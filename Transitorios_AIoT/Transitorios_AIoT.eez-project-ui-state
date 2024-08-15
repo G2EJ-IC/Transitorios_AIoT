@@ -1,7 +1,10 @@
 {
   "navigation": {
-    "selectedUserPageObject": "[Transitorios_AIoT.eez-project]:/userPages/0",
-    "subnavigationSelectedItems": {}
+    "selectedUserPageObject": "[Transitorios_AIoT.eez-project]:/userPages/1",
+    "selectedBitmapObject": "[Transitorios_AIoT.eez-project]:/bitmaps/4",
+    "subnavigationSelectedItems": {
+      "variables-tab/sub-navigation/selected-item": "Widgets"
+    }
   },
   "layoutModel": {
     "rootEditor": {
@@ -60,6 +63,8 @@
           },
           {
             "type": "border",
+            "selected": 0,
+            "size": 0,
             "location": "bottom",
             "children": [
               {
@@ -121,6 +126,7 @@
                   "type": "tabset",
                   "id": "#53b8a9f5-a604-45e5-8dba-2fa86290a11c",
                   "weight": 1,
+                  "selected": 2,
                   "enableClose": false,
                   "children": [
                     {
@@ -186,10 +192,39 @@
             {
               "type": "tabset",
               "id": "EDITORS",
-              "weight": 60,
+              "weight": 52.70972354623451,
               "enableDeleteWhenEmpty": false,
               "enableClose": false,
               "children": [
+                {
+                  "type": "tab",
+                  "id": "#ebb5eda5-5db0-474d-9757-ab2c4382b9df",
+                  "name": "Main2",
+                  "component": "editor",
+                  "config": {
+                    "objectPath": "[Transitorios_AIoT.eez-project]:/userPages/1",
+                    "permanent": false
+                  },
+                  "icon": {
+                    "type": "svg",
+                    "key": null,
+                    "ref": null,
+                    "props": {
+                      "viewBox": "0 96 960 960",
+                      "fill": "currentColor",
+                      "children": {
+                        "type": "path",
+                        "key": null,
+                        "ref": null,
+                        "props": {
+                          "d": "M343 636h225v-60H343v60Zm0-90h395v-60H343v60Zm0-90h395v-60H343v60Zm-83 400q-24 0-42-18t-18-42V236q0-24 18-42t42-18h560q24 0 42 18t18 42v560q0 24-18 42t-42 18H260Zm0-60h560V236H260v560ZM140 976q-24 0-42-18t-18-42V296h60v620h620v60H140Zm120-740v560-560Z"
+                        },
+                        "_owner": null
+                      }
+                    },
+                    "_owner": null
+                  }
+                },
                 {
                   "type": "tab",
                   "id": "#b163d1ff-01f9-4080-94cd-e05a31cc5430",
@@ -253,17 +288,18 @@
                     "_owner": null
                   }
                 }
-              ]
+              ],
+              "active": true
             },
             {
               "type": "row",
               "id": "#3b709482-e44e-4982-ad60-69137c4ff4bc",
-              "weight": 25,
+              "weight": 32.29027645376549,
               "children": [
                 {
                   "type": "tabset",
                   "id": "#98b73992-aa7a-4cda-8c71-f224f0722ab3",
-                  "weight": 2,
+                  "weight": 1.3870967741935485,
                   "children": [
                     {
                       "type": "tab",
@@ -273,13 +309,12 @@
                       "enableClose": false,
                       "icon": "svg:properties"
                     }
-                  ],
-                  "active": true
+                  ]
                 },
                 {
                   "type": "tabset",
                   "id": "#2afcaf62-d1d7-4e61-97b9-ad079193c201",
-                  "weight": 1,
+                  "weight": 1.6129032258064515,
                   "children": [
                     {
                       "type": "tab",
@@ -590,7 +625,8 @@
                       "component": "bitmaps",
                       "enableClose": false
                     }
-                  ]
+                  ],
+                  "active": true
                 },
                 {
                   "type": "tabset",
@@ -967,7 +1003,48 @@
   "features": {},
   "objects": {
     "[Transitorios_AIoT.eez-project]:/userPages/0[flow-state]": {
-      "selection": {},
+      "selection": {
+        "0": {
+          "0": {
+            "0": {}
+          }
+        }
+      },
+      "transform": {
+        "translate": {
+          "x": -244.2925,
+          "y": -71.12999999999998
+        },
+        "scale": 1
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[Transitorios_AIoT.eez-project]:/userPages/1[flow-state]": {
+      "selection": {
+        "0": {
+          "0": {
+            "1": {
+              "0": {
+                "1": {
+                  "1": {}
+                }
+              }
+            },
+            "2": {
+              "0": {
+                "1": {
+                  "3": {}
+                }
+              }
+            }
+          }
+        }
+      },
       "transform": {
         "translate": {
           "x": -240,
@@ -981,6 +1058,16 @@
         "secondToPx": 200,
         "scrollLeft": 0
       }
+    },
+    "[Transitorios_AIoT.eez-project]:/actions/0[flow-state]": {
+      "selection": {},
+      "transform": {
+        "translate": {
+          "x": 0,
+          "y": 0
+        },
+        "scale": 1
+      }
     }
   },
   "activeOutputSection": 0,
@@ -989,6 +1076,7 @@
   "searchMatchWholeWord": false,
   "replaceEnabled": false,
   "replaceText": "",
+  "pageRuntimeFrontFace": true,
   "breakpoints": {},
   "watchExpressions": [],
   "showComponentDescriptions": true,
@@ -996,6 +1084,9 @@
   "selectedStylePropertyName": "",
   "lvglPart": "MAIN",
   "lvglState": "DEFAULT",
-  "lvglExpandedPropertiesGroup": [],
+  "lvglExpandedPropertiesGroup": [
+    "TEXT",
+    "POSITION AND SIZE"
+  ],
   "showInactiveFlowsInDebugger": true
 }

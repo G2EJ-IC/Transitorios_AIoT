@@ -601,10 +601,9 @@ void create_screen_main2() {
                                                     // Label_Red_WiFi_SSID
                                                     lv_obj_t *obj = lv_label_create(parent_obj);
                                                     objects.label_red_wi_fi_ssid = obj;
-                                                    lv_obj_set_pos(obj, 0, LV_PCT(-30));
+                                                    lv_obj_set_pos(obj, LV_PCT(5), LV_PCT(15));
                                                     lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                                                     lv_label_set_text(obj, "Red WiFi (SSID).:");
-                                                    lv_obj_set_style_align(obj, LV_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
                                                     lv_obj_set_style_text_font(obj, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
                                                     lv_obj_set_style_text_align(obj, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
                                                 }
@@ -612,10 +611,9 @@ void create_screen_main2() {
                                                     // Label_Direccion_IP
                                                     lv_obj_t *obj = lv_label_create(parent_obj);
                                                     objects.label_direccion_ip = obj;
-                                                    lv_obj_set_pos(obj, -13, LV_PCT(-10));
+                                                    lv_obj_set_pos(obj, LV_PCT(5), LV_PCT(35));
                                                     lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                                                     lv_label_set_text(obj, "Direccion IP.:");
-                                                    lv_obj_set_style_align(obj, LV_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
                                                     lv_obj_set_style_text_font(obj, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
                                                     lv_obj_set_style_text_align(obj, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
                                                 }
@@ -623,10 +621,9 @@ void create_screen_main2() {
                                                     // Label_Direccion_DNS
                                                     lv_obj_t *obj = lv_label_create(parent_obj);
                                                     objects.label_direccion_dns = obj;
-                                                    lv_obj_set_pos(obj, -4, LV_PCT(10));
+                                                    lv_obj_set_pos(obj, 5, LV_PCT(55));
                                                     lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                                                     lv_label_set_text(obj, "Direccion DNS.:");
-                                                    lv_obj_set_style_align(obj, LV_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
                                                     lv_obj_set_style_text_font(obj, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
                                                     lv_obj_set_style_text_align(obj, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
                                                 }
@@ -634,10 +631,9 @@ void create_screen_main2() {
                                                     // Label_Direccion_MAC
                                                     lv_obj_t *obj = lv_label_create(parent_obj);
                                                     objects.label_direccion_mac = obj;
-                                                    lv_obj_set_pos(obj, -3, LV_PCT(30));
+                                                    lv_obj_set_pos(obj, LV_PCT(5), LV_PCT(75));
                                                     lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                                                     lv_label_set_text(obj, "Direccion MAC.:");
-                                                    lv_obj_set_style_align(obj, LV_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
                                                     lv_obj_set_style_text_font(obj, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
                                                     lv_obj_set_style_text_align(obj, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
                                                 }
@@ -648,7 +644,7 @@ void create_screen_main2() {
                                             lv_obj_t *obj = lv_obj_create(parent_obj);
                                             objects.container_resultados = obj;
                                             lv_obj_set_pos(obj, 114, -18);
-                                            lv_obj_set_size(obj, 207, 196);
+                                            lv_obj_set_size(obj, 328, 196);
                                             lv_obj_set_style_pad_left(obj, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
                                             lv_obj_set_style_pad_top(obj, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
                                             lv_obj_set_style_pad_right(obj, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -662,10 +658,9 @@ void create_screen_main2() {
                                                     // ui_LabSSID
                                                     lv_obj_t *obj = lv_label_create(parent_obj);
                                                     objects.ui_lab_ssid = obj;
-                                                    lv_obj_set_pos(obj, -17, LV_PCT(-30));
-                                                    lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
-                                                    lv_label_set_text(obj, "Nombre WiFi (SSID).:");
-                                                    lv_obj_set_style_align(obj, LV_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
+                                                    lv_obj_set_pos(obj, LV_PCT(5), LV_PCT(15));
+                                                    lv_obj_set_size(obj, 295, LV_SIZE_CONTENT);
+                                                    lv_label_set_text(obj, "Nombre WiFi (SSID).");
                                                     lv_obj_set_style_text_font(obj, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
                                                     lv_obj_set_style_text_align(obj, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN | LV_STATE_DEFAULT);
                                                 }
@@ -673,10 +668,9 @@ void create_screen_main2() {
                                                     // ui_LabIP
                                                     lv_obj_t *obj = lv_label_create(parent_obj);
                                                     objects.ui_lab_ip = obj;
-                                                    lv_obj_set_pos(obj, -56, LV_PCT(-10));
-                                                    lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
+                                                    lv_obj_set_pos(obj, LV_PCT(5), LV_PCT(35));
+                                                    lv_obj_set_size(obj, 140, LV_SIZE_CONTENT);
                                                     lv_label_set_text(obj, "xx.xx.xx.xx");
-                                                    lv_obj_set_style_align(obj, LV_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
                                                     lv_obj_set_style_text_font(obj, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
                                                     lv_obj_set_style_text_align(obj, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN | LV_STATE_DEFAULT);
                                                 }
@@ -684,10 +678,10 @@ void create_screen_main2() {
                                                     // ui_LabMAC
                                                     lv_obj_t *obj = lv_label_create(parent_obj);
                                                     objects.ui_lab_mac = obj;
-                                                    lv_obj_set_pos(obj, -37, LV_PCT(10));
-                                                    lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
+                                                    lv_obj_set_pos(obj, LV_PCT(5), LV_PCT(55));
+                                                    lv_obj_set_size(obj, 140, LV_SIZE_CONTENT);
                                                     lv_label_set_text(obj, "xx:xx:xx:xx:xx:xx");
-                                                    lv_obj_set_style_align(obj, LV_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
+                                                    lv_obj_set_style_align(obj, LV_ALIGN_DEFAULT, LV_PART_MAIN | LV_STATE_DEFAULT);
                                                     lv_obj_set_style_text_font(obj, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
                                                     lv_obj_set_style_text_align(obj, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN | LV_STATE_DEFAULT);
                                                 }
@@ -695,12 +689,18 @@ void create_screen_main2() {
                                                     // ui_LabDNS
                                                     lv_obj_t *obj = lv_label_create(parent_obj);
                                                     objects.ui_lab_dns = obj;
-                                                    lv_obj_set_pos(obj, -56, LV_PCT(30));
-                                                    lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
+                                                    lv_obj_set_pos(obj, LV_PCT(5), LV_PCT(75));
+                                                    lv_obj_set_size(obj, 140, LV_SIZE_CONTENT);
                                                     lv_label_set_text(obj, "xx.xx.xx.xx");
-                                                    lv_obj_set_style_align(obj, LV_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
+                                                    lv_obj_set_style_align(obj, LV_ALIGN_DEFAULT, LV_PART_MAIN | LV_STATE_DEFAULT);
                                                     lv_obj_set_style_text_font(obj, &lv_font_montserrat_14, LV_PART_MAIN | LV_STATE_DEFAULT);
                                                     lv_obj_set_style_text_align(obj, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN | LV_STATE_DEFAULT);
+                                                }
+                                                {
+                                                    lv_obj_t *obj = lv_img_create(parent_obj);
+                                                    lv_obj_set_pos(obj, 217, 43);
+                                                    lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
+                                                    lv_img_set_src(obj, &img_ud_fjd_c);
                                                 }
                                             }
                                         }
@@ -725,12 +725,6 @@ void create_screen_main2() {
                                                     lv_obj_set_style_text_align(obj, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
                                                 }
                                             }
-                                        }
-                                        {
-                                            lv_obj_t *obj = lv_img_create(parent_obj);
-                                            lv_obj_set_pos(obj, 321, 19);
-                                            lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
-                                            lv_img_set_src(obj, &img_ud_fjd_c);
                                         }
                                     }
                                 }

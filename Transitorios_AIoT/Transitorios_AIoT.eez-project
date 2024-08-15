@@ -2207,8 +2207,8 @@
                                 {
                                   "objID": "dd6a9e65-8fc4-493f-b284-39b101c13c99",
                                   "type": "LVGLLabelWidget",
-                                  "left": 0,
-                                  "top": -30,
+                                  "left": 5,
+                                  "top": 15,
                                   "width": 120,
                                   "height": 16,
                                   "customInputs": [],
@@ -2223,7 +2223,7 @@
                                   "timeline": [],
                                   "eventHandlers": [],
                                   "identifier": "Label_Red_WiFi_SSID",
-                                  "leftUnit": "px",
+                                  "leftUnit": "%",
                                   "topUnit": "%",
                                   "widthUnit": "content",
                                   "heightUnit": "content",
@@ -2239,7 +2239,6 @@
                                     "definition": {
                                       "MAIN": {
                                         "DEFAULT": {
-                                          "align": "CENTER",
                                           "text_font": "MONTSERRAT_14",
                                           "text_align": "CENTER"
                                         }
@@ -2254,8 +2253,8 @@
                                 {
                                   "objID": "9c37546b-a7ab-4e85-91ff-e3fbafcf8448",
                                   "type": "LVGLLabelWidget",
-                                  "left": -13,
-                                  "top": -10,
+                                  "left": 5,
+                                  "top": 35,
                                   "width": 94,
                                   "height": 16,
                                   "customInputs": [],
@@ -2270,7 +2269,7 @@
                                   "timeline": [],
                                   "eventHandlers": [],
                                   "identifier": "Label_Direccion_IP",
-                                  "leftUnit": "px",
+                                  "leftUnit": "%",
                                   "topUnit": "%",
                                   "widthUnit": "content",
                                   "heightUnit": "content",
@@ -2286,7 +2285,6 @@
                                     "definition": {
                                       "MAIN": {
                                         "DEFAULT": {
-                                          "align": "CENTER",
                                           "text_font": "MONTSERRAT_14",
                                           "text_align": "CENTER"
                                         }
@@ -2301,8 +2299,8 @@
                                 {
                                   "objID": "da839ee1-5cae-44bc-a9f5-032675b104a5",
                                   "type": "LVGLLabelWidget",
-                                  "left": -4,
-                                  "top": 10,
+                                  "left": 5,
+                                  "top": 55,
                                   "width": 112,
                                   "height": 16,
                                   "customInputs": [],
@@ -2333,7 +2331,6 @@
                                     "definition": {
                                       "MAIN": {
                                         "DEFAULT": {
-                                          "align": "CENTER",
                                           "text_font": "MONTSERRAT_14",
                                           "text_align": "CENTER"
                                         }
@@ -2348,8 +2345,8 @@
                                 {
                                   "objID": "99779586-4258-4bb6-a92c-fd987826c916",
                                   "type": "LVGLLabelWidget",
-                                  "left": -3,
-                                  "top": 30,
+                                  "left": 5,
+                                  "top": 75,
                                   "width": 113,
                                   "height": 16,
                                   "customInputs": [],
@@ -2364,7 +2361,7 @@
                                   "timeline": [],
                                   "eventHandlers": [],
                                   "identifier": "Label_Direccion_MAC",
-                                  "leftUnit": "px",
+                                  "leftUnit": "%",
                                   "topUnit": "%",
                                   "widthUnit": "content",
                                   "heightUnit": "content",
@@ -2380,7 +2377,6 @@
                                     "definition": {
                                       "MAIN": {
                                         "DEFAULT": {
-                                          "align": "CENTER",
                                           "text_font": "MONTSERRAT_14",
                                           "text_align": "CENTER"
                                         }
@@ -2411,7 +2407,7 @@
                               "type": "LVGLContainerWidget",
                               "left": 114,
                               "top": -18,
-                              "width": 207,
+                              "width": 328,
                               "height": 196,
                               "customInputs": [],
                               "customOutputs": [],
@@ -2432,9 +2428,9 @@
                                 {
                                   "objID": "b511b709-1934-4c88-c909-11475ce5d0a2",
                                   "type": "LVGLLabelWidget",
-                                  "left": -17,
-                                  "top": -30,
-                                  "width": 151,
+                                  "left": 5,
+                                  "top": 15,
+                                  "width": 295,
                                   "height": 16,
                                   "customInputs": [],
                                   "customOutputs": [],
@@ -2448,9 +2444,9 @@
                                   "timeline": [],
                                   "eventHandlers": [],
                                   "identifier": "ui_LabSSID",
-                                  "leftUnit": "px",
+                                  "leftUnit": "%",
                                   "topUnit": "%",
-                                  "widthUnit": "content",
+                                  "widthUnit": "px",
                                   "heightUnit": "content",
                                   "children": [],
                                   "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -2464,14 +2460,13 @@
                                     "definition": {
                                       "MAIN": {
                                         "DEFAULT": {
-                                          "align": "CENTER",
                                           "text_font": "MONTSERRAT_14",
                                           "text_align": "LEFT"
                                         }
                                       }
                                     }
                                   },
-                                  "text": "Nombre WiFi (SSID).:",
+                                  "text": "Nombre WiFi (SSID).",
                                   "textType": "literal",
                                   "longMode": "WRAP",
                                   "recolor": false
@@ -2479,9 +2474,9 @@
                                 {
                                   "objID": "16b784d1-fdca-430b-d469-5049c3920c3b",
                                   "type": "LVGLLabelWidget",
-                                  "left": -56,
-                                  "top": -10,
-                                  "width": 73,
+                                  "left": 5,
+                                  "top": 35,
+                                  "width": 140,
                                   "height": 16,
                                   "customInputs": [],
                                   "customOutputs": [],
@@ -2495,9 +2490,9 @@
                                   "timeline": [],
                                   "eventHandlers": [],
                                   "identifier": "ui_LabIP",
-                                  "leftUnit": "px",
+                                  "leftUnit": "%",
                                   "topUnit": "%",
-                                  "widthUnit": "content",
+                                  "widthUnit": "px",
                                   "heightUnit": "content",
                                   "children": [],
                                   "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -2511,7 +2506,6 @@
                                     "definition": {
                                       "MAIN": {
                                         "DEFAULT": {
-                                          "align": "CENTER",
                                           "text_font": "MONTSERRAT_14",
                                           "text_align": "LEFT"
                                         }
@@ -2526,9 +2520,9 @@
                                 {
                                   "objID": "b87b4aa7-66a4-4c00-c952-130d3f0c57ed",
                                   "type": "LVGLLabelWidget",
-                                  "left": -37,
-                                  "top": 10,
-                                  "width": 111,
+                                  "left": 5,
+                                  "top": 55,
+                                  "width": 140,
                                   "height": 16,
                                   "customInputs": [],
                                   "customOutputs": [],
@@ -2542,9 +2536,9 @@
                                   "timeline": [],
                                   "eventHandlers": [],
                                   "identifier": "ui_LabMAC",
-                                  "leftUnit": "px",
+                                  "leftUnit": "%",
                                   "topUnit": "%",
-                                  "widthUnit": "content",
+                                  "widthUnit": "px",
                                   "heightUnit": "content",
                                   "children": [],
                                   "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -2558,7 +2552,7 @@
                                     "definition": {
                                       "MAIN": {
                                         "DEFAULT": {
-                                          "align": "CENTER",
+                                          "align": "DEFAULT",
                                           "text_font": "MONTSERRAT_14",
                                           "text_align": "LEFT"
                                         }
@@ -2573,9 +2567,9 @@
                                 {
                                   "objID": "014dee96-a7dc-4f4f-b1ae-12f7892b99c5",
                                   "type": "LVGLLabelWidget",
-                                  "left": -56,
-                                  "top": 30,
-                                  "width": 73,
+                                  "left": 5,
+                                  "top": 75,
+                                  "width": 140,
                                   "height": 16,
                                   "customInputs": [],
                                   "customOutputs": [],
@@ -2589,9 +2583,9 @@
                                   "timeline": [],
                                   "eventHandlers": [],
                                   "identifier": "ui_LabDNS",
-                                  "leftUnit": "px",
+                                  "leftUnit": "%",
                                   "topUnit": "%",
-                                  "widthUnit": "content",
+                                  "widthUnit": "px",
                                   "heightUnit": "content",
                                   "children": [],
                                   "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -2605,7 +2599,7 @@
                                     "definition": {
                                       "MAIN": {
                                         "DEFAULT": {
-                                          "align": "CENTER",
+                                          "align": "DEFAULT",
                                           "text_font": "MONTSERRAT_14",
                                           "text_align": "LEFT"
                                         }
@@ -2616,6 +2610,45 @@
                                   "textType": "literal",
                                   "longMode": "WRAP",
                                   "recolor": false
+                                },
+                                {
+                                  "objID": "4ddd1d7d-71bd-4611-91bd-092868f474de",
+                                  "type": "LVGLImageWidget",
+                                  "left": 217,
+                                  "top": 43,
+                                  "width": 103,
+                                  "height": 159,
+                                  "customInputs": [],
+                                  "customOutputs": [],
+                                  "style": {
+                                    "objID": "7129c9a8-00b1-424b-e3fe-1fc043624a5c",
+                                    "useStyle": "default",
+                                    "conditionalStyles": [],
+                                    "childStyles": []
+                                  },
+                                  "hiddenInEditor": false,
+                                  "timeline": [],
+                                  "eventHandlers": [],
+                                  "leftUnit": "px",
+                                  "topUnit": "px",
+                                  "widthUnit": "content",
+                                  "heightUnit": "content",
+                                  "children": [],
+                                  "widgetFlags": "ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
+                                  "hiddenFlagType": "literal",
+                                  "clickableFlagType": "literal",
+                                  "checkedStateType": "literal",
+                                  "disabledStateType": "literal",
+                                  "states": "",
+                                  "localStyles": {
+                                    "objID": "1dae0c35-f366-40cc-89b0-70231f255993"
+                                  },
+                                  "image": "udFJdC",
+                                  "pivotX": 0,
+                                  "pivotY": 0,
+                                  "zoom": 256,
+                                  "angle": 0,
+                                  "innerAlign": "CENTER"
                                 }
                               ],
                               "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
@@ -2723,45 +2756,6 @@
                               "localStyles": {
                                 "objID": "44d39a21-0757-44fa-af0d-10f82a507f1f"
                               }
-                            },
-                            {
-                              "objID": "4ddd1d7d-71bd-4611-91bd-092868f474de",
-                              "type": "LVGLImageWidget",
-                              "left": 321,
-                              "top": 19,
-                              "width": 103,
-                              "height": 159,
-                              "customInputs": [],
-                              "customOutputs": [],
-                              "style": {
-                                "objID": "7129c9a8-00b1-424b-e3fe-1fc043624a5c",
-                                "useStyle": "default",
-                                "conditionalStyles": [],
-                                "childStyles": []
-                              },
-                              "hiddenInEditor": false,
-                              "timeline": [],
-                              "eventHandlers": [],
-                              "leftUnit": "px",
-                              "topUnit": "px",
-                              "widthUnit": "content",
-                              "heightUnit": "content",
-                              "children": [],
-                              "widgetFlags": "ADV_HITTEST|CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
-                              "hiddenFlagType": "literal",
-                              "clickableFlagType": "literal",
-                              "checkedStateType": "literal",
-                              "disabledStateType": "literal",
-                              "states": "",
-                              "localStyles": {
-                                "objID": "1dae0c35-f366-40cc-89b0-70231f255993"
-                              },
-                              "image": "udFJdC",
-                              "pivotX": 0,
-                              "pivotY": 0,
-                              "zoom": 256,
-                              "angle": 0,
-                              "innerAlign": "CENTER"
                             }
                           ],
                           "widgetFlags": "CLICKABLE|CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
