@@ -39,6 +39,9 @@
 #define PIN_BUSY	-1	//	cfg.pin_busy = 	-1;
 #define PIN_INT		-1	//	cfg.pin_int =	-1;
 
+#define TOUCH_CS 	21 	// Pin CS del panel táctil
+#define PinLED 		2	// LED_BUILTIN
+
 #elif defined(HMI_ESP32_4827S043)
 // Pines TFT HMI ESP32 4827S043 - ESP32-S3 480x320
 #define LCD_SCK     12  //  cfg.pin_sclk =  12;
@@ -54,6 +57,7 @@
 
 #define PIN_BUSY	-1	//	cfg.pin_busy = 	-1;
 #define PIN_INT		-1	//	cfg.pin_int =	-1;
+#define PinLED 2          // LED_BUILTIN
 
 #endif
 //----------------------------end tp configaction
@@ -62,6 +66,7 @@
 #define BUF_SIZE 80
 #define DISP_BUF_SIZE (LV_HOR_RES_MAX * BUF_SIZE)
 #define BUF_NUM 1
+#define ICACHE_FLASH_ATTR
 //------------------------end display select
 
 #endif // __CONFIG_H__

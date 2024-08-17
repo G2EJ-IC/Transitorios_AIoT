@@ -517,7 +517,7 @@
               "objID": "8c17a929-c770-486c-a14a-204548fcf1e6",
               "action": "CHANGE_SCREEN",
               "showPreviousScreen": false,
-              "screen": "Main3",
+              "screen": "Main2",
               "fadeMode": "FADE_IN",
               "speed": 200,
               "delay": 0
