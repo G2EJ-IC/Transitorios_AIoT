@@ -8,7 +8,10 @@
 class tp_service
 {
 private:
-    void my_touchpad_read (lv_indev_t * indev_driver, lv_indev_data_t * data);
+    friend class display_service;
+    friend class io_service;
+    // friend class dhms_AIoT;
+    // friend class tp_service;
 
 public:
     tp_service();
@@ -16,6 +19,8 @@ public:
 
     void ICACHE_FLASH_ATTR setup();
     void ICACHE_FLASH_ATTR loop();
+
+    void ICACHE_FLASH_ATTR lv_no_sleep(uint32_t);
 };
 
 #endif // __TP_SERVICE_H__

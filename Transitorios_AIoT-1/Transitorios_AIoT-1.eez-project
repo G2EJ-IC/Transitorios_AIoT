@@ -478,9 +478,9 @@
                   }
                 }
               ],
-              "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
+              "widgetFlags": "",
               "hiddenFlagType": "literal",
-              "clickableFlag": true,
+              "clickableFlag": false,
               "clickableFlagType": "literal",
               "flagScrollbarMode": "",
               "flagScrollDirection": "",
@@ -1360,9 +1360,9 @@
                           }
                         }
                       ],
-                      "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
+                      "widgetFlags": "",
                       "hiddenFlagType": "literal",
-                      "clickableFlag": true,
+                      "clickableFlag": false,
                       "clickableFlagType": "literal",
                       "flagScrollbarMode": "",
                       "flagScrollDirection": "",
@@ -1374,9 +1374,9 @@
                       }
                     }
                   ],
-                  "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
+                  "widgetFlags": "",
                   "hiddenFlagType": "literal",
-                  "clickableFlag": true,
+                  "clickableFlag": false,
                   "clickableFlagType": "literal",
                   "flagScrollbarMode": "",
                   "flagScrollDirection": "",
@@ -2261,9 +2261,9 @@
                               }
                             }
                           ],
-                          "widgetFlags": "CLICKABLE|CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
+                          "widgetFlags": "CLICKABLE",
                           "hiddenFlagType": "literal",
-                          "clickableFlag": true,
+                          "clickableFlag": false,
                           "clickableFlagType": "literal",
                           "checkedStateType": "literal",
                           "disabledStateType": "literal",
@@ -2283,9 +2283,9 @@
                           }
                         }
                       ],
-                      "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
+                      "widgetFlags": "",
                       "hiddenFlagType": "literal",
-                      "clickableFlag": true,
+                      "clickableFlag": false,
                       "clickableFlagType": "literal",
                       "flagScrollbarMode": "",
                       "flagScrollDirection": "",
@@ -2918,7 +2918,7 @@
                           "recolor": false
                         }
                       ],
-                      "widgetFlags": "CLICKABLE|CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
+                      "widgetFlags": "CLICKABLE",
                       "hiddenFlagType": "literal",
                       "clickableFlag": false,
                       "clickableFlagType": "literal",
@@ -2993,9 +2993,9 @@
                   }
                 }
               ],
-              "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
+              "widgetFlags": "",
               "hiddenFlagType": "literal",
-              "clickableFlag": true,
+              "clickableFlag": false,
               "clickableFlagType": "literal",
               "flagScrollbarMode": "",
               "flagScrollDirection": "",

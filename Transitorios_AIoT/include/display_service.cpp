@@ -1,5 +1,7 @@
 #include <Arduino.h>
 #include <lvgl.h>
+#include "config.h"
+#include <SPI.h>
 #include "LovyanGFX_Class_ILI9488.h"
 #include "display_service.h"
 #include "tp_service.h"
@@ -35,6 +37,15 @@ static lv_display_t *disp;
 /*Set tick routine needed for LVGL internal timings*/
 inline static uint32_t my_tick_get_cb (void){ return millis(); }
 
+#if LV_USE_LOG != 0
+    /* Serial debugging */
+    void my_print(const char *buf1)
+    {
+        Serial.printf(buf1);
+        Serial.flush();
+    }
+#endif 
+
 /* =============================icache functions========================= */
 void ICACHE_FLASH_ATTR display_service::lv_setup()
 {
@@ -47,15 +58,6 @@ void ICACHE_FLASH_ATTR display_service::lv_setup()
     Serial.println("I am LVGL_Arduino");
 
 #if LV_USE_LOG != 0
-    /* Serial debugging */
-    void my_print(const char *buf1)
-    {
-        Serial.printf(buf1);
-        Serial.flush();
-    }
-#endif    
-
-#if LV_USE_LOG != 0
     lv_log_register_print_cb(my_print); /* register print function for debugging */
 #endif
 }
@@ -63,7 +65,7 @@ void ICACHE_FLASH_ATTR display_service::lv_setup()
 void ICACHE_FLASH_ATTR display_service::touch_setup()
 {
     tp.setup();         /* TFT setup*/
-    Serial.begin( 115200 ); /* prepare for possible serial debug */
+    Serial.begin(115200); /* prepare for possible serial debug */
 
     //************************************************************************************************
     // tft.setBrightness(255);
@@ -137,7 +139,7 @@ void display_service::my_touchpad_read (lv_indev_t * indev_driver, lv_indev_data
     uint16_t touchX = 0, touchY = 0;
 
     // bool touched = false;//tft.getTouch(&touchX, &touchY, 600);
-    bool touched = tft.getTouch(&touchX, &touchY, 0);
+    bool touched = tft.getTouch(&touchX, &touchY);
 
     if (!touched)
     {
