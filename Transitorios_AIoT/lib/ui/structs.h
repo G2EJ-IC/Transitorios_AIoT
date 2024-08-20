@@ -1,6 +1,7 @@
 #ifndef EEZ_LVGL_UI_STRUCTS_H
 #define EEZ_LVGL_UI_STRUCTS_H
 
+#include <eez/flow/flow.h>
 #include <stdint.h>
 #include <stdbool.h>
 

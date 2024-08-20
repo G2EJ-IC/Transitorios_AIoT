@@ -12,6 +12,7 @@ private:
     friend class io_service;
     // friend class dhms_AIoT;
     // friend class tp_service;
+    void setPin32(bool);
 
 public:
     tp_service();
@@ -19,7 +20,7 @@ public:
 
     void ICACHE_FLASH_ATTR setup();
     void ICACHE_FLASH_ATTR loop();
-
+    
     void ICACHE_FLASH_ATTR lv_no_sleep(uint32_t);
 };
 

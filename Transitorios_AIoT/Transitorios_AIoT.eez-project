@@ -103,7 +103,7 @@
       ],
       "destinationFolder": "lib\\ui",
       "lvglInclude": "lvgl.h",
-      "generateSourceCodeForEezFramework": true,
+      "generateSourceCodeForEezFramework": false,
       "compressFlowDefinition": false,
       "executionQueueSize": 1000,
       "expressionEvaluatorStackSize": 20
@@ -346,7 +346,7 @@
                           "action": "Fn_Plus"
                         }
                       ],
-                      "identifier": "BtDerPag2_Main1",
+                      "identifier": "BtDerPag2",
                       "leftUnit": "px",
                       "topUnit": "px",
                       "widthUnit": "px",
@@ -677,8 +677,14 @@
                               "locked": false,
                               "hiddenInEditor": false,
                               "timeline": [],
-                              "eventHandlers": [],
-                              "identifier": "Bt_IzqPag2_Main3_1",
+                              "eventHandlers": [
+                                {
+                                  "objID": "22d073a2-8d27-44d8-a066-4c85841ec9d8",
+                                  "eventName": "PRESSED",
+                                  "handlerType": "flow"
+                                }
+                              ],
+                              "identifier": "Bt_Plus_2",
                               "leftUnit": "%",
                               "topUnit": "px",
                               "widthUnit": "px",
@@ -765,7 +771,7 @@
                               "hiddenInEditor": false,
                               "timeline": [],
                               "eventHandlers": [],
-                              "identifier": "Bt_Connec_WiFi",
+                              "identifier": "Bt_Rescan_WiFi_3",
                               "leftUnit": "px",
                               "topUnit": "px",
                               "widthUnit": "%",
@@ -848,7 +854,7 @@
                               "hiddenInEditor": false,
                               "timeline": [],
                               "eventHandlers": [],
-                              "identifier": "Bt_Conectado_3_1",
+                              "identifier": "Bt_Conectado_3",
                               "leftUnit": "px",
                               "topUnit": "px",
                               "widthUnit": "px",
@@ -894,7 +900,7 @@
                               "hiddenInEditor": false,
                               "timeline": [],
                               "eventHandlers": [],
-                              "identifier": "Bt_ReScan_WiFi",
+                              "identifier": "Bt_Desconectar_WiFi_3",
                               "leftUnit": "px",
                               "topUnit": "px",
                               "widthUnit": "%",
@@ -983,7 +989,7 @@
                                   "handlerType": "flow"
                                 }
                               ],
-                              "identifier": "Bt_DerPag1_Main3_1",
+                              "identifier": "Bt_Minus_2",
                               "leftUnit": "%",
                               "topUnit": "px",
                               "widthUnit": "px",
@@ -1479,7 +1485,7 @@
                                   "handlerType": "flow"
                                 }
                               ],
-                              "identifier": "Bt_IzqPag2_Main3_2",
+                              "identifier": "Bt_Plus_3",
                               "leftUnit": "%",
                               "topUnit": "px",
                               "widthUnit": "px",
@@ -1572,7 +1578,7 @@
                                   "handlerType": "flow"
                                 }
                               ],
-                              "identifier": "Bt_DerPag1_Main3_2",
+                              "identifier": "Bt_Minus_3",
                               "leftUnit": "%",
                               "topUnit": "px",
                               "widthUnit": "px",
@@ -1637,135 +1643,6 @@
                                     }
                                   }
                                 }
-                              }
-                            },
-                            {
-                              "objID": "b7d3bb1e-b3d1-4268-a6c3-4cec7ea9756e",
-                              "type": "LVGLButtonWidget",
-                              "left": 196,
-                              "top": -12,
-                              "width": 32,
-                              "height": 32,
-                              "customInputs": [],
-                              "customOutputs": [],
-                              "style": {
-                                "objID": "e144f1a9-a43a-422c-8597-17a45a44dc32",
-                                "useStyle": "default",
-                                "conditionalStyles": [],
-                                "childStyles": []
-                              },
-                              "locked": false,
-                              "hiddenInEditor": false,
-                              "timeline": [],
-                              "eventHandlers": [],
-                              "identifier": "Bt_Conectado_3_2",
-                              "leftUnit": "px",
-                              "topUnit": "px",
-                              "widthUnit": "px",
-                              "heightUnit": "px",
-                              "children": [],
-                              "widgetFlags": "CLICKABLE|CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
-                              "hiddenFlagType": "literal",
-                              "clickableFlag": false,
-                              "clickableFlagType": "literal",
-                              "checkedState": false,
-                              "checkedStateType": "literal",
-                              "disabledStateType": "literal",
-                              "states": "",
-                              "useStyle": "",
-                              "localStyles": {
-                                "objID": "1131456e-84d3-4d8c-d56d-444be4ef6b3d",
-                                "definition": {
-                                  "MAIN": {
-                                    "DEFAULT": {
-                                      "radius": 16,
-                                      "bg_color": "#ff0000"
-                                    }
-                                  }
-                                }
-                              }
-                            },
-                            {
-                              "objID": "04b2d6cf-4786-4cc0-ad43-4f485cab9d24",
-                              "type": "LVGLButtonWidget",
-                              "left": 74,
-                              "top": -11,
-                              "width": 25,
-                              "height": 30,
-                              "customInputs": [],
-                              "customOutputs": [],
-                              "style": {
-                                "objID": "8e2973cc-ac29-43c6-858d-0270a8ce237a",
-                                "useStyle": "default",
-                                "conditionalStyles": [],
-                                "childStyles": []
-                              },
-                              "locked": false,
-                              "hiddenInEditor": false,
-                              "timeline": [],
-                              "eventHandlers": [],
-                              "identifier": "Bt_DesConnec_WiFi",
-                              "leftUnit": "px",
-                              "topUnit": "px",
-                              "widthUnit": "%",
-                              "heightUnit": "px",
-                              "children": [
-                                {
-                                  "objID": "070cadee-618d-422a-af91-36f91f1a4571",
-                                  "type": "LVGLLabelWidget",
-                                  "left": -5,
-                                  "top": -3,
-                                  "width": 84,
-                                  "height": 16,
-                                  "customInputs": [],
-                                  "customOutputs": [],
-                                  "style": {
-                                    "objID": "c0038a33-20bd-488f-c7a7-816ce40bb522",
-                                    "useStyle": "default",
-                                    "conditionalStyles": [],
-                                    "childStyles": []
-                                  },
-                                  "timeline": [],
-                                  "eventHandlers": [],
-                                  "leftUnit": "px",
-                                  "topUnit": "px",
-                                  "widthUnit": "content",
-                                  "heightUnit": "content",
-                                  "children": [],
-                                  "widgetFlags": "CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLLABLE|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_WITH_ARROW|SNAPPABLE",
-                                  "hiddenFlagType": "literal",
-                                  "clickableFlagType": "literal",
-                                  "checkedStateType": "literal",
-                                  "disabledStateType": "literal",
-                                  "states": "",
-                                  "localStyles": {
-                                    "objID": "0570c774-39d5-4d9c-dea6-680673ff7f4d",
-                                    "definition": {
-                                      "MAIN": {
-                                        "DEFAULT": {
-                                          "text_align": "CENTER",
-                                          "text_font": "MONTSERRAT_14"
-                                        }
-                                      }
-                                    }
-                                  },
-                                  "text": "DesConnec",
-                                  "textType": "literal",
-                                  "longMode": "WRAP",
-                                  "recolor": false
-                                }
-                              ],
-                              "widgetFlags": "CLICKABLE|CLICK_FOCUSABLE|GESTURE_BUBBLE|PRESS_LOCK|SCROLL_CHAIN_HOR|SCROLL_CHAIN_VER|SCROLL_ELASTIC|SCROLL_MOMENTUM|SCROLL_ON_FOCUS|SCROLL_WITH_ARROW|SNAPPABLE",
-                              "hiddenFlagType": "literal",
-                              "clickableFlag": true,
-                              "clickableFlagType": "literal",
-                              "checkedState": false,
-                              "checkedStateType": "literal",
-                              "disabledStateType": "literal",
-                              "states": "",
-                              "useStyle": "",
-                              "localStyles": {
-                                "objID": "25d40660-8c5f-40a8-fed9-d68e5a60ca41"
                               }
                             }
                           ],
@@ -2564,6 +2441,13 @@
           "input": "@seqin"
         },
         {
+          "objID": "77048a7f-d81e-4e91-91c1-2f472c8af6ed",
+          "source": "85398fcf-452b-4363-c418-08140b3fc41a",
+          "output": "PRESSED",
+          "target": "e987144c-3600-4277-c365-2150858a77d5",
+          "input": "@seqin"
+        },
+        {
           "objID": "02f81bd2-f2fc-4d21-d40b-8ba9cc8698df",
           "source": "f90b78aa-3a6c-43eb-fddf-fbf0eb7eacd5",
           "output": "PRESSED",
@@ -2630,7 +2514,7 @@
                   "objID": "b26afb20-0ce0-4e25-9eea-d60cb58990bf",
                   "type": "LVGLPanelWidget",
                   "left": 2,
-                  "top": 7,
+                  "top": 5,
                   "width": 96,
                   "height": 15,
                   "customInputs": [],
@@ -2675,7 +2559,7 @@
                           "handlerType": "flow"
                         }
                       ],
-                      "identifier": "Bt_IzqPag1_Main2",
+                      "identifier": "Bt_Plus_1",
                       "leftUnit": "%",
                       "topUnit": "px",
                       "widthUnit": "px",
@@ -2811,7 +2695,7 @@
                           "handlerType": "flow"
                         }
                       ],
-                      "identifier": "Bt_DerPag3_Main2",
+                      "identifier": "Bt_Minus_1",
                       "leftUnit": "%",
                       "topUnit": "px",
                       "widthUnit": "px",

@@ -5,6 +5,7 @@
 #include "io_service.h"
 #include "screens.h"
 #include "DateTime_AIoT.h"
+// #include "ui.h"
 
 dhms_AIoT DateTime;       // load DateTime
 
@@ -14,9 +15,10 @@ io_service::~io_service() {}
 /* =============================icache functions========================= */
 void ICACHE_FLASH_ATTR io_service::setup()
 {
-  lv_task_handler();
+  // lv_task_handler();
+  // ui_tick();
   Serial.begin(115200);
-  pinMode(PinLED, OUTPUT);
+  // pinMode(PinLED, OUTPUT);
   ParpadeoLED();
 } // end io setup
 
@@ -31,6 +33,7 @@ void ICACHE_FLASH_ATTR io_service::loop()
  * @return Salida. 
  */
 void io_service::ParpadeoLED(void) {
+    pinMode(PinLED, OUTPUT);
     digitalWrite(PinLED, !digitalRead(PinLED));
 }
 

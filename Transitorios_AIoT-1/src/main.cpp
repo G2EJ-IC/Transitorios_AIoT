@@ -41,7 +41,8 @@ int delayLength0 = 3000;
 void ICACHE_FLASH_ATTR setup()
 {
   io.memoria_ESP();
-  pinMode(PIN_BL, OUTPUT);
+  // pinMode(PinLED, OUTPUT);
+  // pinMode(PIN_BL, OUTPUT);
   // Segundo Siclo en el Núcleo Secundario.
   // Núcleo Principal  -> 1. APP
   // Núcleo Secundario -> 0. PRO
@@ -116,8 +117,8 @@ void ICACHE_FLASH_ATTR setup()
   }
 
   /******************************************End FreeRTOS***************************************/
-  delay(2000);
-  lv_task_handler();
+  delay(1000);
+  // lv_task_handler();
 }
 
 void ICACHE_FLASH_ATTR loop()
@@ -160,7 +161,7 @@ void ICACHE_FLASH_ATTR loop1(void *parameter)
   unsigned long asyncDelay1 = 0;
 
   io.setup();
-  for (;;)
+  for (;;) //while(1);
   {
     io.feedTheDog();
     loop_Task1();
@@ -216,7 +217,8 @@ void ICACHE_FLASH_ATTR loop4(void *parameter)
 {
   int delayLength4 = 50u;
   unsigned long asyncDelay4 = 0;
-
+  tp.setup();
+  // pinMode(PIN_BL, OUTPUT);
   for (;;)
   {
     io.feedTheDog();
@@ -226,6 +228,7 @@ void ICACHE_FLASH_ATTR loop4(void *parameter)
       asyncDelay4 += delayLength4;
       io.cronometro(asyncDelay4);
       // io.TestHWM("loop4", asyncDelay4);     
-    }   
+    } 
+    vTaskDelay(pdMS_TO_TICKS(5)); // delay( 5 );  
   }
 }
