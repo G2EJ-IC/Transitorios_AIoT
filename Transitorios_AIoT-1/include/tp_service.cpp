@@ -4,10 +4,11 @@
 #include "tp_service.h"
 #include "DateTime_AIoT.h"
 #include "io_service.h"
+#include "screens.h"
 // #include "ui.h"
 
 dhms_AIoT DateTimeAhora;       // load DateTime
-// io_service ioAhora;            // load IO control service
+io_service io_tp;              // load IO control service
 
 tp_service::tp_service() {}
 tp_service::~tp_service() {}
@@ -20,23 +21,20 @@ void ICACHE_FLASH_ATTR tp_service::setup()
 
 void ICACHE_FLASH_ATTR tp_service::loop()
 {
-    lv_no_sleep(20);
+    // lv_no_sleep();
 } // end tp loop
 
-void tp_service::setPin32(bool estado) {
-  // Configurar el PIN 32 como salida (si es necesario)
-  pinMode(PIN_BL, OUTPUT);
 
-  // Escribir el estado en el PIN 32
-  digitalWrite(PIN_BL, estado ? HIGH : LOW);
-}
 
 void ICACHE_FLASH_ATTR tp_service::lv_no_sleep(uint32_t lv_sleep)
 {
     /*Normal operation (no sleep) in < 1 sec inactivity*/
+    // uint32_t lv_N_sleep = lv_dropdown_get_selected(objects.drop_down_suspender);
+    // uint32_t lv_sleep = 20;
+
     if (lv_display_get_inactive_time(NULL) < (1000 * lv_sleep))
     {
-        setPin32(HIGH);
+        io_tp.setPin32(HIGH);
     }
     /*Sleep after 1 sec inactivity*/
     else
@@ -45,7 +43,7 @@ void ICACHE_FLASH_ATTR tp_service::lv_no_sleep(uint32_t lv_sleep)
         uint32_t Ahora = lv_display_get_inactive_time(NULL);
         String DHMS = DateTimeAhora.DHMS_AIoT_get((uint64_t)(Ahora));
         Serial.printf("%u mSeg - %s",Ahora, DHMS);
-        setPin32(LOW);
+        io_tp.setPin32(LOW);
         Serial.println();
     }
 }

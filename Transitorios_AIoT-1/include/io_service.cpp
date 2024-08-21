@@ -15,10 +15,7 @@ io_service::~io_service() {}
 /* =============================icache functions========================= */
 void ICACHE_FLASH_ATTR io_service::setup()
 {
-  // lv_task_handler();
-  // ui_tick();
   Serial.begin(115200);
-  // pinMode(PinLED, OUTPUT);
   ParpadeoLED();
 } // end io setup
 
@@ -32,6 +29,11 @@ void ICACHE_FLASH_ATTR io_service::loop()
  * @param Parámetros.
  * @return Salida. 
  */
+void io_service::setPin32(bool estado) {
+  pinMode(PIN_BL, OUTPUT);
+  digitalWrite(PIN_BL, estado ? HIGH : LOW);
+}
+
 void io_service::ParpadeoLED(void) {
     pinMode(PinLED, OUTPUT);
     digitalWrite(PinLED, !digitalRead(PinLED));

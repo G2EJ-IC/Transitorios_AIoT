@@ -26,6 +26,7 @@ typedef struct _objects_t {
     lv_obj_t *container_label;
     lv_obj_t *container_resultados;
     lv_obj_t *drop_down_1;
+    lv_obj_t *drop_down_suspender;
     lv_obj_t *img_der_pag2;
     lv_obj_t *img_ud_fjd_c_58x77;
     lv_obj_t *keyboard;

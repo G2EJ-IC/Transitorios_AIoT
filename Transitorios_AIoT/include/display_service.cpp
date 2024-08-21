@@ -115,6 +115,7 @@ void IRAM_ATTR display_service::lv_main()
 }
 
 /* Display flushing */
+// void my_disp_flush( lv_display_t *disp, const lv_area_t *area, uint8_t * px_map)
 void display_service::my_disp_flush (lv_display_t *disp, const lv_area_t *area, uint8_t *pixelmap)
 {
     uint32_t w = ( area->x2 - area->x1 + 1 );

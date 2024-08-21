@@ -9,12 +9,13 @@ private:
     friend class display_service;
     // friend class io_service;
     friend class tp_service;
-    // friend class dhms_AIoT;
+    // friend class dhms_AIoT;    
 
 public:
     io_service();
     ~io_service();
 
+    void ICACHE_FLASH_ATTR setPin32(bool);
     void ICACHE_FLASH_ATTR ParpadeoLED(void);
     void ICACHE_FLASH_ATTR TestHWM(const char *, uint32_t);
     void ICACHE_FLASH_ATTR memoria_ESP(void);

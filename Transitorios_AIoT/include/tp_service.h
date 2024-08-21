@@ -12,8 +12,7 @@ private:
     friend class io_service;
     // friend class dhms_AIoT;
     // friend class tp_service;
-    void setPin32(bool);
-
+    
 public:
     tp_service();
     ~tp_service();
