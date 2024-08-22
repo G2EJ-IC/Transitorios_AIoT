@@ -49,7 +49,9 @@ void ICACHE_FLASH_ATTR setup()
   // Núcleo Principal  -> 1. APP
   // Núcleo Secundario -> 0. PRO
   /************************************Begin FreeRTOS*******************************************/
-  BaseType_t taskCreationResult;  
+  
+  BaseType_t taskCreationResult;
+
   taskCreationResult = xTaskCreatePinnedToCore(
       loop1,
       "Task_1",

@@ -42,6 +42,10 @@ typedef struct _objects_t {
     lv_obj_t *label_red_wi_fi_ssid;
     lv_obj_t *label_wi_fi_pass_pag1;
     lv_obj_t *label_wi_fi_ssid_pag1;
+    lv_obj_t *obj0;
+    lv_obj_t *obj1;
+    lv_obj_t *obj2;
+    lv_obj_t *obj3;
     lv_obj_t *pag2;
     lv_obj_t *pag3;
     lv_obj_t *panel_aio_t;
