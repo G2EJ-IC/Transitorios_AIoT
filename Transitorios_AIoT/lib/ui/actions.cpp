@@ -1,4 +1,5 @@
 #include <Arduino.h>
+
 /** 
 * @brief : Función Similar a cout << de C++, Debe estar despues de #include <Arduino.h> para que funcione.
 * @param : T.
@@ -12,4 +13,6 @@ inline Print &operator <<(Print &obj, T arg) {
 
 #include "actions.h"
 #include "screens.h"
+
+
 

@@ -19,6 +19,8 @@ display_service display;  // load display service
 tp_service tp;            // load touchpad
 // dhms_AIoT DateTime;       // load DateTime
 
+uint32_t lv_N_sleep;
+
 //************************************************************************************************
 inline void loop_Task1(void);
 inline void loop_Task2(void);
@@ -142,7 +144,15 @@ inline void loop_Task1(void)
 
 inline void loop_Task2(void)
 {
+  int N = 0;
   display.loop();
+  N = lv_dropdown_get_selected(objects.drop_down_suspender);
+  if (N==0) lv_N_sleep = 15;
+  if (N==1) lv_N_sleep = 30;
+  if (N==2) lv_N_sleep = 1 * 60;
+  if (N==3) lv_N_sleep = 2 * 60;
+  if (N==4) lv_N_sleep = 5 * 60;
+  if (N==5) lv_N_sleep = 10 * 60;
 }
 
 inline void loop_Task3(void)
@@ -152,7 +162,7 @@ inline void loop_Task3(void)
 
 inline void loop_Task4(void)
 {
-  tp.lv_no_sleep(20);
+  tp.lv_no_sleep(lv_N_sleep);
 }
 
 void ICACHE_FLASH_ATTR loop1(void *parameter)
@@ -184,7 +194,7 @@ void ICACHE_FLASH_ATTR loop2(void *parameter)
   {
     io.feedTheDog();
     loop_Task2();
-    tp.lv_no_sleep(20);
+    tp.lv_no_sleep(lv_N_sleep);
     if (millis() > asyncDelay2)
     {
       asyncDelay2 += delayLength2;

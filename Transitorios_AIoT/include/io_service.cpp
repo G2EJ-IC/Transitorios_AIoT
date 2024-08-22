@@ -30,10 +30,7 @@ void ICACHE_FLASH_ATTR io_service::loop()
  * @return Salida. 
  */
 void io_service::setPin32(bool estado) {
-  // Configurar el PIN 32 como salida (si es necesario)
   pinMode(PIN_BL, OUTPUT);
-
-  // Escribir el estado en el PIN 32
   digitalWrite(PIN_BL, estado ? HIGH : LOW);
 }
 

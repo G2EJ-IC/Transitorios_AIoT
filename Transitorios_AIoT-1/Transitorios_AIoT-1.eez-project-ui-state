@@ -1,10 +1,8 @@
 {
   "navigation": {
     "selectedUserPageObject": "[Transitorios_AIoT-1.eez-project]:/userPages/2",
-    "selectedActionObject": "[Transitorios_AIoT-1.eez-project]:/actions/-1",
-    "selectedGlobalVariableObject": "[Transitorios_AIoT-1.eez-project]:/variables/globalVariables/-1",
     "subnavigationSelectedItems": {
-      "variables-tab/sub-navigation/selected-item": "Global"
+      "variables-tab/sub-navigation/selected-item": "Local"
     }
   },
   "layoutModel": {
@@ -65,6 +63,7 @@
           {
             "type": "border",
             "selected": 0,
+            "size": 0,
             "location": "bottom",
             "children": [
               {
@@ -175,17 +174,31 @@
                       "enableClose": false,
                       "icon": "svg:variable"
                     }
-                  ]
+                  ],
+                  "active": true
                 }
               ]
             },
             {
               "type": "tabset",
               "id": "EDITORS",
-              "weight": 49.57674418604651,
+              "weight": 47.36279069767442,
+              "selected": 1,
               "enableDeleteWhenEmpty": false,
               "enableClose": false,
               "children": [
+                {
+                  "type": "tab",
+                  "id": "#7eb6c9ad-589f-427b-bcbc-c300c255bb47",
+                  "name": "Settings",
+                  "component": "editor",
+                  "config": {
+                    "objectPath": "[Transitorios_AIoT-1.eez-project]:/settings",
+                    "subObjectPath": "[Transitorios_AIoT-1.eez-project]:/settings",
+                    "permanent": false
+                  },
+                  "icon": "material:settings"
+                },
                 {
                   "type": "tab",
                   "id": "#8cb239a9-09ff-4371-b920-479c15b8d713",
@@ -193,7 +206,7 @@
                   "component": "editor",
                   "config": {
                     "objectPath": "[Transitorios_AIoT-1.eez-project]:/userPages/2",
-                    "permanent": false
+                    "permanent": true
                   },
                   "icon": {
                     "type": "svg",
@@ -215,13 +228,12 @@
                     "_owner": null
                   }
                 }
-              ],
-              "active": true
+              ]
             },
             {
               "type": "row",
               "id": "#fd7bd194-2c3d-493a-9329-50b8c9dd80c6",
-              "weight": 35.42325581395349,
+              "weight": 37.63720930232558,
               "children": [
                 {
                   "type": "tabset",
@@ -950,26 +962,13 @@
   "features": {},
   "objects": {
     "[Transitorios_AIoT-1.eez-project]:/userPages/0[flow-state]": {
-      "selection": {},
-      "transform": {
-        "translate": {
-          "x": -240,
-          "y": -160
-        },
-        "scale": 1
-      },
-      "timeline": {
-        "isEditorActive": false,
-        "position": 0,
-        "secondToPx": 200,
-        "scrollLeft": 0
-      }
-    },
-    "[Transitorios_AIoT-1.eez-project]:/userPages/2[flow-state]": {
       "selection": {
         "0": {
           "0": {
-            "1": {
+            "0": {
+              "2": {
+                "0": {}
+              },
               "$selected": true
             }
           }
@@ -989,6 +988,31 @@
         "scrollLeft": 0
       }
     },
+    "[Transitorios_AIoT-1.eez-project]:/userPages/2[flow-state]": {
+      "selection": {
+        "0": {
+          "0": {
+            "1": {
+              "5": {},
+              "$selected": true
+            }
+          }
+        }
+      },
+      "transform": {
+        "translate": {
+          "x": -240,
+          "y": -260
+        },
+        "scale": 1
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
     "[Transitorios_AIoT-1.eez-project]:/actions/0[flow-state]": {
       "selection": {},
       "transform": {
@@ -998,6 +1022,30 @@
         },
         "scale": 1
       }
+    },
+    "[Transitorios_AIoT-1.eez-project]:/userPages/1[flow-state]": {
+      "selection": {
+        "0": {
+          "0": {
+            "0": {
+              "$selected": true
+            }
+          }
+        }
+      },
+      "transform": {
+        "translate": {
+          "x": -240,
+          "y": -160
+        },
+        "scale": 1
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
     }
   },
   "activeOutputSection": 0,
@@ -1006,7 +1054,7 @@
   "searchMatchWholeWord": false,
   "replaceEnabled": false,
   "replaceText": "",
-  "pageRuntimeFrontFace": false,
+  "pageRuntimeFrontFace": true,
   "breakpoints": {},
   "watchExpressions": [],
   "showComponentDescriptions": true,

@@ -4,6 +4,7 @@
 #include "tp_service.h"
 #include "DateTime_AIoT.h"
 #include "io_service.h"
+#include "screens.h"
 // #include "ui.h"
 
 dhms_AIoT DateTimeAhora;       // load DateTime
@@ -20,7 +21,7 @@ void ICACHE_FLASH_ATTR tp_service::setup()
 
 void ICACHE_FLASH_ATTR tp_service::loop()
 {
-    lv_no_sleep(20);
+    // lv_no_sleep();
 } // end tp loop
 
 
@@ -28,6 +29,9 @@ void ICACHE_FLASH_ATTR tp_service::loop()
 void ICACHE_FLASH_ATTR tp_service::lv_no_sleep(uint32_t lv_sleep)
 {
     /*Normal operation (no sleep) in < 1 sec inactivity*/
+    // uint32_t lv_N_sleep = lv_dropdown_get_selected(objects.drop_down_suspender);
+    // uint32_t lv_sleep = 20;
+
     if (lv_display_get_inactive_time(NULL) < (1000 * lv_sleep))
     {
         io_tp.setPin32(HIGH);
