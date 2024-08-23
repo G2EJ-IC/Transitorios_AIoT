@@ -5,8 +5,6 @@
 
 extern const lv_img_dsc_t img_aio_t;
 extern const lv_img_dsc_t img_aio_t_235x157;
-extern const lv_img_dsc_t img_der_032x032;
-extern const lv_img_dsc_t img_izq_032x032;
 extern const lv_img_dsc_t img_ud_fjd_c;
 extern const lv_img_dsc_t img_ud_fjd_c_058x077;
 
@@ -18,7 +16,7 @@ typedef struct _ext_img_desc_t {
 } ext_img_desc_t;
 #endif
 
-extern const ext_img_desc_t images[6];
+extern const ext_img_desc_t images[4];
 
 
 #endif /*EEZ_LVGL_UI_IMAGES_H*/

@@ -96,10 +96,26 @@ void ICACHE_FLASH_ATTR io_service::memoria_ESP(void)
 
 void ICACHE_FLASH_ATTR io_service::cronometro(uint32_t Ahora)
 {
-    String DHMS = DateTime.DHMS_AIoT_get((uint64_t)(Ahora));
-    // lv_label_set_text(objects.label_dhms_1, "xx.xx.xx.xx");
-    // lv_label_set_text(objects.label_dhms_2, "xx.xx.xx.xx");
-    lv_label_set_text(objects.label_dhms_1, String(DHMS).c_str());
-    lv_label_set_text(objects.label_dhms_2, String(DHMS).c_str());
-    // lv_label_set_text(objects.label_dhms_3, String(DHMS).c_str());
+  String DHMS = DateTime.DHMS_AIoT_get((uint64_t)(Ahora));
+  // lv_label_set_text(objects.label_dhms_1, "xx.xx.xx.xx");
+  // lv_label_set_text(objects.label_dhms_2, "xx.xx.xx.xx");
+  lv_label_set_text(objects.label_dhms_1, String(DHMS).c_str());
+  lv_label_set_text(objects.label_dhms_2, String(DHMS).c_str());
+  // lv_label_set_text(objects.label_dhms_3, String(DHMS).c_str());
+}
+
+uint32_t ICACHE_FLASH_ATTR io_service::suspender(void)
+{
+  int N = 0;
+  uint32_t N_sleep;
+
+  N = lv_dropdown_get_selected(objects.drop_down_suspender);
+  if (N==0) N_sleep = 15;
+  if (N==1) N_sleep = 30;
+  if (N==2) N_sleep = 1 * 60;
+  if (N==3) N_sleep = 2 * 60;
+  if (N==4) N_sleep = 5 * 60;
+  if (N==5) N_sleep = 10 * 60;
+
+  return N_sleep;
 }

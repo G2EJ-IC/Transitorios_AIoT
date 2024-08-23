@@ -17,7 +17,6 @@ SemaphoreHandle_t cuentaMutex;
 io_service io;            // load IO control service
 display_service display;  // load display service
 tp_service tp;            // load touchpad
-// dhms_AIoT DateTime;       // load DateTime
 
 uint32_t lv_N_sleep;
 
@@ -31,8 +30,7 @@ void loop1(void *);
 void loop2(void *);
 void loop3(void *);
 void loop4(void *);
-//************************************************************************************************
-
+//************************************************************************************************setPin32;
 #define ICACHE_FLASH_ATTR
 
 unsigned long asyncDelay0 = 0;
@@ -128,6 +126,7 @@ void ICACHE_FLASH_ATTR setup()
 void ICACHE_FLASH_ATTR loop()
 {
   io.feedTheDog();
+  // analogWrite(PIN_BL, 1);
   // tp.lv_no_sleep(60);
   if (millis() > asyncDelay0)
   {
@@ -146,15 +145,8 @@ inline void loop_Task1(void)
 
 inline void loop_Task2(void)
 {
-  int N = 0;
   display.loop();
-  N = lv_dropdown_get_selected(objects.drop_down_suspender);
-  if (N==0) lv_N_sleep = 15;
-  if (N==1) lv_N_sleep = 30;
-  if (N==2) lv_N_sleep = 1 * 60;
-  if (N==3) lv_N_sleep = 2 * 60;
-  if (N==4) lv_N_sleep = 5 * 60;
-  if (N==5) lv_N_sleep = 10 * 60;
+  lv_N_sleep = io.suspender();
 }
 
 inline void loop_Task3(void)
