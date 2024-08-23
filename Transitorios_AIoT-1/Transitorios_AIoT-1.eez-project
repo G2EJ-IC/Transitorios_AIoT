@@ -117,7 +117,8 @@
         "name": "SliderPorcentaje",
         "type": "integer",
         "defaultValue": "100",
-        "persistent": false
+        "persistent": false,
+        "native": false
       }
     ],
     "structures": [],
