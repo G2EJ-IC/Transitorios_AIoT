@@ -189,10 +189,10 @@ void ICACHE_FLASH_ATTR loop2(void *parameter)
     io.feedTheDog();
     loop_Task2();
     tp.lv_no_sleep(lv_N_sleep);
-    if (millis() > asyncDelay2)
+    if (millis() >= asyncDelay2)
     {
+      io.cronometro(asyncDelay2);
       asyncDelay2 += delayLength2;
-      io.cronometro(asyncDelay2);     
       io.TestHWM("loop2", asyncDelay2);      
     }
   }
@@ -208,7 +208,6 @@ void ICACHE_FLASH_ATTR loop3(void *parameter)
   {
     io.feedTheDog();
     loop_Task3();
-    // tp.lv_no_sleep(20);
     if (millis() > asyncDelay3)
     {
       asyncDelay3 += delayLength3;
@@ -219,20 +218,14 @@ void ICACHE_FLASH_ATTR loop3(void *parameter)
 
 void ICACHE_FLASH_ATTR loop4(void *parameter)
 {
-  int delayLength4 = 50u;
   unsigned long asyncDelay4 = 0;
   tp.setup();
-  // pinMode(PIN_BL, OUTPUT);
   for (;;)
   {
     io.feedTheDog();
     loop_Task4();
-    if (millis() > asyncDelay4)
-    {
-      asyncDelay4 += delayLength4;
-      io.cronometro(asyncDelay4);
-      // io.TestHWM("loop4", asyncDelay4);     
-    } 
+    asyncDelay4 = millis();
+    io.cronometro(asyncDelay4);
     vTaskDelay(pdMS_TO_TICKS(5)); // delay( 5 );  
   }
 }

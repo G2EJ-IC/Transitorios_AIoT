@@ -47,6 +47,8 @@ typedef struct _objects_t {
     lv_obj_t *obj4;
     lv_obj_t *obj5;
     lv_obj_t *obj6;
+    lv_obj_t *obj7;
+    lv_obj_t *obj8;
     lv_obj_t *pag2;
     lv_obj_t *pag3;
     lv_obj_t *panel_aio_t;
