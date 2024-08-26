@@ -1,8 +1,9 @@
 {
   "navigation": {
-    "selectedUserPageObject": "[Transitorios_AIoT-1.eez-project]:/userPages/1",
+    "selectedUserPageObject": "[Transitorios_AIoT-1.eez-project]:/userPages/2",
+    "selectedGlobalVariableObject": "[Transitorios_AIoT-1.eez-project]:/variables/globalVariables/0",
     "subnavigationSelectedItems": {
-      "variables-tab/sub-navigation/selected-item": "Actions"
+      "variables-tab/sub-navigation/selected-item": "Global"
     }
   },
   "layoutModel": {
@@ -156,8 +157,7 @@
                       "enableClose": false,
                       "icon": "svg:hierarchy"
                     }
-                  ],
-                  "active": true
+                  ]
                 },
                 {
                   "type": "tabset",
@@ -181,6 +181,7 @@
               "type": "tabset",
               "id": "EDITORS",
               "weight": 48.311627906976746,
+              "selected": 1,
               "enableDeleteWhenEmpty": false,
               "enableClose": false,
               "children": [
@@ -283,7 +284,8 @@
                     "_owner": null
                   }
                 }
-              ]
+              ],
+              "active": true
             },
             {
               "type": "row",
@@ -1010,9 +1012,14 @@
       "selection": {
         "0": {
           "1": {
-            "1": {
-              "$selected": true
-            }
+            "0": {
+              "2": {
+                "0": {
+                  "$selected": true
+                }
+              }
+            },
+            "1": {}
           }
         }
       },
