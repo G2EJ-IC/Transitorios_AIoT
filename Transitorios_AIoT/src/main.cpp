@@ -8,6 +8,9 @@
 #include "config.h"
 #include "screens.h"
 
+#include "flow_def.h"
+#include "vars.h"
+
 TaskHandle_t Task1 = NULL;
 TaskHandle_t Task2 = NULL;
 TaskHandle_t Task3 = NULL;
@@ -226,6 +229,9 @@ void ICACHE_FLASH_ATTR loop4(void *parameter)
     loop_Task4();
     asyncDelay4 = millis();
     io.cronometro(asyncDelay4);
-    vTaskDelay(pdMS_TO_TICKS(5)); // delay( 5 );  
+    vTaskDelay(pdMS_TO_TICKS(5)); // delay( 5 );
+    // get_var_slider_porcentaje();
+    // set_var_slider_porcentaje(15);
+
   }
 }
