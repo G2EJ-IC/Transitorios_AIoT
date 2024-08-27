@@ -7,7 +7,7 @@
 extern "C" {
 #endif
 
-extern const uint8_t assets[1459];
+extern const uint8_t assets[1442];
 
 #ifdef __cplusplus
 }

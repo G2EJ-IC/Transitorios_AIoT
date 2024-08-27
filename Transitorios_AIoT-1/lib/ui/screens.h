@@ -37,6 +37,7 @@ typedef struct _objects_t {
     lv_obj_t *label_direccion_ip;
     lv_obj_t *label_direccion_mac;
     lv_obj_t *label_red_wi_fi_ssid;
+    lv_obj_t *label_slider_porcentaje;
     lv_obj_t *label_wi_fi_pass_pag1;
     lv_obj_t *label_wi_fi_ssid_pag1;
     lv_obj_t *m_todo_de_conecci_n;
@@ -48,8 +49,6 @@ typedef struct _objects_t {
     lv_obj_t *obj5;
     lv_obj_t *obj6;
     lv_obj_t *obj7;
-    lv_obj_t *obj8;
-    lv_obj_t *obj9;
     lv_obj_t *pag2;
     lv_obj_t *pag3;
     lv_obj_t *panel_aio_t;
@@ -60,6 +59,7 @@ typedef struct _objects_t {
     lv_obj_t *panel03_3;
     lv_obj_t *panel03_4;
     lv_obj_t *panel03_5;
+    lv_obj_t *slider_porcentaje_main2;
     lv_obj_t *suspender;
     lv_obj_t *tab_view_main2;
     lv_obj_t *text_area_password;

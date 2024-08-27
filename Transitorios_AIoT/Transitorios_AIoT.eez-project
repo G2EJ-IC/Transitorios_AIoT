@@ -43,7 +43,7 @@
         {
           "objID": "56e09a74-8fc0-46c2-d0b9-1fd05358002f",
           "fileName": "vars.h",
-          "template": "#ifndef EEZ_LVGL_UI_VARS_H\r\n#define EEZ_LVGL_UI_VARS_H\r\n\r\n#include <stdint.h>\r\n#include <stdbool.h>\r\n\r\n//${eez-studio LVGL_VARS_DECL}\r\n\r\n#endif /*EEZ_LVGL_UI_VARS_H*/"
+          "template": "#ifndef EEZ_LVGL_UI_VARS_H\r\n#define EEZ_LVGL_UI_VARS_H\r\n\r\n#include <stdint.h>\r\n#include <stdbool.h>\r\n\r\n#ifdef __cplusplus\r\nextern \"C\" {\r\n#endif\r\n\r\n//${eez-studio LVGL_VARS_DECL}\r\n\r\n#ifdef __cplusplus\r\n}\r\n#endif\r\n\r\n#endif /*EEZ_LVGL_UI_VARS_H*/"
         },
         {
           "objID": "487e4fa2-3d33-47ec-d3cd-8e52dd59fc18",
@@ -118,7 +118,7 @@
         "type": "integer",
         "defaultValue": "100",
         "persistent": false,
-        "native": false
+        "native": true
       }
     ],
     "structures": [],
@@ -2890,6 +2890,7 @@
                       },
                       "timeline": [],
                       "eventHandlers": [],
+                      "identifier": "SliderPorcentaje_Main2",
                       "leftUnit": "px",
                       "topUnit": "px",
                       "widthUnit": "%",
@@ -2955,6 +2956,7 @@
                           },
                           "timeline": [],
                           "eventHandlers": [],
+                          "identifier": "LabelSliderPorcentaje",
                           "leftUnit": "px",
                           "topUnit": "px",
                           "widthUnit": "content",

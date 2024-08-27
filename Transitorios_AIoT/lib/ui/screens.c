@@ -57,7 +57,7 @@ static void event_handler_cb_main2_img_izq_pag1_main2(lv_event_t *e) {
     }
 }
 
-static void event_handler_cb_main2_obj7(lv_event_t *e) {
+static void event_handler_cb_main2_slider_porcentaje_main2(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
     if (event == LV_EVENT_VALUE_CHANGED) {
@@ -828,12 +828,13 @@ void create_screen_main2() {
                             }
                         }
                         {
+                            // SliderPorcentaje_Main2
                             lv_obj_t *obj = lv_slider_create(parent_obj);
-                            objects.obj7 = obj;
+                            objects.slider_porcentaje_main2 = obj;
                             lv_obj_set_pos(obj, 64, -8);
                             lv_obj_set_size(obj, LV_PCT(70), 10);
                             lv_slider_set_range(obj, 30, 100);
-                            lv_obj_add_event_cb(obj, event_handler_cb_main2_obj7, LV_EVENT_ALL, flowState);
+                            lv_obj_add_event_cb(obj, event_handler_cb_main2_slider_porcentaje_main2, LV_EVENT_ALL, flowState);
                         }
                         {
                             lv_obj_t *obj = lv_obj_create(parent_obj);
@@ -849,8 +850,9 @@ void create_screen_main2() {
                             {
                                 lv_obj_t *parent_obj = obj;
                                 {
+                                    // LabelSliderPorcentaje
                                     lv_obj_t *obj = lv_label_create(parent_obj);
-                                    objects.obj8 = obj;
+                                    objects.label_slider_porcentaje = obj;
                                     lv_obj_set_pos(obj, 0, 0);
                                     lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                                     lv_label_set_text(obj, "");
@@ -875,7 +877,7 @@ void create_screen_main2() {
                                 lv_obj_t *parent_obj = obj;
                                 {
                                     lv_obj_t *obj = lv_label_create(parent_obj);
-                                    objects.obj9 = obj;
+                                    objects.obj7 = obj;
                                     lv_obj_set_pos(obj, 0, 0);
                                     lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                                     lv_label_set_text(obj, "");
@@ -1048,28 +1050,28 @@ void tick_screen_main2() {
     }
     {
         int32_t new_val = evalIntegerProperty(flowState, 6, 3, "Failed to evaluate Value in Slider widget");
-        int32_t cur_val = lv_slider_get_value(objects.obj7);
+        int32_t cur_val = lv_slider_get_value(objects.slider_porcentaje_main2);
         if (new_val != cur_val) {
-            tick_value_change_obj = objects.obj7;
-            lv_slider_set_value(objects.obj7, new_val, LV_ANIM_OFF);
+            tick_value_change_obj = objects.slider_porcentaje_main2;
+            lv_slider_set_value(objects.slider_porcentaje_main2, new_val, LV_ANIM_OFF);
             tick_value_change_obj = NULL;
         }
     }
     {
         const char *new_val = evalTextProperty(flowState, 8, 3, "Failed to evaluate Text in Label widget");
-        const char *cur_val = lv_label_get_text(objects.obj8);
+        const char *cur_val = lv_label_get_text(objects.label_slider_porcentaje);
         if (strcmp(new_val, cur_val) != 0) {
-            tick_value_change_obj = objects.obj8;
-            lv_label_set_text(objects.obj8, new_val);
+            tick_value_change_obj = objects.label_slider_porcentaje;
+            lv_label_set_text(objects.label_slider_porcentaje, new_val);
             tick_value_change_obj = NULL;
         }
     }
     {
         const char *new_val = evalTextProperty(flowState, 11, 3, "Failed to evaluate Text in Label widget");
-        const char *cur_val = lv_label_get_text(objects.obj9);
+        const char *cur_val = lv_label_get_text(objects.obj7);
         if (strcmp(new_val, cur_val) != 0) {
-            tick_value_change_obj = objects.obj9;
-            lv_label_set_text(objects.obj9, new_val);
+            tick_value_change_obj = objects.obj7;
+            lv_label_set_text(objects.obj7, new_val);
             tick_value_change_obj = NULL;
         }
     }

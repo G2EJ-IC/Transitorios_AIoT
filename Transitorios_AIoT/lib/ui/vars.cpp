@@ -8,14 +8,14 @@
 #include "structs.h"
 #include "ui.h"
 
-// int32_t selected_item_index = 100;
+int32_t selected_item_index = 100;
 
-// extern int32_t get_var_slider_porcentaje()
-// {
-//     return selected_item_index;
-// }
+int32_t get_var_slider_porcentaje()
+{
+    return selected_item_index;
+}
+void set_var_slider_porcentaje(int32_t value)
+{
+    selected_item_index = value;
+}
 
-// extern void set_var_slider_porcentaje(int32_t value)
-// {
-//     selected_item_index = value;
-// }
