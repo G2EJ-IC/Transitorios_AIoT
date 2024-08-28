@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "selectedUserPageObject": "[Transitorios_AIoT-1.eez-project]:/userPages/2",
+    "selectedUserPageObject": "[Transitorios_AIoT-1.eez-project]:/userPages/1",
     "subnavigationSelectedItems": {}
   },
   "layoutModel": {
@@ -101,16 +101,16 @@
         ],
         "layout": {
           "type": "row",
-          "id": "#d1f9d184-1b81-434a-9ce7-1165f7e4eb8f",
+          "id": "#ce0ef4f7-4a11-4584-8761-e317602b03f9",
           "children": [
             {
               "type": "row",
-              "id": "#0c8f6f7c-bd1a-4e8b-adaf-5d7703c519ec",
+              "id": "#df1700ae-a866-4eb3-bce9-a7843f722a9d",
               "weight": 20,
               "children": [
                 {
                   "type": "tabset",
-                  "id": "#5d651955-89bb-4258-89fc-fb9a27270c91",
+                  "id": "#3e241025-498e-4be3-94a9-b982ca8cee48",
                   "weight": 1,
                   "enableClose": false,
                   "children": [
@@ -142,23 +142,24 @@
                 },
                 {
                   "type": "tabset",
-                  "id": "#044f3096-d89a-4468-bfb4-51dc89ced68e",
+                  "id": "#b24759ad-c4c5-4721-80fa-3f6f5cbeae39",
                   "weight": 1,
                   "enableClose": false,
                   "children": [
                     {
                       "type": "tab",
-                      "id": "#fff75591-2fbf-4004-a53d-b6643d6a08cd",
+                      "id": "#3990a94f-85d2-4d01-8d1d-33401d3c0c90",
                       "name": "Widgets Structure",
                       "component": "flow-structure",
                       "enableClose": false,
                       "icon": "svg:hierarchy"
                     }
-                  ]
+                  ],
+                  "active": true
                 },
                 {
                   "type": "tabset",
-                  "id": "#6a661bbc-4fe0-4c57-b771-49c29f461dc3",
+                  "id": "#76a9d117-9f7f-4848-9450-c6b1e8ad3089",
                   "weight": 1,
                   "enableClose": false,
                   "children": [
@@ -183,23 +184,11 @@
               "children": [
                 {
                   "type": "tab",
-                  "id": "#08d901a7-ae99-43e7-b9e8-60c074b8748b",
-                  "name": "Settings",
+                  "id": "#ce9cca14-74a5-4f11-b674-57cbbf1806af",
+                  "name": "Main3",
                   "component": "editor",
                   "config": {
-                    "objectPath": "[Transitorios_AIoT-1.eez-project]:/settings",
-                    "subObjectPath": "[Transitorios_AIoT-1.eez-project]:/settings",
-                    "permanent": false
-                  },
-                  "icon": "material:settings"
-                },
-                {
-                  "type": "tab",
-                  "id": "#053ad50c-2f7d-4900-b569-8d03851750dc",
-                  "name": "Main2",
-                  "component": "editor",
-                  "config": {
-                    "objectPath": "[Transitorios_AIoT-1.eez-project]:/userPages/2",
+                    "objectPath": "[Transitorios_AIoT-1.eez-project]:/userPages/1",
                     "permanent": false
                   },
                   "icon": {
@@ -222,17 +211,16 @@
                     "_owner": null
                   }
                 }
-              ],
-              "active": true
+              ]
             },
             {
               "type": "row",
-              "id": "#acad8776-3187-490d-84b7-58ea0084bfde",
+              "id": "#96e8561b-faf1-466d-89c3-3b8a432d646b",
               "weight": 25,
               "children": [
                 {
                   "type": "tabset",
-                  "id": "#ee218c4c-1c13-4eb9-a2c5-9021f16fbe4a",
+                  "id": "#f52ad753-5804-4318-814e-b2196bc7f097",
                   "weight": 2,
                   "children": [
                     {
@@ -247,7 +235,7 @@
                 },
                 {
                   "type": "tabset",
-                  "id": "#70a89199-4f6e-453d-b976-ada9ccf37b62",
+                  "id": "#701fb0db-e56e-4fa5-9524-d95f80000b55",
                   "weight": 1,
                   "children": [
                     {
@@ -330,11 +318,11 @@
         ],
         "layout": {
           "type": "row",
-          "id": "#ed570549-057d-4d9a-810e-0be9a482f9c0",
+          "id": "#86cf3088-0396-44bb-8318-5963e207e7f9",
           "children": [
             {
               "type": "tabset",
-              "id": "#ca716aa6-20cb-4a5a-82e3-cc18208c94c6",
+              "id": "#2fce200b-9651-4d60-9330-9da9bd6d3829",
               "weight": 20,
               "enableClose": false,
               "children": [
@@ -359,7 +347,7 @@
             },
             {
               "type": "tabset",
-              "id": "#2ea9d11f-8fc4-419f-965d-07d06e151e0b",
+              "id": "#55063333-ec64-45b6-b1f2-35ccf87d2276",
               "weight": 25,
               "children": [
                 {
@@ -388,16 +376,16 @@
         "borders": [],
         "layout": {
           "type": "row",
-          "id": "#8bffb694-501a-48d2-9bfb-406ff76ac23d",
+          "id": "#078cbd32-4476-4c09-9ecf-a5ce97003c0a",
           "children": [
             {
               "type": "row",
-              "id": "#ad6e7905-6dc4-4153-af8c-8f45d959ed97",
+              "id": "#7b52d6ae-0557-42ef-89ce-2e52abf3e3c5",
               "weight": 25,
               "children": [
                 {
                   "type": "tabset",
-                  "id": "#93f24b8b-8808-47a2-bd43-5e95f8c8b976",
+                  "id": "#d6fef421-c0f6-4e88-9011-202753a844d0",
                   "weight": 1,
                   "children": [
                     {
@@ -428,12 +416,12 @@
                 },
                 {
                   "type": "tabset",
-                  "id": "#f5c6f55b-4c46-4a26-95b4-212620acd3cc",
+                  "id": "#6efbfe49-5f3a-4678-9738-18e547f4aced",
                   "weight": 1,
                   "children": [
                     {
                       "type": "tab",
-                      "id": "#1afa5af5-8764-4a38-b366-653b2d06bf5f",
+                      "id": "#e9a06371-9e4a-4dff-b372-414ce6386544",
                       "name": "Active Flows",
                       "component": "active-flows",
                       "enableClose": false,
@@ -443,12 +431,12 @@
                 },
                 {
                   "type": "tabset",
-                  "id": "#70a9d548-c4c1-4f2c-9ab4-788c7d776e4d",
+                  "id": "#3fd3229f-0dc1-41bc-8458-38cf1b1b9db0",
                   "weight": 2,
                   "children": [
                     {
                       "type": "tab",
-                      "id": "#0cd0a94a-7a8f-4463-bc13-2bf4bdfe24f7",
+                      "id": "#cdae3184-fc81-4a68-be4f-af6a0d694f70",
                       "name": "Watch",
                       "component": "watch",
                       "enableClose": false,
@@ -469,17 +457,17 @@
             },
             {
               "type": "row",
-              "id": "#6e50960d-a0f5-48e1-b3b2-d0f15cfcee9c",
+              "id": "#b70bb268-a2e4-46c0-8c3d-db657e923b0e",
               "weight": 25,
               "children": [
                 {
                   "type": "tabset",
-                  "id": "#7c9b7234-c3c9-4108-a18b-56f2c29c4bac",
+                  "id": "#8a6cda79-1023-4c85-bd1b-43305864a83a",
                   "weight": 1,
                   "children": [
                     {
                       "type": "tab",
-                      "id": "#f8749450-6313-47fb-a823-52fdd8a7dcc1",
+                      "id": "#32b90b7a-1029-404c-a82f-d48af9695aaf",
                       "name": "Queue",
                       "component": "queue",
                       "enableClose": false,
@@ -497,7 +485,7 @@
                 },
                 {
                   "type": "tabset",
-                  "id": "#1d6f9092-5e00-4e11-8f3d-3166117abe54",
+                  "id": "#3470d738-8e6e-4f2b-b7f4-6d5b11b562a2",
                   "weight": 2,
                   "children": [
                     {
@@ -528,15 +516,15 @@
         "borders": [],
         "layout": {
           "type": "row",
-          "id": "#84f0b6d3-23ff-433f-bfe4-e3636994b337",
+          "id": "#3ad0b9ef-9ddb-4f39-9f20-119baab676ab",
           "children": [
             {
               "type": "row",
-              "id": "#3ac46d83-e626-45cd-b1a5-7dd8b846528a",
+              "id": "#8647ff3e-06af-42a5-9743-7ebdef673011",
               "children": [
                 {
                   "type": "tabset",
-                  "id": "#5240bb49-d9a6-42d4-8455-5e508a263eb5",
+                  "id": "#68c34247-6830-4a83-b73d-5e78e4766021",
                   "weight": 75,
                   "enableDrop": false,
                   "enableDrag": false,
@@ -545,7 +533,7 @@
                   "children": [
                     {
                       "type": "tab",
-                      "id": "#857d14a2-a0fe-4c43-9ac2-88ca1dbb440c",
+                      "id": "#7df812b7-5516-4ead-9da1-8f8333ef17b3",
                       "name": "Bitmaps",
                       "component": "bitmaps",
                       "enableClose": false
@@ -554,7 +542,7 @@
                 },
                 {
                   "type": "tabset",
-                  "id": "#775532e1-7316-4329-b9ba-eb968c7cae59",
+                  "id": "#69ce8d3f-53ef-44db-9118-e9f6b1c78edc",
                   "weight": 25,
                   "enableDrop": false,
                   "enableDrag": false,
@@ -563,7 +551,7 @@
                   "children": [
                     {
                       "type": "tab",
-                      "id": "#503d051f-58aa-4535-a38c-8bd701e0d844",
+                      "id": "#27e48190-625a-4ef4-b1eb-b7ae9f8d5db4",
                       "name": "Preview",
                       "component": "preview",
                       "enableClose": false
@@ -588,11 +576,11 @@
         "borders": [],
         "layout": {
           "type": "row",
-          "id": "#c8246746-1a53-428b-a781-78941acbe817",
+          "id": "#12a7c87d-9cd4-48fa-9c32-ebd64b990cda",
           "children": [
             {
               "type": "tabset",
-              "id": "#c6c1246c-4b8d-48cb-9cca-a67fd7a60975",
+              "id": "#c4b78de9-b9f8-4cba-97e1-e27e1bd1099e",
               "enableDrop": false,
               "enableDrag": false,
               "enableClose": false,
@@ -600,7 +588,7 @@
               "children": [
                 {
                   "type": "tab",
-                  "id": "#00d384e6-f638-4c74-b9b7-35b1ea5c8ad8",
+                  "id": "#923aa91c-215d-416b-b934-a9945b5cc71e",
                   "component": "glyphs",
                   "enableClose": false
                 }
@@ -608,7 +596,7 @@
             },
             {
               "type": "tabset",
-              "id": "#aadf885c-14db-4ca8-af33-c606f7f1ab8e",
+              "id": "#21979ac7-1fb1-4e72-a2ed-265c8f4248c0",
               "enableDrop": false,
               "enableDrag": false,
               "enableClose": false,
@@ -616,7 +604,7 @@
               "children": [
                 {
                   "type": "tab",
-                  "id": "#9e9a0e26-1366-4d14-9061-11c10fd40999",
+                  "id": "#163167b2-e33a-4bb3-8557-61b950908ade",
                   "component": "editor",
                   "enableClose": false
                 }
@@ -638,15 +626,15 @@
         "borders": [],
         "layout": {
           "type": "row",
-          "id": "#5ab02052-89dc-4f77-80ff-990b4047a6ba",
+          "id": "#52931f23-7f6e-497b-a845-3f4bafa0ef0f",
           "children": [
             {
               "type": "row",
-              "id": "#1b610e9a-7efa-49ba-8a34-19f3a31c89d8",
+              "id": "#c2062ef7-cae1-4f56-888b-5300d825ccf4",
               "children": [
                 {
                   "type": "tabset",
-                  "id": "#6867c4ba-71c5-4665-905c-c820ff5f41c6",
+                  "id": "#973955b6-f0b3-4b6a-a705-5d4b49fa8f75",
                   "children": [
                     {
                       "type": "tab",
@@ -666,7 +654,7 @@
                 },
                 {
                   "type": "tabset",
-                  "id": "#61ab7742-767b-4b0d-a0d5-cd0815c18f9b",
+                  "id": "#b25c6b2d-6713-4e9a-acbe-d1daad4e9d86",
                   "children": [
                     {
                       "type": "tab",
@@ -695,15 +683,15 @@
         "borders": [],
         "layout": {
           "type": "row",
-          "id": "#4491c2cf-22d8-47f1-8726-b8e24674843d",
+          "id": "#6ee3a681-8c2b-41b2-8791-0863965d3953",
           "children": [
             {
               "type": "row",
-              "id": "#655d782b-6fb0-4b8d-b775-17ce8dd8e97c",
+              "id": "#4fd32e50-57e4-446b-be24-4c4754f75d6b",
               "children": [
                 {
                   "type": "tabset",
-                  "id": "#156dc4e3-0a46-44c6-a624-ade3e222848f",
+                  "id": "#d521da6c-5e1a-41fb-9009-539ab5694c79",
                   "weight": 75,
                   "enableDrop": false,
                   "enableDrag": false,
@@ -712,7 +700,7 @@
                   "children": [
                     {
                       "type": "tab",
-                      "id": "#cd0d0573-dac7-46a9-983b-ef1570757304",
+                      "id": "#df106f6c-30ab-4416-aa3e-32d1223484fb",
                       "name": "Styles",
                       "component": "styles",
                       "enableClose": false
@@ -721,7 +709,7 @@
                 },
                 {
                   "type": "tabset",
-                  "id": "#47bffa83-1f0b-480d-a532-de927b408e41",
+                  "id": "#ffc0a9f8-ddae-4888-888c-4569a16f5820",
                   "weight": 25,
                   "enableDrop": false,
                   "enableDrag": false,
@@ -730,7 +718,7 @@
                   "children": [
                     {
                       "type": "tab",
-                      "id": "#dc638985-d125-423c-be77-9d9a4055f92e",
+                      "id": "#af050807-0aa6-4e87-8567-5592172c1a8e",
                       "name": "Preview",
                       "component": "preview",
                       "enableClose": false
@@ -755,15 +743,15 @@
         "borders": [],
         "layout": {
           "type": "row",
-          "id": "#2e32faf4-4923-46c4-be37-77f31cbc8926",
+          "id": "#415f6d9f-6c70-462f-937c-dfe6525ff5b6",
           "children": [
             {
               "type": "row",
-              "id": "#e2197772-3532-4ba7-b5b3-435a56a81ecf",
+              "id": "#e6a854f3-cccd-4994-abb3-2ce98fb8f213",
               "children": [
                 {
                   "type": "tabset",
-                  "id": "#7626e9b7-decc-4251-980a-18e4558f2631",
+                  "id": "#442a5b91-0261-432e-83e1-06434e6ffc1c",
                   "weight": 75,
                   "enableDrop": false,
                   "enableDrag": false,
@@ -772,7 +760,7 @@
                   "children": [
                     {
                       "type": "tab",
-                      "id": "#1dcbe79f-acfd-4075-8329-779a42c03c16",
+                      "id": "#32f72904-651d-40a7-9780-92e34dba59c1",
                       "name": "Styles",
                       "component": "styles",
                       "enableClose": false
@@ -781,7 +769,7 @@
                 },
                 {
                   "type": "tabset",
-                  "id": "#06e5e8b8-0d5f-473e-8504-869b26af8c1d",
+                  "id": "#d765fab7-336b-4847-a1ec-8d340741b6d6",
                   "weight": 25,
                   "enableDrop": false,
                   "enableDrag": false,
@@ -790,7 +778,7 @@
                   "children": [
                     {
                       "type": "tab",
-                      "id": "#57953514-606c-466c-bad9-f2971b6e31e6",
+                      "id": "#9d24424a-a3ae-4cb6-bd2e-7c42b18e5097",
                       "name": "Preview",
                       "component": "preview",
                       "enableClose": false
@@ -815,15 +803,15 @@
         "borders": [],
         "layout": {
           "type": "row",
-          "id": "#f613c6a8-1c76-41b8-a27c-817e3ee2df26",
+          "id": "#8eeb5616-88d1-43e5-a7bc-9f834df63667",
           "children": [
             {
               "type": "row",
-              "id": "#2f46e802-285a-4fd1-8d57-71618b851852",
+              "id": "#92c5a4a9-8fc5-4d50-b817-a9250cb156af",
               "children": [
                 {
                   "type": "tabset",
-                  "id": "#f6674c33-c70d-49c9-86c4-c61fbc1f2868",
+                  "id": "#3b19de14-f3ea-4184-8314-194953c9f567",
                   "enableDrop": false,
                   "enableDrag": false,
                   "enableClose": false,
@@ -831,7 +819,7 @@
                   "children": [
                     {
                       "type": "tab",
-                      "id": "#f2a51b79-66b2-41ca-a446-771663bdeb77",
+                      "id": "#1c17c201-b192-4971-a935-d337db1f537e",
                       "component": "themes",
                       "enableClose": false
                     }
@@ -839,7 +827,7 @@
                 },
                 {
                   "type": "tabset",
-                  "id": "#7e25101f-84f9-4bee-a5de-c8e51e6f2230",
+                  "id": "#0aadece2-fdfd-4cfd-88db-432afb143748",
                   "enableDrop": false,
                   "enableDrag": false,
                   "enableClose": false,
@@ -847,7 +835,7 @@
                   "children": [
                     {
                       "type": "tab",
-                      "id": "#d6226242-f045-4eb2-9a79-9112c96c4ecd",
+                      "id": "#1ea36527-2afb-4b08-9ba8-93b266307ecc",
                       "component": "colors",
                       "enableClose": false
                     }
@@ -871,15 +859,15 @@
         "borders": [],
         "layout": {
           "type": "row",
-          "id": "#8555944e-0522-4436-940a-d6002324b0b5",
+          "id": "#aa7ee1d5-c094-4d43-96e2-119de6c4be91",
           "children": [
             {
               "type": "row",
-              "id": "#6a576665-1076-47cd-b036-dbd7c97cbcf8",
+              "id": "#bed73272-c299-4b92-b9c3-885441d262ba",
               "children": [
                 {
                   "type": "tabset",
-                  "id": "#64b15968-138a-477e-aed2-bc6417a84c41",
+                  "id": "#75d8929f-8baa-4ff1-8162-aeb73aed10b6",
                   "children": [
                     {
                       "type": "tab",
@@ -892,7 +880,7 @@
                 },
                 {
                   "type": "tabset",
-                  "id": "#3387fc9c-fe38-443f-94df-856d1953072d",
+                  "id": "#0f5eaceb-1820-4e69-b27b-e04c78fe4db8",
                   "children": [
                     {
                       "type": "tab",
@@ -905,7 +893,7 @@
                 },
                 {
                   "type": "tabset",
-                  "id": "#19c6c7c9-0053-49cc-aed5-24bbd9a87530",
+                  "id": "#d678b7ba-8ef4-4d3f-9319-1b05cf936e95",
                   "children": [
                     {
                       "type": "tab",
@@ -942,8 +930,16 @@
         "scrollLeft": 0
       }
     },
-    "[Transitorios_AIoT-1.eez-project]:/userPages/2[flow-state]": {
-      "selection": {},
+    "[Transitorios_AIoT-1.eez-project]:/userPages/1[flow-state]": {
+      "selection": {
+        "0": {
+          "0": {
+            "1": {
+              "$selected": true
+            }
+          }
+        }
+      },
       "transform": {
         "translate": {
           "x": -240,

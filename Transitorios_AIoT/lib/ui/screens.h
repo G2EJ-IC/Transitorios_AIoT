@@ -11,7 +11,8 @@ typedef struct _objects_t {
     lv_obj_t *main1;
     lv_obj_t *main3;
     lv_obj_t *main2;
-    lv_obj_t *bt_conectado_3;
+    lv_obj_t *bt_conectado_main3_tab1;
+    lv_obj_t *bt_conectado_main3_tab2;
     lv_obj_t *bt_connec_wi_fi_main3;
     lv_obj_t *bt_dhms_1;
     lv_obj_t *bt_dhms_2;
@@ -49,6 +50,7 @@ typedef struct _objects_t {
     lv_obj_t *obj5;
     lv_obj_t *obj6;
     lv_obj_t *obj7;
+    lv_obj_t *obj8;
     lv_obj_t *pag2;
     lv_obj_t *pag3;
     lv_obj_t *panel_aio_t;

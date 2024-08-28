@@ -57,7 +57,7 @@
 
 #define PIN_BUSY	-1	//	cfg.pin_busy = 	-1;
 #define PIN_INT		-1	//	cfg.pin_int =	-1;
-#define PinLED 2          // LED_BUILTIN
+#define PinLED 		2   // LED_BUILTIN
 
 #endif
 //----------------------------end tp configaction

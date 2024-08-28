@@ -8,6 +8,18 @@
 extern "C" {
 #endif
 
+// enum declarations
+
+
+
+// Flow global variables
+
+enum FlowGlobalVariables {
+    FLOW_GLOBAL_VARIABLE_NONE
+};
+
+// Native global variables
+
 extern int32_t get_var_slider_porcentaje();
 extern void set_var_slider_porcentaje(int32_t value);
 
