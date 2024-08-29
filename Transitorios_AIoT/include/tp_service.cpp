@@ -1,10 +1,12 @@
 #include <Arduino.h>
 #include "display_service.h"
 #include "config.h"
+
 #include "tp_service.h"
-#include "DateTime_AIoT.h"
 #include "io_service.h"
 #include "screens.h"
+
+#include "DateTime_AIoT.h"
 
 dhms_AIoT DateTimeAhora;       // load DateTime
 io_service io_tp;              // load IO control service

@@ -1,15 +1,14 @@
 #include "Arduino.h"
-//#include <lvgl.h>
-//#include "LovyanGFX_Class_ILI9488.h"
-// #include <ui.h>
+
 #include "display_service.h"
 #include "io_service.h"
 #include "tp_service.h"
+
 #include "config.h"
 #include "screens.h"
 
-// #include "flow_def.h"
 #include "vars.h"
+
 
 TaskHandle_t Task1 = NULL;
 TaskHandle_t Task2 = NULL;
@@ -58,7 +57,7 @@ void ICACHE_FLASH_ATTR setup()
       "Task_1",
       11264,
       NULL,
-      3,
+      2,
       &Task1,
       0);
   if (taskCreationResult != pdPASS)
@@ -73,7 +72,7 @@ void ICACHE_FLASH_ATTR setup()
       "Task_2",
       31744,
       NULL,
-      2,
+      3,
       &Task2,
       1);
   if (taskCreationResult != pdPASS)
@@ -161,6 +160,9 @@ inline void loop_Task4(void)
 {
   tp.lv_no_sleep(lv_N_sleep);
 }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+//************************************************************************************************
 
 void ICACHE_FLASH_ATTR loop1(void *parameter)
 {

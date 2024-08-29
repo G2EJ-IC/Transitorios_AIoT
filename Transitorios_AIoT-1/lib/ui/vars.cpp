@@ -19,3 +19,22 @@ extern void set_var_slider_porcentaje(int32_t value)
     selected_item_index = value;
 }
 
+extern bool get_var_connec()
+{
+    return true;
+}
+
+extern void set_var_connec(bool value)
+{
+
+}
+
+extern bool get_var_re_scan()
+{
+    return true;
+}
+
+extern void set_var_re_scan(bool value)
+{
+
+}

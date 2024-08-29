@@ -3,8 +3,10 @@
 #include "config.h"
 #include <SPI.h>
 #include "LovyanGFX_Class_ILI9488.h"
+
 #include "display_service.h"
 #include "tp_service.h"
+
 #include "esp_freertos_hooks.h"
 #include "ui.h"
 
@@ -21,7 +23,7 @@ display_service::~display_service() {}
 /*Change to your screen resolution*/
 static const uint16_t screenWidth  = 480;
 static const uint16_t screenHeight = 320;
-static const uint16_t N = 12u; // N = {10, 12, 15, 16, 20, 24, 25, 32}
+static const uint16_t N = 15u; // N = {10, 12, 15, 16, 20, 24, 25, 32}
 
 enum { SCREENBUFFER_SIZE_PIXELS = (screenWidth * screenHeight / N) * (LV_COLOR_DEPTH / 8) };
 static lv_color_t buf [SCREENBUFFER_SIZE_PIXELS];

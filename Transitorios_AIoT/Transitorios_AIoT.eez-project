@@ -94,7 +94,7 @@
       "destinationFolder": "lib\\ui",
       "lvglInclude": "lvgl.h",
       "generateSourceCodeForEezFramework": true,
-      "compressFlowDefinition": false,
+      "compressFlowDefinition": true,
       "executionQueueSize": 1000,
       "expressionEvaluatorStackSize": 20
     }
@@ -109,12 +109,47 @@
         "defaultValue": "100",
         "persistent": false,
         "native": true
+      },
+      {
+        "objID": "4727aa25-f8ab-41ad-f5ee-5a2cb88adc87",
+        "name": "Connec",
+        "type": "boolean",
+        "defaultValue": "false",
+        "persistent": false,
+        "native": true
+      },
+      {
+        "objID": "0f86cbce-3984-4b80-9218-728d7ca0b648",
+        "name": "ReScan",
+        "type": "boolean",
+        "defaultValue": "false",
+        "persistent": false,
+        "native": true
       }
     ],
     "structures": [],
     "enums": []
   },
-  "actions": [],
+  "actions": [
+    {
+      "objID": "50295f94-a9c7-47f5-cd2f-34027ea44e9f",
+      "components": [],
+      "connectionLines": [],
+      "localVariables": [],
+      "name": "Fn_Connec",
+      "description": "Fn_Connec",
+      "implementationType": "native"
+    },
+    {
+      "objID": "76b77b94-39be-43b1-d10a-78ee30668ed4",
+      "components": [],
+      "connectionLines": [],
+      "localVariables": [],
+      "name": "Fn_ReScan",
+      "description": "Fn_ReScan",
+      "implementationType": "native"
+    }
+  ],
   "userPages": [
     {
       "objID": "4b40eba7-b31a-468a-b887-11dfd0b6637f",
@@ -853,7 +888,14 @@
                               "locked": false,
                               "hiddenInEditor": false,
                               "timeline": [],
-                              "eventHandlers": [],
+                              "eventHandlers": [
+                                {
+                                  "objID": "461dcc10-6f86-4a90-fd39-0c3e922531f5",
+                                  "eventName": "CLICKED",
+                                  "handlerType": "action",
+                                  "action": "Fn_Connec"
+                                }
+                              ],
                               "identifier": "Bt_Connec_WiFi_Main3",
                               "leftUnit": "px",
                               "topUnit": "px",
@@ -1028,7 +1070,14 @@
                               "locked": false,
                               "hiddenInEditor": false,
                               "timeline": [],
-                              "eventHandlers": [],
+                              "eventHandlers": [
+                                {
+                                  "objID": "28db1110-ebbd-4fb7-d99e-88bcdc3ec9b8",
+                                  "eventName": "CLICKED",
+                                  "handlerType": "action",
+                                  "action": "Fn_ReScan"
+                                }
+                              ],
                               "identifier": "Bt_Re-Scan_WiFi_Main3",
                               "leftUnit": "px",
                               "topUnit": "px",
@@ -3509,7 +3558,7 @@
                               "localStyles": {
                                 "objID": "bcbf1f7b-32bd-4cd0-a52b-ccaeb7e5fe0f"
                               },
-                              "options": "WiFi Manager\nWiFi Multi",
+                              "options": "WiFi Multi\nWiFi Manager",
                               "optionsType": "literal",
                               "selected": 0,
                               "selectedType": "literal"

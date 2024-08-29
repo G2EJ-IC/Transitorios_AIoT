@@ -27,6 +27,22 @@ static void event_handler_cb_main3_img_izq_pag2_main3_1(lv_event_t *e) {
     }
 }
 
+static void event_handler_cb_main3_bt_connec_wi_fi_main3(lv_event_t *e) {
+    lv_event_code_t event = lv_event_get_code(e);
+    void *flowState = e->user_data;
+    if (event == LV_EVENT_CLICKED) {
+        action_fn_connec(e);
+    }
+}
+
+static void event_handler_cb_main3_bt_re_scan_wi_fi_main3(lv_event_t *e) {
+    lv_event_code_t event = lv_event_get_code(e);
+    void *flowState = e->user_data;
+    if (event == LV_EVENT_CLICKED) {
+        action_fn_re_scan(e);
+    }
+}
+
 static void event_handler_cb_main3_img_der_pag1_main3_1(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = e->user_data;
@@ -310,6 +326,7 @@ void create_screen_main3() {
                                             objects.bt_connec_wi_fi_main3 = obj;
                                             lv_obj_set_pos(obj, 74, -11);
                                             lv_obj_set_size(obj, LV_PCT(25), 30);
+                                            lv_obj_add_event_cb(obj, event_handler_cb_main3_bt_connec_wi_fi_main3, LV_EVENT_ALL, flowState);
                                             {
                                                 lv_obj_t *parent_obj = obj;
                                                 {
@@ -348,6 +365,7 @@ void create_screen_main3() {
                                             objects.bt_re_scan_wi_fi_main3 = obj;
                                             lv_obj_set_pos(obj, 242, -11);
                                             lv_obj_set_size(obj, LV_PCT(25), 30);
+                                            lv_obj_add_event_cb(obj, event_handler_cb_main3_bt_re_scan_wi_fi_main3, LV_EVENT_ALL, flowState);
                                             {
                                                 lv_obj_t *parent_obj = obj;
                                                 {
@@ -1012,7 +1030,7 @@ void create_screen_main2() {
                                             objects.drop_down_1 = obj;
                                             lv_obj_set_pos(obj, 0, 20);
                                             lv_obj_set_size(obj, 200, 40);
-                                            lv_dropdown_set_options(obj, "WiFi Manager\nWiFi Multi");
+                                            lv_dropdown_set_options(obj, "WiFi Multi\nWiFi Manager");
                                         }
                                     }
                                 }

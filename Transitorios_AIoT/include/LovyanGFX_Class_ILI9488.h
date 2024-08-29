@@ -20,8 +20,8 @@
 // LovyanGFX
 // https://github.com/lovyan03/LovyanGFX
 #define LGFX_USE_V1
-#include <LovyanGFX.hpp>
 #include "config.h"
+#include <LovyanGFX.hpp>
 
 static const uint32_t TFT_WIDTH = 320;
 static const uint32_t TFT_HEIGHT = 480;

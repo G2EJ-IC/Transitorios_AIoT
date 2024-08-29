@@ -1,12 +1,12 @@
 #ifndef __SRC_CONECTARWIFI_AIOT_H__
 #define __SRC_CONECTARWIFI_AIOT_H__
 
+#include <Arduino.h>
+#include <WiFi.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-#include <Arduino.h>
-#include <WiFi.h>
 
 class WiFi_AIoT
 {
