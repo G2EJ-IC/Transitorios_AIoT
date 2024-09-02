@@ -8,76 +8,86 @@
 #include "styles.h"
 #include "ui.h"
 
+#include <string.h>
+
 objects_t objects;
 lv_obj_t *tick_value_change_obj;
 
 static void event_handler_cb_main1_img_der_pag2_main1(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
-    void *flowState = e->user_data;
+    void *flowState = lv_event_get_user_data(e);
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 8, 0);
+        e->user_data = (void *)0;
+        flowPropagateValueLVGLEvent(flowState, 8, 0, e);
     }
 }
 
 static void event_handler_cb_main3_img_izq_pag2_main3_1(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
-    void *flowState = e->user_data;
+    void *flowState = lv_event_get_user_data(e);
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 5, 0);
+        e->user_data = (void *)0;
+        flowPropagateValueLVGLEvent(flowState, 5, 0, e);
     }
 }
 
 static void event_handler_cb_main3_bt_connec_wi_fi_main3(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
-    void *flowState = e->user_data;
+    void *flowState = lv_event_get_user_data(e);
     if (event == LV_EVENT_CLICKED) {
+        e->user_data = (void *)0;
         action_fn_connec(e);
     }
 }
 
 static void event_handler_cb_main3_bt_re_scan_wi_fi_main3(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
-    void *flowState = e->user_data;
+    void *flowState = lv_event_get_user_data(e);
     if (event == LV_EVENT_CLICKED) {
+        e->user_data = (void *)0;
         action_fn_re_scan(e);
     }
 }
 
 static void event_handler_cb_main3_img_der_pag1_main3_1(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
-    void *flowState = e->user_data;
+    void *flowState = lv_event_get_user_data(e);
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 13, 0);
+        e->user_data = (void *)0;
+        flowPropagateValueLVGLEvent(flowState, 13, 0, e);
     }
 }
 
 static void event_handler_cb_main3_img_izq_pag2_main3_2(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
-    void *flowState = e->user_data;
+    void *flowState = lv_event_get_user_data(e);
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 24, 0);
+        e->user_data = (void *)0;
+        flowPropagateValueLVGLEvent(flowState, 24, 0, e);
     }
 }
 
 static void event_handler_cb_main3_img_der_pag1_main3_2(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
-    void *flowState = e->user_data;
+    void *flowState = lv_event_get_user_data(e);
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 28, 0);
+        e->user_data = (void *)0;
+        flowPropagateValueLVGLEvent(flowState, 28, 0, e);
     }
 }
 
 static void event_handler_cb_main2_img_izq_pag1_main2(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
-    void *flowState = e->user_data;
+    void *flowState = lv_event_get_user_data(e);
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 4, 0);
+        e->user_data = (void *)0;
+        flowPropagateValueLVGLEvent(flowState, 4, 0, e);
     }
 }
 
 static void event_handler_cb_main2_slider_porcentaje_main2(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
-    void *flowState = e->user_data;
+    void *flowState = lv_event_get_user_data(e);
     if (event == LV_EVENT_VALUE_CHANGED) {
         lv_obj_t *ta = lv_event_get_target(e);
         if (tick_value_change_obj != ta) {
@@ -91,9 +101,10 @@ static void event_handler_cb_main2_slider_porcentaje_main2(lv_event_t *e) {
 
 static void event_handler_cb_main2_img_der_pag3_main2(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
-    void *flowState = e->user_data;
+    void *flowState = lv_event_get_user_data(e);
     if (event == LV_EVENT_PRESSED) {
-        flowPropagateValue(flowState, 10, 0);
+        e->user_data = (void *)0;
+        flowPropagateValueLVGLEvent(flowState, 10, 0, e);
     }
 }
 

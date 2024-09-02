@@ -9,7 +9,6 @@
 
 #include "vars.h"
 
-
 TaskHandle_t Task1 = NULL;
 TaskHandle_t Task2 = NULL;
 TaskHandle_t Task3 = NULL;
