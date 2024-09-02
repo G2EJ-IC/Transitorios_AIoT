@@ -33,6 +33,7 @@ void ICACHE_FLASH_ATTR io_service::loop()
 void io_service::setPin32(bool estado) {
   pinMode(PIN_BL, OUTPUT);
   digitalWrite(PIN_BL, estado ? HIGH : LOW);
+  // lv_obj_set_style_shadow_opa(NULL, 127, LV_PART_MAIN | LV_STATE_DEFAULT);
 }
 
 void io_service::ParpadeoLED(void) {
