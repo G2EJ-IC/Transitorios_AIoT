@@ -1,0 +1,26 @@
+#ifndef __TP_SERVICE_H__
+#define __TP_SERVICE_H__
+
+#define ICACHE_FLASH_ATTR
+
+#include "lvgl.h"
+
+class tp_service
+{
+private:
+    friend class display_service;
+    friend class io_service;
+    // friend class dhms_AIoT;
+    // friend class tp_service;
+    
+public:
+    tp_service();
+    ~tp_service();
+
+    void setup();
+    void loop();
+    
+    void lv_no_sleep(uint32_t);
+};
+
+#endif // __TP_SERVICE_H__

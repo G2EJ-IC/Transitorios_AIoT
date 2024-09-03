@@ -1,40 +1,38 @@
-#ifndef __CONECTARWIFI_AIOT_H__
-#define __CONECTARWIFI_AIOT_H__
+#ifndef __SRC_CONECTARWIFI_AIOT_H__
+#define __SRC_CONECTARWIFI_AIOT_H__
 
-/**
- * @file ConectarWiFi_AIoT.h
- *
- */
+#include <Arduino.h>
+#include <WiFi.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-/*********************
- *      INCLUDES
- *********************/
+class WiFi_AIoT
+{
+private:
+    void WiFi_Manager(void);
+    void WiFi_Multi(void);
 
-#include <WiFiManager.h>
-#include "src/ConectarWiFi_AIoT.h"
+public:
+    WiFi_AIoT();
+    ~WiFi_AIoT();
+    void ResetWiFi_AIoT(void);
+    void DisconnectWiFi_AIoT(void);
+    void ConectarWiFi_AIoT(int);
 
-/*********************
- *      DEFINES
- *********************/
+    String get_AIoT_SSID(void);
+    String get_AIoT_PWD(void);
 
-/**********************
- *      TYPEDEFS
- **********************/
+    String get_AIoT_IP(void);
+    String get_AIoT_DNS(void);
+    String get_AIoT_MAC(void);
 
-/**********************
- * GLOBAL PROTOTYPES
- **********************/
-
-/**********************
- *      MACROS
- **********************/
+    wl_status_t get_AIoT_status(void);
+};
 
 #ifdef __cplusplus
 } /*extern "C"*/
 #endif
 
-#endif // __CONECTARWIFI_AIOT_H__
+#endif // __SRC_CONECTARWIFI_AIOT_H__
