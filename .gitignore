@@ -17,4 +17,4 @@ token.h
 *-v(2024*
 *-v(HMS)*
 lib/TFT_eSPI
-driver-libraries/eez-framework/*.*
+*driver-libraries/eez-framework/*
