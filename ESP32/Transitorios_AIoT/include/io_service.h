@@ -23,7 +23,9 @@ public:
     void ICACHE_FLASH_ATTR setup();
     void ICACHE_FLASH_ATTR loop();
     void ICACHE_FLASH_ATTR cronometro(uint32_t);
-    uint32_t ICACHE_FLASH_ATTR suspender(void); 
+    uint32_t ICACHE_FLASH_ATTR suspender(void);
+
+    void ICACHE_FLASH_ATTR setPin3232(bool);
 };
 
 #endif // __IO_SERVICE_H__

@@ -19,6 +19,9 @@ typedef struct _objects_t {
     lv_obj_t *bt_re_scan_wi_fi_main3;
     lv_obj_t *but_img_der_pag2_main1;
     lv_obj_t *container_label;
+    lv_obj_t *container_main1;
+    lv_obj_t *container_main2;
+    lv_obj_t *container_main3;
     lv_obj_t *container_resultados;
     lv_obj_t *drop_down;
     lv_obj_t *drop_down_1;

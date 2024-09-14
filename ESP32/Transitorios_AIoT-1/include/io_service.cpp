@@ -36,6 +36,28 @@ void io_service::setPin32(bool estado) {
   // lv_obj_set_style_shadow_opa(NULL, 127, LV_PART_MAIN | LV_STATE_DEFAULT);
 }
 
+/**
+ * @brief Breve descripción.
+ * @param Parámetros.
+ * @return Salida. 
+ */
+void io_service::setPin3232(bool estado) {
+  
+  
+  
+  
+  pinMode(PIN_BL, OUTPUT);
+  digitalWrite(PIN_BL, estado ? HIGH : LOW);
+  // lv_obj_set_style_bg_opa(objects.container_main1, 120, 0);
+
+
+
+
+
+
+}
+
+
 void io_service::ParpadeoLED(void) {
     pinMode(PinLED, OUTPUT);
     digitalWrite(PinLED, !digitalRead(PinLED));
