@@ -891,7 +891,7 @@ void create_screen_main2() {
                             // SliderPorcentaje_Main2
                             lv_obj_t *obj = lv_slider_create(parent_obj);
                             objects.slider_porcentaje_main2 = obj;
-                            lv_obj_set_pos(obj, 64, -8);
+                            lv_obj_set_pos(obj, 64, -9);
                             lv_obj_set_size(obj, LV_PCT(70), 10);
                             lv_slider_set_range(obj, 30, 100);
                             lv_obj_add_event_cb(obj, event_handler_cb_main2_slider_porcentaje_main2, LV_EVENT_ALL, flowState);

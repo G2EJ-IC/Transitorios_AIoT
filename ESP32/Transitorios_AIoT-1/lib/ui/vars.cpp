@@ -12,7 +12,7 @@ int32_t selected_item_index = 100;
 
 extern int32_t get_var_slider_porcentaje()
 {
-    return selected_item_index;
+    return selected_item_index;    
 }
 extern void set_var_slider_porcentaje(int32_t value)
 {
