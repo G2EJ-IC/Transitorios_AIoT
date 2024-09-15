@@ -42,7 +42,7 @@ void io_service::setPin32(bool estado) {
  */
 void io_service::setOpacity(uint32_t opaContainer) {
   // int32_t opaContainer = (int32_t)(255 * lv_slider_get_value(objects.slider_porcentaje) / 100);
-  Serial.println(opaContainer);
+  // Serial.println(opaContainer);
   const int pwmChannel  = 0; // 0-15
   const int frecuencia = 10000; // en Hz
   const int resolucion = 8; // 8-16 bits de resolución.
