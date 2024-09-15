@@ -64,7 +64,7 @@ typedef struct _objects_t {
     lv_obj_t *panel03_3;
     lv_obj_t *panel03_4;
     lv_obj_t *panel03_5;
-    lv_obj_t *slider_porcentaje_main2;
+    lv_obj_t *slider_porcentaje;
     lv_obj_t *suspender;
     lv_obj_t *tab_view_main2;
     lv_obj_t *text_area_password;

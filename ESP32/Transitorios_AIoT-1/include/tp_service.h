@@ -20,6 +20,7 @@ public:
     void ICACHE_FLASH_ATTR setup();
     void ICACHE_FLASH_ATTR loop();
     
+    // void ICACHE_FLASH_ATTR lv_no_sleep(uint32_t);
     void ICACHE_FLASH_ATTR lv_no_sleep(uint32_t);
 };
 

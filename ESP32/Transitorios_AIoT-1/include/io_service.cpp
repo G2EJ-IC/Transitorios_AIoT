@@ -22,7 +22,7 @@ void ICACHE_FLASH_ATTR io_service::setup()
 
 void ICACHE_FLASH_ATTR io_service::loop()
 {
-  
+
 } // end io loop
 
 /**
@@ -33,7 +33,6 @@ void ICACHE_FLASH_ATTR io_service::loop()
 void io_service::setPin32(bool estado) {
   pinMode(PIN_BL, OUTPUT);
   digitalWrite(PIN_BL, estado ? HIGH : LOW);
-  // lv_obj_set_style_shadow_opa(NULL, 127, LV_PART_MAIN | LV_STATE_DEFAULT);
 }
 
 /**
@@ -41,22 +40,18 @@ void io_service::setPin32(bool estado) {
  * @param Parámetros.
  * @return Salida. 
  */
-void io_service::setPin3232(bool estado) {
-  
-  
-  
-  
+void io_service::setOpacity(uint32_t opaContainer) {
+  // int32_t opaContainer = (int32_t)(255 * lv_slider_get_value(objects.slider_porcentaje) / 100);
+  Serial.println(opaContainer);
+  const int pwmChannel  = 0; // 0-15
+  const int frecuencia = 10000; // en Hz
+  const int resolucion = 8; // 8-16 bits de resolución.
+
   pinMode(PIN_BL, OUTPUT);
-  digitalWrite(PIN_BL, estado ? HIGH : LOW);
-  // lv_obj_set_style_bg_opa(objects.container_main1, 120, 0);
-
-
-
-
-
-
+  ledcSetup(pwmChannel , frecuencia, resolucion);
+  ledcAttachPin(PIN_BL, pwmChannel);
+  ledcWrite(pwmChannel , opaContainer);
 }
-
 
 void io_service::ParpadeoLED(void) {
     pinMode(PinLED, OUTPUT);

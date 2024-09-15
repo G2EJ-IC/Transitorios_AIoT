@@ -5,13 +5,15 @@
 #include "LovyanGFX_Class_ILI9488.h"
 
 #include "display_service.h"
+#include "io_service.h"
 #include "tp_service.h"
 
 #include "esp_freertos_hooks.h"
 #include "ui.h"
 
-static LGFX tft;      // load tft service
-extern tp_service tp; // load tp service
+static LGFX tft;            // load tft service
+extern tp_service tp;       // load tp service
+extern io_service io_tp;    // load IO control service
 
 display_service::display_service() {}
 display_service::~display_service() {}

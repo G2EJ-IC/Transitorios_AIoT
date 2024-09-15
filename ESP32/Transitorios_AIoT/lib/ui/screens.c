@@ -85,7 +85,7 @@ static void event_handler_cb_main2_img_izq_pag1_main2(lv_event_t *e) {
     }
 }
 
-static void event_handler_cb_main2_slider_porcentaje_main2(lv_event_t *e) {
+static void event_handler_cb_main2_slider_porcentaje(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = lv_event_get_user_data(e);
     if (event == LV_EVENT_VALUE_CHANGED) {
@@ -846,6 +846,7 @@ void create_screen_main2() {
     objects.main2 = obj;
     lv_obj_set_pos(obj, 0, 0);
     lv_obj_set_size(obj, 480, 320);
+    lv_obj_set_style_bg_color(obj, lv_color_hex(0xfff5f5f5), LV_PART_MAIN | LV_STATE_DEFAULT);
     {
         lv_obj_t *parent_obj = obj;
         {
@@ -922,13 +923,13 @@ void create_screen_main2() {
                                     }
                                 }
                                 {
-                                    // SliderPorcentaje_Main2
+                                    // SliderPorcentaje
                                     lv_obj_t *obj = lv_slider_create(parent_obj);
-                                    objects.slider_porcentaje_main2 = obj;
+                                    objects.slider_porcentaje = obj;
                                     lv_obj_set_pos(obj, 64, -9);
                                     lv_obj_set_size(obj, LV_PCT(70), 10);
-                                    lv_slider_set_range(obj, 30, 100);
-                                    lv_obj_add_event_cb(obj, event_handler_cb_main2_slider_porcentaje_main2, LV_EVENT_ALL, flowState);
+                                    lv_slider_set_range(obj, 10, 100);
+                                    lv_obj_add_event_cb(obj, event_handler_cb_main2_slider_porcentaje, LV_EVENT_ALL, flowState);
                                 }
                                 {
                                     lv_obj_t *obj = lv_obj_create(parent_obj);
@@ -1146,10 +1147,10 @@ void tick_screen_main2() {
     }
     {
         int32_t new_val = evalIntegerProperty(flowState, 7, 3, "Failed to evaluate Value in Slider widget");
-        int32_t cur_val = lv_slider_get_value(objects.slider_porcentaje_main2);
+        int32_t cur_val = lv_slider_get_value(objects.slider_porcentaje);
         if (new_val != cur_val) {
-            tick_value_change_obj = objects.slider_porcentaje_main2;
-            lv_slider_set_value(objects.slider_porcentaje_main2, new_val, LV_ANIM_OFF);
+            tick_value_change_obj = objects.slider_porcentaje;
+            lv_slider_set_value(objects.slider_porcentaje, new_val, LV_ANIM_OFF);
             tick_value_change_obj = NULL;
         }
     }

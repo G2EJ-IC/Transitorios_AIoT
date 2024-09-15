@@ -6,7 +6,7 @@
 * @return : obj.
 */
 template<class T>
-inline Print &operator <<(Print &obj, T arg) { 
+inline Print &operator <<(Print &obj, T arg){ 
     obj.print(arg); 
     return obj; 
 }
@@ -20,8 +20,7 @@ inline Print &operator <<(Print &obj, T arg) {
 int counter;
 WiFi_AIoT wifi_AIoT;
 
-extern void action_fn_connec(lv_event_t * e)
-{
+extern void action_fn_connec(lv_event_t * e){
 	// int opcion = lv_dropdown_get_selected(objects.drop_down_1);
 	// wifi_AIoT.ConectarWiFi_AIoT((int)opcion);
 	// if (WiFi.status() == WL_CONNECTED) {
@@ -41,8 +40,7 @@ extern void action_fn_connec(lv_event_t * e)
 	// }
 }
 
-extern void action_fn_re_scan(lv_event_t * e)
-{
+extern void action_fn_re_scan(lv_event_t * e){
 	lv_label_set_text(objects.ui_lab_ssid, "Nombre WiFi (SSID)");
 	lv_label_set_text(objects.ui_lab_ip, "xx.xx.xx.xx");
 	lv_label_set_text(objects.ui_lab_dns, "xx.xx.xx.xx");
@@ -51,6 +49,3 @@ extern void action_fn_re_scan(lv_event_t * e)
 	lv_obj_set_style_bg_color(objects.bt_conectado_main3_tab2, lv_color_hex(0xFF0000), LV_PART_MAIN | LV_STATE_DEFAULT);
 	// wifi_AIoT.DisconnectWiFi_AIoT();
 }
-
-
-

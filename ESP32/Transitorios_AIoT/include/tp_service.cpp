@@ -6,7 +6,10 @@
 #include "io_service.h"
 #include "screens.h"
 
+#include "actions.h"
+
 #include "DateTime_AIoT.h"
+#include <SPI.h>
 
 dhms_AIoT DateTimeAhora;       // load DateTime
 io_service io_tp;              // load IO control service
@@ -27,15 +30,13 @@ void ICACHE_FLASH_ATTR tp_service::loop()
 
 
 
-void ICACHE_FLASH_ATTR tp_service::lv_no_sleep(uint32_t lv_sleep)
-{
-    if (lv_display_get_inactive_time(NULL) < (1000 * lv_sleep))
-    {
+void ICACHE_FLASH_ATTR tp_service::lv_no_sleep(uint32_t lv_sleep){
+    if (lv_display_get_inactive_time(NULL) < (1000 * lv_sleep)){
         io_tp.setPin32(HIGH);
+        io_tp.setOpacity((int32_t)(255 * lv_slider_get_value(objects.slider_porcentaje) / 100));
     }
     /*Sleep after 1 sec inactivity*/
-    else
-    {
+    else {
         Serial.println();
         uint32_t Ahora = lv_display_get_inactive_time(NULL);
         String DHMS = DateTimeAhora.DHMS_AIoT_get((uint64_t)(Ahora));
