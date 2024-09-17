@@ -5,6 +5,9 @@
 
 #include "lvgl.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 class tp_service
 {
 private:
@@ -23,5 +26,9 @@ public:
     // void ICACHE_FLASH_ATTR lv_no_sleep(uint32_t);
     void ICACHE_FLASH_ATTR lv_no_sleep(uint32_t);
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // __TP_SERVICE_H__

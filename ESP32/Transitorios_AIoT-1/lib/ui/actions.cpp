@@ -17,6 +17,10 @@ inline Print &operator <<(Print &obj, T arg){
 
 #include "ConectarWiFi_AIoT.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 int counter;
 WiFi_AIoT wifi_AIoT;
 
@@ -49,3 +53,7 @@ extern void action_fn_re_scan(lv_event_t * e){
 	lv_obj_set_style_bg_color(objects.bt_conectado_main3_tab2, lv_color_hex(0xFF0000), LV_PART_MAIN | LV_STATE_DEFAULT);
 	// wifi_AIoT.DisconnectWiFi_AIoT();
 }
+
+#ifdef __cplusplus
+}
+#endif

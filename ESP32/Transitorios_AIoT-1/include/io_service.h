@@ -3,6 +3,10 @@
 
 #define ICACHE_FLASH_ATTR
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 class io_service
 {
 private:
@@ -26,5 +30,9 @@ public:
     void ICACHE_FLASH_ATTR cronometro(uint32_t);
     uint32_t ICACHE_FLASH_ATTR suspender(void);    
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // __IO_SERVICE_H__

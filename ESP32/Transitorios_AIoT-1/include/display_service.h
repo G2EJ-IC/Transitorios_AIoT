@@ -5,6 +5,10 @@
 
 #include <lvgl.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 class display_service
 {
 private:
@@ -24,5 +28,9 @@ public:
     void IRAM_ATTR setup();
     void IRAM_ATTR loop();
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // __DISPLAY_SERVICE_H__

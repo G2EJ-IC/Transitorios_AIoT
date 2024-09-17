@@ -8,6 +8,10 @@
 #include "structs.h"
 #include "ui.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 int32_t selected_item_index = 100;
 
 extern int32_t get_var_slider_porcentaje()
@@ -38,3 +42,7 @@ extern void set_var_re_scan(bool value)
 {
 
 }
+
+#ifdef __cplusplus
+}
+#endif
