@@ -16,6 +16,7 @@ lv_obj_t *tick_value_change_obj;
 static void event_handler_cb_main1_img_der_pag2_main1(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = lv_event_get_user_data(e);
+    
     if (event == LV_EVENT_PRESSED) {
         e->user_data = (void *)0;
         flowPropagateValueLVGLEvent(flowState, 8, 0, e);
@@ -25,6 +26,7 @@ static void event_handler_cb_main1_img_der_pag2_main1(lv_event_t *e) {
 static void event_handler_cb_main3_img_izq_pag2_main3_1(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = lv_event_get_user_data(e);
+    
     if (event == LV_EVENT_PRESSED) {
         e->user_data = (void *)0;
         flowPropagateValueLVGLEvent(flowState, 6, 0, e);
@@ -34,6 +36,7 @@ static void event_handler_cb_main3_img_izq_pag2_main3_1(lv_event_t *e) {
 static void event_handler_cb_main3_bt_connec_wi_fi_main3(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = lv_event_get_user_data(e);
+    
     if (event == LV_EVENT_CLICKED) {
         e->user_data = (void *)0;
         action_fn_connec(e);
@@ -43,6 +46,7 @@ static void event_handler_cb_main3_bt_connec_wi_fi_main3(lv_event_t *e) {
 static void event_handler_cb_main3_bt_re_scan_wi_fi_main3(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = lv_event_get_user_data(e);
+    
     if (event == LV_EVENT_CLICKED) {
         e->user_data = (void *)0;
         action_fn_re_scan(e);
@@ -52,6 +56,7 @@ static void event_handler_cb_main3_bt_re_scan_wi_fi_main3(lv_event_t *e) {
 static void event_handler_cb_main3_img_der_pag1_main3_1(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = lv_event_get_user_data(e);
+    
     if (event == LV_EVENT_PRESSED) {
         e->user_data = (void *)0;
         flowPropagateValueLVGLEvent(flowState, 14, 0, e);
@@ -61,6 +66,7 @@ static void event_handler_cb_main3_img_der_pag1_main3_1(lv_event_t *e) {
 static void event_handler_cb_main3_img_izq_pag2_main3_2(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = lv_event_get_user_data(e);
+    
     if (event == LV_EVENT_PRESSED) {
         e->user_data = (void *)0;
         flowPropagateValueLVGLEvent(flowState, 25, 0, e);
@@ -70,6 +76,7 @@ static void event_handler_cb_main3_img_izq_pag2_main3_2(lv_event_t *e) {
 static void event_handler_cb_main3_img_der_pag1_main3_2(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = lv_event_get_user_data(e);
+    
     if (event == LV_EVENT_PRESSED) {
         e->user_data = (void *)0;
         flowPropagateValueLVGLEvent(flowState, 29, 0, e);
@@ -79,6 +86,7 @@ static void event_handler_cb_main3_img_der_pag1_main3_2(lv_event_t *e) {
 static void event_handler_cb_main2_img_izq_pag1_main2(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = lv_event_get_user_data(e);
+    
     if (event == LV_EVENT_PRESSED) {
         e->user_data = (void *)0;
         flowPropagateValueLVGLEvent(flowState, 5, 0, e);
@@ -88,6 +96,7 @@ static void event_handler_cb_main2_img_izq_pag1_main2(lv_event_t *e) {
 static void event_handler_cb_main2_slider_porcentaje(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = lv_event_get_user_data(e);
+    
     if (event == LV_EVENT_VALUE_CHANGED) {
         lv_obj_t *ta = lv_event_get_target(e);
         if (tick_value_change_obj != ta) {
@@ -102,6 +111,7 @@ static void event_handler_cb_main2_slider_porcentaje(lv_event_t *e) {
 static void event_handler_cb_main2_img_der_pag3_main2(lv_event_t *e) {
     lv_event_code_t event = lv_event_get_code(e);
     void *flowState = lv_event_get_user_data(e);
+    
     if (event == LV_EVENT_PRESSED) {
         e->user_data = (void *)0;
         flowPropagateValueLVGLEvent(flowState, 11, 0, e);
@@ -166,6 +176,7 @@ void create_screen_main1() {
                                     lv_obj_set_pos(obj, 0, 0);
                                     lv_obj_set_size(obj, 58, 77);
                                     lv_img_set_src(obj, &img_ud_fjd_c_058x077);
+                                    lv_img_set_pivot(obj, 0, 0);
                                     lv_obj_clear_flag(obj, LV_OBJ_FLAG_ADV_HITTEST|LV_OBJ_FLAG_CLICK_FOCUSABLE|LV_OBJ_FLAG_GESTURE_BUBBLE|LV_OBJ_FLAG_PRESS_LOCK|LV_OBJ_FLAG_SCROLLABLE|LV_OBJ_FLAG_SCROLL_CHAIN_HOR|LV_OBJ_FLAG_SCROLL_CHAIN_VER|LV_OBJ_FLAG_SCROLL_ELASTIC|LV_OBJ_FLAG_SCROLL_MOMENTUM|LV_OBJ_FLAG_SCROLL_WITH_ARROW|LV_OBJ_FLAG_SNAPPABLE);
                                 }
                                 {
@@ -236,6 +247,7 @@ void create_screen_main1() {
                             lv_obj_set_pos(obj, 95, 100);
                             lv_obj_set_size(obj, 235, 157);
                             lv_img_set_src(obj, &img_aio_t_235x157);
+                            lv_img_set_pivot(obj, 0, 0);
                         }
                     }
                 }
@@ -746,6 +758,7 @@ void create_screen_main3() {
                                                     lv_obj_set_pos(obj, 334, 6);
                                                     lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                                                     lv_img_set_src(obj, &img_ud_fjd_c);
+                                                    lv_img_set_pivot(obj, 0, 0);
                                                 }
                                                 {
                                                     // Bt_DHMS_2
@@ -1122,6 +1135,7 @@ void create_screen_main2() {
                                             lv_obj_set_pos(obj, 334, 6);
                                             lv_obj_set_size(obj, LV_SIZE_CONTENT, LV_SIZE_CONTENT);
                                             lv_img_set_src(obj, &img_ud_fjd_c);
+                                            lv_img_set_pivot(obj, 0, 0);
                                         }
                                     }
                                 }
@@ -1175,7 +1189,13 @@ void tick_screen_main2() {
 }
 
 
+static const char *screen_names[] = { "Main1", "Main3", "Main2" };
+static const char *object_names[] = { "main1", "main3", "main2", "bt_conectado_main3_tab1", "bt_conectado_main3_tab2", "bt_connec_wi_fi_main3", "bt_dhms_1", "bt_dhms_2", "bt_re_scan_wi_fi_main3", "but_img_der_pag2_main1", "container_label", "container_main1", "container_main2", "container_main3", "container_resultados", "drop_down", "drop_down_1", "drop_down_suspender", "img_der_pag1_main3_1", "img_der_pag1_main3_2", "img_der_pag2_main1", "img_der_pag3_main2", "img_izq_pag1_main2", "img_izq_pag2_main3_1", "img_izq_pag2_main3_2", "img_ud_fjd_c_58x77", "keyboard", "label_dhms_1", "label_dhms_2", "label_direccion_dns", "label_direccion_ip", "label_direccion_mac", "label_red_wi_fi_ssid", "label_slider_porcentaje", "label_wi_fi_pass_pag1", "label_wi_fi_ssid_pag1", "m_todo_de_conecci_n", "obj0", "obj1", "obj2", "obj3", "obj4", "obj5", "obj6", "obj7", "obj8", "pag2", "pag3", "panel_aio_t", "panel_nombre", "panel02_1", "panel02_2", "panel02_3", "panel03_3", "panel03_4", "panel03_5", "slider_porcentaje", "suspender", "tab_view_main2", "text_area_password", "ui_lab_dns", "ui_lab_ip", "ui_lab_mac", "ui_lab_ssid" };
+
 void create_screens() {
+    eez_flow_init_screen_names(screen_names, sizeof(screen_names) / sizeof(const char *));
+    eez_flow_init_object_names(object_names, sizeof(object_names) / sizeof(const char *));
+    
     lv_disp_t *dispp = lv_disp_get_default();
     lv_theme_t *theme = lv_theme_default_init(dispp, lv_palette_main(LV_PALETTE_BLUE), lv_palette_main(LV_PALETTE_RED), false, LV_FONT_DEFAULT);
     lv_disp_set_theme(dispp, theme);
