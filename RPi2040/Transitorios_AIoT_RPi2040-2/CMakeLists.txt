@@ -48,7 +48,12 @@ FILE(GLOB_RECURSE UI_Sources CONFIGURE_DEPENDS
     ui/*.c
     ui/*.h)
 
-add_executable( ${CMAKE_PROJECT_NAME} main.cpp ${UI_Sources} ${LVGL_Sources} ${TFT_eSPI_Sources} ${Arduino_Sources} )
+add_executable( ${CMAKE_PROJECT_NAME} 
+	main.cpp 
+	${UI_Sources} ${LVGL_Sources} 
+	${TFT_eSPI_Sources} ${Arduino_Sources} 
+)
+	
 pico_add_extra_outputs( ${CMAKE_PROJECT_NAME} )
 
 target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE pico_stdlib m hardware_spi hardware_dma hardware_pio pico_cyw43_arch_none hardware_adc hardware_pwm )
