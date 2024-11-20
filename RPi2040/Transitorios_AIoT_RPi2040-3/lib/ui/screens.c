@@ -183,8 +183,8 @@ void create_screen_main1() {
                                     // PanelNombre
                                     lv_obj_t *obj = lv_obj_create(parent_obj);
                                     objects.panel_nombre = obj;
-                                    lv_obj_set_pos(obj, 62, 9);
-                                    lv_obj_set_size(obj, 320, 60);
+                                    lv_obj_set_pos(obj, 62, 15);
+                                    lv_obj_set_size(obj, 320, 50);
                                     lv_obj_clear_flag(obj, LV_OBJ_FLAG_CLICK_FOCUSABLE|LV_OBJ_FLAG_GESTURE_BUBBLE|LV_OBJ_FLAG_PRESS_LOCK|LV_OBJ_FLAG_SCROLLABLE|LV_OBJ_FLAG_SCROLL_CHAIN_HOR|LV_OBJ_FLAG_SCROLL_CHAIN_VER|LV_OBJ_FLAG_SCROLL_ELASTIC|LV_OBJ_FLAG_SCROLL_MOMENTUM|LV_OBJ_FLAG_SCROLL_WITH_ARROW|LV_OBJ_FLAG_SNAPPABLE);
                                     lv_obj_set_style_bg_color(obj, lv_color_hex(0xffc8c8c8), LV_PART_MAIN | LV_STATE_DEFAULT);
                                     lv_obj_set_style_border_color(obj, lv_color_hex(0xff000000), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -195,8 +195,8 @@ void create_screen_main1() {
                                         {
                                             lv_obj_t *obj = lv_label_create(parent_obj);
                                             lv_obj_set_pos(obj, 0, 0);
-                                            lv_obj_set_size(obj, LV_PCT(115), LV_PCT(200));
-                                            lv_label_set_text(obj, "ERNESTO JOSE GUERRERO GONZALEZ\nJEAN PAUL EDUARDO GARCIA VASQUEZ\nAIoT Transitorios Hidraulicos");
+                                            lv_obj_set_size(obj, LV_PCT(115), LV_PCT(250));
+                                            lv_label_set_text(obj, "ERNESTO JOSE GUERRERO GONZALEZ\nAIoT Transitorios Hidraulicos");
                                             lv_obj_set_style_align(obj, LV_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
                                             lv_obj_set_style_text_align(obj, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
                                         }
@@ -1190,7 +1190,7 @@ void tick_screen_main2() {
 
 
 static const char *screen_names[] = { "Main1", "Main3", "Main2" };
-static const char *object_names[] = { "main1", "main3", "main2", "bt_conectado_main3_tab1", "bt_conectado_main3_tab2", "bt_connec_wi_fi_main3", "bt_dhms_1", "bt_dhms_2", "bt_re_scan_wi_fi_main3", "but_img_der_pag2_main1", "container_label", "container_main1", "container_main2", "container_main3", "container_resultados", "drop_down", "drop_down_1", "drop_down_suspender", "img_der_pag1_main3_1", "img_der_pag1_main3_2", "img_der_pag2_main1", "img_der_pag3_main2", "img_izq_pag1_main2", "img_izq_pag2_main3_1", "img_izq_pag2_main3_2", "img_ud_fjd_c_58x77", "keyboard", "label_dhms_1", "label_dhms_2", "label_direccion_dns", "label_direccion_ip", "label_direccion_mac", "label_red_wi_fi_ssid", "label_slider_porcentaje", "label_wi_fi_pass_pag1", "label_wi_fi_ssid_pag1", "m_todo_de_conecci_n", "obj0", "obj1", "obj2", "obj3", "obj4", "obj5", "obj6", "obj7", "obj8", "pag2", "pag3", "panel_aio_t", "panel_nombre", "panel02_1", "panel02_2", "panel02_3", "panel03_3", "panel03_4", "panel03_5", "slider_porcentaje", "suspender", "tab_view_main2", "text_area_password", "ui_lab_dns", "ui_lab_ip", "ui_lab_mac", "ui_lab_ssid" };
+static const char *object_names[] = { "main1", "main3", "main2", "img_der_pag2_main1", "img_izq_pag2_main3_1", "bt_connec_wi_fi_main3", "bt_re_scan_wi_fi_main3", "img_der_pag1_main3_1", "img_izq_pag2_main3_2", "img_der_pag1_main3_2", "img_izq_pag1_main2", "slider_porcentaje", "img_der_pag3_main2", "container_main1", "panel_aio_t", "img_ud_fjd_c_58x77", "panel_nombre", "but_img_der_pag2_main1", "obj0", "container_main3", "tab_view_main2", "pag2", "panel02_3", "bt_conectado_main3_tab1", "panel03_4", "label_wi_fi_ssid_pag1", "label_wi_fi_pass_pag1", "text_area_password", "keyboard", "pag3", "panel02_2", "bt_conectado_main3_tab2", "panel03_5", "container_label", "label_red_wi_fi_ssid", "label_direccion_ip", "label_direccion_dns", "label_direccion_mac", "container_resultados", "ui_lab_ssid", "ui_lab_ip", "ui_lab_mac", "ui_lab_dns", "bt_dhms_2", "label_dhms_2", "obj1", "obj2", "obj3", "obj4", "obj5", "obj6", "container_main2", "panel02_1", "label_slider_porcentaje", "panel03_3", "drop_down", "suspender", "drop_down_suspender", "m_todo_de_conecci_n", "drop_down_1", "bt_dhms_1", "label_dhms_1", "obj7", "obj8" };
 
 void create_screens() {
     eez_flow_init_screen_names(screen_names, sizeof(screen_names) / sizeof(const char *));

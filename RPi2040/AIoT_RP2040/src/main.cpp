@@ -11,13 +11,15 @@ template<class T> inline Print &operator <<(Print &obj, T arg) {
  // Raspberry Pi Pico Tx (pin 0) ---- ESP8266 Rx
 SoftwareSerial esp8266(1,0); // RX | TX
 
-
-
-
 void setup() {
   Serial.begin(115200);  // monitor serial del arduino
   esp8266.begin(115200); // baud rate del ESP8266
 }
+
+void setup1() {
+  Serial.begin(115200);  // monitor serial del arduino
+}
+
 
 void loop() {
   // Repetir lo recibido por el ESP8266 hacia el monitor serial
@@ -31,4 +33,8 @@ void loop() {
     char c = Serial.read();
     esp8266.print(c);
   }
+}
+
+void loop1() {
+  // Repetir lo recibido por el ESP8266 hacia el monitor serial
 }
