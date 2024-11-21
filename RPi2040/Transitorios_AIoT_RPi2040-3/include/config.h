@@ -12,11 +12,12 @@
 	Modificado: Ernesto José Guerrero González, Civil Engineering ud FJdC.
 */
 //////////////////////////////////////////////////////////////////////////
-#define HMI_TFT_ILI9488_480x320
+// #define HMI_TFT_ILI9488_480x320
+#define HMI_RPi2040
 
 #define VERSION "0.0.0.4" //version number
 #define _DEBUG_           //debug switch
-#define DEV_TYPE "esp32dev"
+#define DEV_TYPE "pico"
 #define LVGL_TICK_PERIOD 10 //lvgl tick period
 #define ROTATION 3          //set ui rotation
 #define TOUCHPAD //whether the UI support touch pad
@@ -42,22 +43,24 @@
 #define TOUCH_CS 	21 	// Pin CS del panel táctil
 #define PinLED 		2	// LED_BUILTIN
 
-#elif defined(HMI_ESP32_4827S043)
+#elif defined(HMI_RPi2040)
 // Pines TFT HMI ESP32 4827S043 - ESP32-S3 480x320
-#define LCD_SCK     12  //  cfg.pin_sclk =  12;
-#define LCD_MOSI    13  //  cfg.pin_mosi =  13;
-#define LCD_MISO    14  //  cfg.pin_miso =  14;
-#define LCD_SS0     3   //  cfg.pin_cs =    3;
-#define LCD_SS1 	-1	//	cfg.pin_cs =	-1;
-#define LCD_SS2 	-1	//	cfg.pin_cs =	-1;
+#define LCD_SCK      2  //  cfg.pin_sclk =  12;
+#define LCD_MOSI     3  //  cfg.pin_mosi =  13;
+#define LCD_MISO     0  //  cfg.pin_miso =  14;
+#define LCD_SS0     20  //  cfg.pin_cs =    3;
+#define LCD_SS1 	14	//	cfg.pin_cs =	-1;
+#define LCD_SS2 	17	//	cfg.pin_cs =	-1;
 
-#define SPI_DC		42	//	cfg.pin_dc   = 	42;
-#define PIN_RST		-1	//	cfg.pin_rst = 	-1;
-#define PIN_BL		46	//	cfg.pin_bl =	46;
+#define SPI_DC		22	//	cfg.pin_dc   = 	42;
+#define PIN_RST		21	//	cfg.pin_rst = 	-1;
+#define PIN_BL		 1	//	cfg.pin_bl =	46;
 
 #define PIN_BUSY	-1	//	cfg.pin_busy = 	-1;
 #define PIN_INT		-1	//	cfg.pin_int =	-1;
-#define PinLED 		2   // LED_BUILTIN
+
+#define TOUCH_CS 	14 	// Pin CS del panel táctil
+#define PinLED 		25  // LED_BUILTIN
 
 #endif
 //----------------------------end tp configaction

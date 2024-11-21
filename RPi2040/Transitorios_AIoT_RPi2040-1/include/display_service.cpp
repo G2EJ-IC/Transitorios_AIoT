@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "pico/stdlib.h"
+// #include "pico/stdlib.h"
 #include <lvgl.h>
 #include "config.h"
 #include <SPI.h>

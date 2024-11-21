@@ -19,15 +19,13 @@ typedef struct _objects_t {
     lv_obj_t *img_izq_pag2_main3_2;
     lv_obj_t *img_der_pag1_main3_2;
     lv_obj_t *img_izq_pag1_main2;
-    lv_obj_t *slider_porcentaje;
+    lv_obj_t *slider_porcentaje_main2;
     lv_obj_t *img_der_pag3_main2;
-    lv_obj_t *container_main1;
     lv_obj_t *panel_aio_t;
     lv_obj_t *img_ud_fjd_c_58x77;
     lv_obj_t *panel_nombre;
     lv_obj_t *but_img_der_pag2_main1;
     lv_obj_t *obj0;
-    lv_obj_t *container_main3;
     lv_obj_t *tab_view_main2;
     lv_obj_t *pag2;
     lv_obj_t *panel02_3;
@@ -59,7 +57,6 @@ typedef struct _objects_t {
     lv_obj_t *obj4;
     lv_obj_t *obj5;
     lv_obj_t *obj6;
-    lv_obj_t *container_main2;
     lv_obj_t *panel02_1;
     lv_obj_t *label_slider_porcentaje;
     lv_obj_t *panel03_3;
