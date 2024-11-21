@@ -35,11 +35,11 @@ FILE(GLOB_RECURSE Arduino_Sources ${ARDUINO_SOURCE_DIR}/SPI.cpp ${ARDUINO_SOURCE
                                   ${ARDUINO_SOURCE_DIR}/rpipico/pico_digital.cpp ${ARDUINO_SOURCE_DIR}/wiring_private.cpp ${ARDUINO_SOURCE_DIR}/wiring_digital.cpp
                                   ${ARDUINO_SOURCE_DIR}/wiring_analog.cpp ${ARDUINO_SOURCE_DIR}/Print.cpp )
 FILE(GLOB_RECURSE TFT_eSPI_Sources CONFIGURE_DEPENDS ${DRIVER_SOURCE_DIR}/TFT_eSPI/TFT_eSPI.cpp )
-FILE(GLOB_RECURSE eez-framework_Sources CONFIGURE_DEPENDS eez-framework/src/*.h)
 FILE(GLOB_RECURSE UI_Sources CONFIGURE_DEPENDS ui/*.c ui/*.cpp)
 FILE(GLOB_RECURSE UI_Sources CONFIGURE_DEPENDS ui/*.c ui/*.cpp)
+FILE(GLOB_RECURSE EEZ-framework_Sources CONFIGURE_DEPENDS eez-framework/src/*.h)
 
-add_executable( ${CMAKE_PROJECT_NAME} main.cpp ${UI_Sources} ${LVGL_Sources} ${TFT_eSPI_Sources} ${Arduino_Sources} )
+add_executable( ${CMAKE_PROJECT_NAME} main.cpp ${EEZ-framework_Sources} ${UI_Sources} ${LVGL_Sources} ${TFT_eSPI_Sources} ${Arduino_Sources} )
 pico_add_extra_outputs( ${CMAKE_PROJECT_NAME} )
 
 target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE pico_stdlib m hardware_spi hardware_dma hardware_pio hardware_adc hardware_pwm )

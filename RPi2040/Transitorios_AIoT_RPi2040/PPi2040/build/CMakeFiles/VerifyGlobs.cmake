@@ -12,7 +12,7 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "C:/xEEZStudio/Transitorios_AIoT/RPi2040/Transitorios_AIoT_RPi2040/PPi2040/build/CMakeFiles/cmake.verify_globs")
 endif()
 
-# eez-framework_Sources at CMakeLists.txt:38 (FILE)
+# EEZ-framework_Sources at CMakeLists.txt:40 (FILE)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/xEEZStudio/Transitorios_AIoT/RPi2040/Transitorios_AIoT_RPi2040/PPi2040/eez-framework/src/*.h")
 set(OLD_GLOB
   "C:/xEEZStudio/Transitorios_AIoT/RPi2040/Transitorios_AIoT_RPi2040/PPi2040/eez-framework/src/eez-framework.h"
@@ -278,8 +278,8 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "C:/xEEZStudio/Transitorios_AIoT/RPi2040/Transitorios_AIoT_RPi2040/PPi2040/build/CMakeFiles/cmake.verify_globs")
 endif()
 
+# UI_Sources at CMakeLists.txt:38 (FILE)
 # UI_Sources at CMakeLists.txt:39 (FILE)
-# UI_Sources at CMakeLists.txt:40 (FILE)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/xEEZStudio/Transitorios_AIoT/RPi2040/Transitorios_AIoT_RPi2040/PPi2040/ui/*.c")
 set(OLD_GLOB
   "C:/xEEZStudio/Transitorios_AIoT/RPi2040/Transitorios_AIoT_RPi2040/PPi2040/ui/eez-flow-lz4.c"
@@ -297,8 +297,8 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "C:/xEEZStudio/Transitorios_AIoT/RPi2040/Transitorios_AIoT_RPi2040/PPi2040/build/CMakeFiles/cmake.verify_globs")
 endif()
 
+# UI_Sources at CMakeLists.txt:38 (FILE)
 # UI_Sources at CMakeLists.txt:39 (FILE)
-# UI_Sources at CMakeLists.txt:40 (FILE)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/xEEZStudio/Transitorios_AIoT/RPi2040/Transitorios_AIoT_RPi2040/PPi2040/ui/*.cpp")
 set(OLD_GLOB
   "C:/xEEZStudio/Transitorios_AIoT/RPi2040/Transitorios_AIoT_RPi2040/PPi2040/ui/eez-flow.cpp"
