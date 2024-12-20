@@ -183,8 +183,8 @@ void create_screen_main1() {
                                     // PanelNombre
                                     lv_obj_t *obj = lv_obj_create(parent_obj);
                                     objects.panel_nombre = obj;
-                                    lv_obj_set_pos(obj, 62, 9);
-                                    lv_obj_set_size(obj, 320, 60);
+                                    lv_obj_set_pos(obj, 62, 15);
+                                    lv_obj_set_size(obj, 320, 50);
                                     lv_obj_clear_flag(obj, LV_OBJ_FLAG_CLICK_FOCUSABLE|LV_OBJ_FLAG_GESTURE_BUBBLE|LV_OBJ_FLAG_PRESS_LOCK|LV_OBJ_FLAG_SCROLLABLE|LV_OBJ_FLAG_SCROLL_CHAIN_HOR|LV_OBJ_FLAG_SCROLL_CHAIN_VER|LV_OBJ_FLAG_SCROLL_ELASTIC|LV_OBJ_FLAG_SCROLL_MOMENTUM|LV_OBJ_FLAG_SCROLL_WITH_ARROW|LV_OBJ_FLAG_SNAPPABLE);
                                     lv_obj_set_style_bg_color(obj, lv_color_hex(0xffc8c8c8), LV_PART_MAIN | LV_STATE_DEFAULT);
                                     lv_obj_set_style_border_color(obj, lv_color_hex(0xff000000), LV_PART_MAIN | LV_STATE_DEFAULT);
@@ -195,8 +195,8 @@ void create_screen_main1() {
                                         {
                                             lv_obj_t *obj = lv_label_create(parent_obj);
                                             lv_obj_set_pos(obj, 0, 0);
-                                            lv_obj_set_size(obj, LV_PCT(115), LV_PCT(200));
-                                            lv_label_set_text(obj, "ERNESTO JOSE GUERRERO GONZALEZ\nJEAN PAUL EDUARDO GARCIA VASQUEZ\nAIoT Transitorios Hidraulicos");
+                                            lv_obj_set_size(obj, LV_PCT(115), LV_PCT(250));
+                                            lv_label_set_text(obj, "ERNESTO JOSE GUERRERO GONZALEZ\nAIoT Transitorios Hidraulicos");
                                             lv_obj_set_style_align(obj, LV_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
                                             lv_obj_set_style_text_align(obj, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN | LV_STATE_DEFAULT);
                                         }
