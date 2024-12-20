@@ -6,7 +6,6 @@
 #include "lvgl/lvgl.h"
 #include "ui/ui.h"
 
-
 //#define __UI_PROJECT_ROTATION__ 0  //should be overwritten by SquareLine Studio later (above v1.3.3), when it's done, comment out this line
 //#define __UI_PROJECT_OFFSET_X__ 0
 //#define __UI_PROJECT_OFFSET_Y__ 0
