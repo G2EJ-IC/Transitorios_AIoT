@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "selectedUserPageObject": "[LVGL_PlatFormIO.eez-project]:/userPages/0",
+    "selectedUserPageObject": "[LVGL_PlatFormIO.eez-project]:/userPages/1",
     "subnavigationSelectedItems": {}
   },
   "layoutModel": {
@@ -200,10 +200,10 @@
                 {
                   "type": "tab",
                   "id": "#def49072-4c40-4c2a-a074-3aef08277f7a",
-                  "name": "Main1",
+                  "name": "Main3",
                   "component": "editor",
                   "config": {
-                    "objectPath": "[LVGL_PlatFormIO.eez-project]:/userPages/0",
+                    "objectPath": "[LVGL_PlatFormIO.eez-project]:/userPages/1",
                     "permanent": false
                   },
                   "icon": "svg:page"
@@ -975,6 +975,38 @@
   "features": {},
   "objects": {
     "[LVGL_PlatFormIO.eez-project]:/userPages/0[flow-state]": {
+      "selection": {},
+      "transform": {
+        "translate": {
+          "x": -240,
+          "y": -136
+        },
+        "scale": 1
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[LVGL_PlatFormIO.eez-project]:/userPages/2[flow-state]": {
+      "selection": {},
+      "transform": {
+        "translate": {
+          "x": -240,
+          "y": -136
+        },
+        "scale": 1
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
+    },
+    "[LVGL_PlatFormIO.eez-project]:/userPages/1[flow-state]": {
       "selection": {},
       "transform": {
         "translate": {
