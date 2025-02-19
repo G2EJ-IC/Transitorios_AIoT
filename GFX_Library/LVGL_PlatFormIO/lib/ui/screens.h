@@ -91,8 +91,10 @@ void tick_screen_main3();
 void create_screen_main2();
 void tick_screen_main2();
 
-void create_screens();
+void tick_screen_by_id(enum ScreensEnum screenId);
 void tick_screen(int screen_index);
+
+void create_screens();
 
 
 #ifdef __cplusplus

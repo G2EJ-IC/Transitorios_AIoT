@@ -170,7 +170,8 @@
                       "enableClose": false,
                       "icon": "svg:hierarchy"
                     }
-                  ]
+                  ],
+                  "active": true
                 },
                 {
                   "type": "tabset",
@@ -199,7 +200,7 @@
               "children": [
                 {
                   "type": "tab",
-                  "id": "#def49072-4c40-4c2a-a074-3aef08277f7a",
+                  "id": "#00d21dfc-e00a-4d49-b3ab-ccd656c8aef5",
                   "name": "Main3",
                   "component": "editor",
                   "config": {
@@ -207,9 +208,19 @@
                     "permanent": false
                   },
                   "icon": "svg:page"
+                },
+                {
+                  "type": "tab",
+                  "id": "#def49072-4c40-4c2a-a074-3aef08277f7a",
+                  "name": "Main1",
+                  "component": "editor",
+                  "config": {
+                    "objectPath": "[LVGL_PlatFormIO.eez-project]:/userPages/0",
+                    "permanent": true
+                  },
+                  "icon": "svg:page"
                 }
-              ],
-              "active": true
+              ]
             },
             {
               "type": "row",
@@ -1007,11 +1018,26 @@
       }
     },
     "[LVGL_PlatFormIO.eez-project]:/userPages/1[flow-state]": {
-      "selection": {},
+      "selection": {
+        "0": {
+          "0": {
+            "0": {
+              "0": {
+                "0": {}
+              },
+              "1": {
+                "0": {
+                  "$selected": true
+                }
+              }
+            }
+          }
+        }
+      },
       "transform": {
         "translate": {
           "x": -240,
-          "y": -136
+          "y": -36
         },
         "scale": 1
       },
@@ -1029,6 +1055,7 @@
   "searchMatchWholeWord": false,
   "replaceEnabled": false,
   "replaceText": "",
+  "pageRuntimeFrontFace": true,
   "breakpoints": {},
   "watchExpressions": [],
   "showComponentDescriptions": true,

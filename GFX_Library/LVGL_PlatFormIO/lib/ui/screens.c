@@ -254,6 +254,8 @@ void create_screen_main1() {
             }
         }
     }
+    
+    tick_screen_main1();
 }
 
 void tick_screen_main1() {
@@ -793,6 +795,8 @@ void create_screen_main3() {
         }
     }
     lv_keyboard_set_textarea(objects.keyboard, objects.text_area_password);
+    
+    tick_screen_main3();
 }
 
 void tick_screen_main3() {
@@ -1146,6 +1150,8 @@ void create_screen_main2() {
             }
         }
     }
+    
+    tick_screen_main2();
 }
 
 void tick_screen_main2() {
@@ -1192,6 +1198,20 @@ void tick_screen_main2() {
 static const char *screen_names[] = { "Main1", "Main3", "Main2" };
 static const char *object_names[] = { "main1", "main3", "main2", "img_der_pag2_main1", "img_izq_pag2_main3_1", "bt_connec_wi_fi_main3", "bt_re_scan_wi_fi_main3", "img_der_pag1_main3_1", "img_izq_pag2_main3_2", "img_der_pag1_main3_2", "img_izq_pag1_main2", "slider_porcentaje", "img_der_pag3_main2", "container_main1", "panel_aio_t", "img_ud_fjd_c_58x77", "panel_nombre", "but_img_der_pag2_main1", "obj0", "container_main3", "tab_view_main2", "pag2", "panel02_3", "bt_conectado_main3_tab1", "panel03_4", "label_wi_fi_ssid_pag1", "label_wi_fi_pass_pag1", "text_area_password", "keyboard", "pag3", "panel02_2", "bt_conectado_main3_tab2", "panel03_5", "container_label", "label_red_wi_fi_ssid", "label_direccion_ip", "label_direccion_dns", "label_direccion_mac", "container_resultados", "ui_lab_ssid", "ui_lab_ip", "ui_lab_mac", "ui_lab_dns", "bt_dhms_2", "label_dhms_2", "obj1", "obj2", "obj3", "obj4", "obj5", "obj6", "container_main2", "panel02_1", "label_slider_porcentaje", "panel03_3", "drop_down", "suspender", "drop_down_suspender", "m_todo_de_conecci_n", "drop_down_1", "bt_dhms_1", "label_dhms_1", "obj7", "obj8" };
 
+
+typedef void (*tick_screen_func_t)();
+tick_screen_func_t tick_screen_funcs[] = {
+    tick_screen_main1,
+    tick_screen_main3,
+    tick_screen_main2,
+};
+void tick_screen(int screen_index) {
+    tick_screen_funcs[screen_index]();
+}
+void tick_screen_by_id(enum ScreensEnum screenId) {
+    tick_screen_funcs[screenId - 1]();
+}
+
 void create_screens() {
     eez_flow_init_screen_names(screen_names, sizeof(screen_names) / sizeof(const char *));
     eez_flow_init_object_names(object_names, sizeof(object_names) / sizeof(const char *));
@@ -1203,16 +1223,4 @@ void create_screens() {
     create_screen_main1();
     create_screen_main3();
     create_screen_main2();
-}
-
-typedef void (*tick_screen_func_t)();
-
-tick_screen_func_t tick_screen_funcs[] = {
-    tick_screen_main1,
-    tick_screen_main3,
-    tick_screen_main2,
-};
-
-void tick_screen(int screen_index) {
-    tick_screen_funcs[screen_index]();
 }
