@@ -1,6 +1,6 @@
 {
   "navigation": {
-    "selectedUserPageObject": "[LVGL_PlatFormIO.eez-project]:/userPages/1",
+    "selectedUserPageObject": "[LVGL_PlatFormIO.eez-project]:/userPages/2",
     "subnavigationSelectedItems": {}
   },
   "layoutModel": {
@@ -170,8 +170,7 @@
                       "enableClose": false,
                       "icon": "svg:hierarchy"
                     }
-                  ],
-                  "active": true
+                  ]
                 },
                 {
                   "type": "tabset",
@@ -201,10 +200,10 @@
                 {
                   "type": "tab",
                   "id": "#00d21dfc-e00a-4d49-b3ab-ccd656c8aef5",
-                  "name": "Main3",
+                  "name": "Main2",
                   "component": "editor",
                   "config": {
-                    "objectPath": "[LVGL_PlatFormIO.eez-project]:/userPages/1",
+                    "objectPath": "[LVGL_PlatFormIO.eez-project]:/userPages/2",
                     "permanent": false
                   },
                   "icon": "svg:page"
@@ -220,7 +219,8 @@
                   },
                   "icon": "svg:page"
                 }
-              ]
+              ],
+              "active": true
             },
             {
               "type": "row",
@@ -986,13 +986,25 @@
   "features": {},
   "objects": {
     "[LVGL_PlatFormIO.eez-project]:/userPages/0[flow-state]": {
-      "selection": {},
+      "selection": {
+        "0": {
+          "0": {
+            "0": {
+              "0": {
+                "1": {
+                  "$selected": true
+                }
+              }
+            }
+          }
+        }
+      },
       "transform": {
         "translate": {
           "x": -240,
           "y": -136
         },
-        "scale": 1
+        "scale": 1.25
       },
       "timeline": {
         "isEditorActive": false,
@@ -1002,13 +1014,24 @@
       }
     },
     "[LVGL_PlatFormIO.eez-project]:/userPages/2[flow-state]": {
-      "selection": {},
+      "selection": {
+        "0": {
+          "0": {
+            "1": {
+              "0": {
+                "2": {},
+                "$selected": true
+              }
+            }
+          }
+        }
+      },
       "transform": {
         "translate": {
           "x": -240,
           "y": -136
         },
-        "scale": 1
+        "scale": 1.25
       },
       "timeline": {
         "isEditorActive": false,
@@ -1023,11 +1046,16 @@
           "0": {
             "0": {
               "0": {
-                "0": {}
+                "0": {
+                  "1": {}
+                }
               },
               "1": {
                 "0": {
-                  "$selected": true
+                  "0": {
+                    "0": {}
+                  },
+                  "1": {}
                 }
               }
             }
@@ -1036,10 +1064,10 @@
       },
       "transform": {
         "translate": {
-          "x": -240,
-          "y": -36
+          "x": -374.875,
+          "y": -200
         },
-        "scale": 1
+        "scale": 1.25
       },
       "timeline": {
         "isEditorActive": false,
@@ -1062,10 +1090,10 @@
   "logsPanelFilter": "all",
   "selectedStylePropertyName": "",
   "lvglPart": "MAIN",
-  "lvglState": "DEFAULT",
+  "lvglState": "CHECKED|PRESSED",
   "lvglExpandedPropertiesGroup": [],
   "showInactiveFlowsInDebugger": true,
   "globalFlowZoom": true,
-  "flowZoom": 1,
+  "flowZoom": 1.25,
   "implementationLanguage": "C"
 }
