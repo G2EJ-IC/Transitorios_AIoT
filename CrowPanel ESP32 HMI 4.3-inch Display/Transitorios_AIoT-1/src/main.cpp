@@ -126,7 +126,7 @@ void ICACHE_FLASH_ATTR setup()
 
 void ICACHE_FLASH_ATTR loop()
 {
-  io.feedTheDog();
+  // io.feedTheDog();
   // analogWrite(PIN_BL, 1);
   // tp.lv_no_sleep(60);
   if (millis() > asyncDelay0)
@@ -171,7 +171,7 @@ void ICACHE_FLASH_ATTR loop1(void *parameter)
   io.setup();
   for (;;) //while(1);
   {
-    io.feedTheDog();
+    // io.feedTheDog();
     loop_Task1();
     if (millis() > asyncDelay1)
     {
@@ -190,7 +190,7 @@ void ICACHE_FLASH_ATTR loop2(void *parameter)
   display.setup();
   for (;;)
   {
-    io.feedTheDog();
+    // io.feedTheDog();
     loop_Task2();
     tp.lv_no_sleep(lv_N_sleep);
     if (millis() >= asyncDelay2)
@@ -210,7 +210,7 @@ void ICACHE_FLASH_ATTR loop3(void *parameter)
   tp.setup();
   for (;;)
   {
-    io.feedTheDog();
+    // io.feedTheDog();
     loop_Task3();
     if (millis() > asyncDelay3)
     {
@@ -226,7 +226,7 @@ void ICACHE_FLASH_ATTR loop4(void *parameter)
   tp.setup();
   for (;;)
   {
-    io.feedTheDog();
+    // io.feedTheDog();
     loop_Task4();
     asyncDelay4 = millis();
     io.cronometro(asyncDelay4);

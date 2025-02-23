@@ -19,7 +19,7 @@ public:
     io_service();
     ~io_service();
 
-    void ICACHE_FLASH_ATTR setPin32(bool);
+    void ICACHE_FLASH_ATTR setPinBL(bool);
     void ICACHE_FLASH_ATTR setOpacity(uint32_t);
     void ICACHE_FLASH_ATTR ParpadeoLED(void);
     void ICACHE_FLASH_ATTR TestHWM(const char *, uint32_t);

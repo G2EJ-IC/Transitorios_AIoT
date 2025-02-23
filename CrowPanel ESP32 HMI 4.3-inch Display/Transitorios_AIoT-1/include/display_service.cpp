@@ -26,7 +26,7 @@ display_service::~display_service() {}
 
 static const uint16_t N = 15u; // N = {10, 12, 15, 16, 20, 24, 25, 32}
 
-enum { SCREENBUFFER_SIZE_PIXELS = (screenWidth * screenHeight / N) * (LV_COLOR_DEPTH / 8) };
+enum { SCREENBUFFER_SIZE_PIXELS = (TFT_WIDTH * TFT_HEIGHT / N) * (LV_COLOR_DEPTH / 8) };
 static lv_color_t buf [SCREENBUFFER_SIZE_PIXELS];
 uint32_t draw_buf[SCREENBUFFER_SIZE_PIXELS / 4];
 
@@ -94,7 +94,7 @@ void ICACHE_FLASH_ATTR display_service::touch_setup()
     tft.setRotation( 3 ); /* Landscape orientation, flipped */
 
     static lv_disp_t* disp;
-    disp = lv_display_create( screenWidth, screenHeight );
+    disp = lv_display_create( TFT_WIDTH, TFT_HEIGHT );
     lv_display_set_buffers( disp, buf, NULL, SCREENBUFFER_SIZE_PIXELS * sizeof(lv_color_t), LV_DISPLAY_RENDER_MODE_PARTIAL );
     lv_display_set_flush_cb( disp, my_disp_flush );
 

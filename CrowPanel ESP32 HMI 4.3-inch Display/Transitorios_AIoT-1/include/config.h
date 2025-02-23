@@ -12,7 +12,7 @@
 	Modificado: Ernesto José Guerrero González, Civil Engineering ud FJdC.
 */
 //////////////////////////////////////////////////////////////////////////
-#define HMI_TFT_ILI9488_480x320
+#define HMI_TFT_NV3047_480x272
 
 #define VERSION "0.0.0.4" //version number
 #define _DEBUG_           //debug switch
@@ -25,6 +25,9 @@
 //----------------------------tp configaction
 #if defined(HMI_TFT_ILI9488_480x320)
 // Pines TFT ILI9488 480x320.
+static const uint16_t TFT_WIDTH = 320;
+static const uint16_t TFT_HEIGHT = 480;
+
 #define LCD_SCK 	18	//	cfg.pin_sclk = 	18;
 #define LCD_MOSI 	23	//	cfg.pin_mosi = 	23;
 #define LCD_MISO 	19	//	cfg.pin_miso = 	19;
@@ -42,22 +45,23 @@
 #define TOUCH_CS 	21 	// Pin CS del panel táctil
 #define PinLED 		2	// LED_BUILTIN
 
-#elif defined(HMI_ESP32_4827S043)
+#elif defined(HMI_TFT_NV3047_480x272)
 // Pines TFT HMI ESP32 4827S043 - ESP32-S3 480x320
-#define LCD_SCK     12  //  cfg.pin_sclk =  12;
-#define LCD_MOSI    13  //  cfg.pin_mosi =  13;
-#define LCD_MISO    14  //  cfg.pin_miso =  14;
-#define LCD_SS0     3   //  cfg.pin_cs =    3;
-#define LCD_SS1 	-1	//	cfg.pin_cs =	-1;
-#define LCD_SS2 	-1	//	cfg.pin_cs =	-1;
+static const uint16_t TFT_WIDTH = 272;
+static const uint16_t TFT_HEIGHT = 480;
 
-#define SPI_DC		42	//	cfg.pin_dc   = 	42;
-#define PIN_RST		-1	//	cfg.pin_rst = 	-1;
-#define PIN_BL		46	//	cfg.pin_bl =	46;
+#define LCD_SCK     GPIO_NUM_12 	//  cfg.pin_sclk =  12;
+#define LCD_MOSI    GPIO_NUM_11 	//  cfg.pin_mosi =  11;
+#define LCD_MISO    GPIO_NUM_13 	//  cfg.pin_miso =  13;
+#define LCD_SS0     GPIO_NUM_10 	//  cfg.pin_cs =    10;
+#define LCD_SS1 	GPIO_NUM_0		//	cfg.pin_cs =	 0;
 
-#define PIN_BUSY	-1	//	cfg.pin_busy = 	-1;
-#define PIN_INT		-1	//	cfg.pin_int =	-1;
-#define PinLED 		2   // LED_BUILTIN
+#define PIN_BL		GPIO_NUM_2		//	cfg.pin_bl =	2;
+
+#define PIN_INT		GPIO_NUM_36		//	cfg.pin_int =	-1;
+
+#define TOUCH_CS 	GPIO_NUM_10 	//  Pin CS del panel táctil
+#define PinLED 		LED_BUILTIN		// 	LED_BUILTIN
 
 #endif
 //----------------------------end tp configaction

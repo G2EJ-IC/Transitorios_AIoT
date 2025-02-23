@@ -1,6 +1,5 @@
 {
   "navigation": {
-    "selectedUserPageObject": "[LVGL_PlatFormIO.eez-project]:/userPages/2",
     "subnavigationSelectedItems": {}
   },
   "layoutModel": {
@@ -154,7 +153,8 @@
                       "enableClose": false,
                       "icon": "material:code"
                     }
-                  ]
+                  ],
+                  "active": true
                 },
                 {
                   "type": "tabset",
@@ -199,17 +199,6 @@
               "children": [
                 {
                   "type": "tab",
-                  "id": "#00d21dfc-e00a-4d49-b3ab-ccd656c8aef5",
-                  "name": "Main2",
-                  "component": "editor",
-                  "config": {
-                    "objectPath": "[LVGL_PlatFormIO.eez-project]:/userPages/2",
-                    "permanent": false
-                  },
-                  "icon": "svg:page"
-                },
-                {
-                  "type": "tab",
                   "id": "#def49072-4c40-4c2a-a074-3aef08277f7a",
                   "name": "Main1",
                   "component": "editor",
@@ -219,8 +208,7 @@
                   },
                   "icon": "svg:page"
                 }
-              ],
-              "active": true
+              ]
             },
             {
               "type": "row",
@@ -230,7 +218,7 @@
                 {
                   "type": "tabset",
                   "id": "#2fb1ffb5-5a4e-49eb-a110-a71b7220d024",
-                  "weight": 2,
+                  "weight": 2.7282608695652173,
                   "children": [
                     {
                       "type": "tab",
@@ -245,7 +233,7 @@
                 {
                   "type": "tabset",
                   "id": "#ea1f5e1b-d050-4812-89ad-bb7c7c8b55af",
-                  "weight": 1,
+                  "weight": 0.2717391304347826,
                   "children": [
                     {
                       "type": "tab",
@@ -1017,10 +1005,10 @@
       "selection": {
         "0": {
           "0": {
+            "0": {},
             "1": {
               "0": {
-                "2": {},
-                "$selected": true
+                "2": {}
               }
             }
           }
@@ -1075,6 +1063,26 @@
         "secondToPx": 200,
         "scrollLeft": 0
       }
+    },
+    "[LVGL_PlatFormIO.eez-project]:/userPages/3[flow-state]": {
+      "selection": {
+        "0": {
+          "0": {}
+        }
+      },
+      "transform": {
+        "translate": {
+          "x": -240,
+          "y": -136
+        },
+        "scale": 1.25
+      },
+      "timeline": {
+        "isEditorActive": false,
+        "position": 0,
+        "secondToPx": 200,
+        "scrollLeft": 0
+      }
     }
   },
   "activeOutputSection": 0,
@@ -1090,7 +1098,7 @@
   "logsPanelFilter": "all",
   "selectedStylePropertyName": "",
   "lvglPart": "MAIN",
-  "lvglState": "CHECKED|PRESSED",
+  "lvglState": "DEFAULT",
   "lvglExpandedPropertiesGroup": [],
   "showInactiveFlowsInDebugger": true,
   "globalFlowZoom": true,

@@ -1,3 +1,4 @@
+#include <Arduino.h>
 #include <lvgl.h>
 #include <SPI.h>
 #include <Arduino_GFX_Library.h>
@@ -30,8 +31,6 @@ Arduino_GFX *lcd = create_default_Arduino_GFX();
 
 int led;
 SPIClass& spi = SPI;
-
-
 
 Arduino_ESP32RGBPanel *bus = new Arduino_ESP32RGBPanel(
   GFX_NOT_DEFINED /* CS */, GFX_NOT_DEFINED /* SCK */, GFX_NOT_DEFINED /* SDA */,

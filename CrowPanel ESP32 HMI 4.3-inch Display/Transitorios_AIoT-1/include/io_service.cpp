@@ -1,6 +1,8 @@
 #include <Arduino.h>
+
 #include "soc/timer_group_struct.h"  //for wdt
 #include "soc/timer_group_reg.h"     //for wdt
+
 #include "config.h"
 
 #include "io_service.h"
@@ -30,7 +32,7 @@ void ICACHE_FLASH_ATTR io_service::loop()
  * @param Parámetros.
  * @return Salida. 
  */
-void io_service::setPin32(bool estado) {
+void io_service::setPinBL(bool estado) {
   pinMode(PIN_BL, OUTPUT);
   digitalWrite(PIN_BL, estado ? HIGH : LOW);
 }
@@ -70,7 +72,7 @@ void ICACHE_FLASH_ATTR io_service::TestHWM(const char *taskName, uint32_t Ahora)
   BaseType_t portGCID = xPortGetCoreID();
   uint32_t dispGIT = lv_disp_get_inactive_time(NULL);
   float temperature = temperatureRead();
-  int HallEffectSensor = hallRead();
+  // int HallEffectSensor = hallRead();
   // String DHMS = DateTime.DHMS_AIoT((uint64_t)Ahora);
 
   Serial.println("\n================================================================================");
@@ -81,12 +83,13 @@ void ICACHE_FLASH_ATTR io_service::TestHWM(const char *taskName, uint32_t Ahora)
               "Temperatura (%.2f°C) \n"
               "Ahora (%u mSeg) \n"
               "Hall Effect Sensor (%i)", 
-              taskName, stack_HWM, portGCID, dispGIT, temperature, Ahora, HallEffectSensor);
+              taskName, stack_HWM, portGCID, dispGIT, temperature, Ahora);
   Serial.println("\n================================================================================");
 }
 
 void ICACHE_FLASH_ATTR io_service::feedTheDog(void)
 {
+  /* 
   // feed dog 0
   TIMERG0.wdt_wprotect=TIMG_WDT_WKEY_VALUE; // write enable
   TIMERG0.wdt_feed=1;                       // feed dog
@@ -95,6 +98,7 @@ void ICACHE_FLASH_ATTR io_service::feedTheDog(void)
   TIMERG1.wdt_wprotect=TIMG_WDT_WKEY_VALUE; // write enable
   TIMERG1.wdt_feed=1;                       // feed dog
   TIMERG1.wdt_wprotect=0;                   // write protect
+  */
 }
 
 void ICACHE_FLASH_ATTR io_service::memoria_ESP(void)
