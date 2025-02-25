@@ -11,7 +11,7 @@
 #include "esp_freertos_hooks.h"
 #include "ui.h"
 
-static LGFX tft;            // load tft service
+//  static LGFX tft;            // load tft service
 extern tp_service tp;       // load tp service
 extern io_service io_tp;    // load IO control service
 
@@ -72,8 +72,8 @@ void ICACHE_FLASH_ATTR display_service::touch_setup()
 
     //************************************************************************************************
     // tft.setBrightness(255);
-    // uint16_t calData[] = { 120, 3120, 170, 170, 4880, 3030, 4770, 50};
-    uint16_t calData[] = {239, 3926, 233, 265, 3856, 3896, 3714, 308};
+    // uint16_t calData[] = { 196, 256, 178, 3792, 3909, 300, 3912, 3791};
+    uint16_t calData[] = {204, 303, 181, 3820, 3913, 303, 3905, 3799};
     tft.setTouchCalibrate(calData);
     lv_init();
     //************************************************************************************************

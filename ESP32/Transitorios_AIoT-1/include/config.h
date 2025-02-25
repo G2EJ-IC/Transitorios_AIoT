@@ -25,6 +25,9 @@
 //----------------------------tp configaction
 #if defined(HMI_TFT_ILI9488_480x320)
 // Pines TFT ILI9488 480x320.
+static const uint16_t TFT_WIDTH = 320;
+static const uint16_t TFT_HEIGHT = 480;
+
 #define LCD_SCK 	18	//	cfg.pin_sclk = 	18;
 #define LCD_MOSI 	23	//	cfg.pin_mosi = 	23;
 #define LCD_MISO 	19	//	cfg.pin_miso = 	19;

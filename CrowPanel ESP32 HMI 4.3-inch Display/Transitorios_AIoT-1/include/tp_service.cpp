@@ -32,7 +32,7 @@ void ICACHE_FLASH_ATTR tp_service::loop()
 
 void ICACHE_FLASH_ATTR tp_service::lv_no_sleep(uint32_t lv_sleep){
     if (lv_display_get_inactive_time(NULL) < (1000 * lv_sleep)){
-        io_tp.setPin32(HIGH);
+        io_tp.setPinBL(HIGH);
         io_tp.setOpacity((int32_t)(255 * lv_slider_get_value(objects.slider_porcentaje) / 100));
     }
     /*Sleep after 1 sec inactivity*/
@@ -41,7 +41,7 @@ void ICACHE_FLASH_ATTR tp_service::lv_no_sleep(uint32_t lv_sleep){
         uint32_t Ahora = lv_display_get_inactive_time(NULL);
         String DHMS = DateTimeAhora.DHMS_AIoT_get((uint64_t)(Ahora));
         Serial.printf("%u mSeg - %s",Ahora, DHMS);
-        io_tp.setPin32(LOW);
+        io_tp.setPinBL(LOW);
         Serial.println();
     }
 }

@@ -11,8 +11,8 @@
  * CrowPanel_70 means CrowPanel 7.0inch Board
  ******************************************************************************/
 // #define CrowPanel_70
- #define CrowPanel_50
-// #define CrowPanel_43
+// #define CrowPanel_50
+#define CrowPanel_43
 
 
 #if defined (CrowPanel_70)

@@ -18,7 +18,7 @@
 #define _DEBUG_           	//debug switch
 #define DEV_TYPE "esp32dev"
 #define LVGL_TICK_PERIOD 10 //lvgl tick period
-#define ROTATION 1          //set ui rotation
+#define ROTATION 0          //set ui rotation
 #define TOUCHPAD 			//whether the UI support touch pad
 // #define _TP_DEBUG_ //TP debug
 

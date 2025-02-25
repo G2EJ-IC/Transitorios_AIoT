@@ -19,7 +19,7 @@ io_service::~io_service() {}
 void ICACHE_FLASH_ATTR io_service::setup()
 {
   Serial.begin(115200);
-  ParpadeoLED();
+  // ParpadeoLED();
 } // end io setup
 
 void ICACHE_FLASH_ATTR io_service::loop()
@@ -82,7 +82,7 @@ void ICACHE_FLASH_ATTR io_service::TestHWM(const char *taskName, uint32_t Ahora)
               "Timer(%u) \n"
               "Temperatura (%.2f°C) \n"
               "Ahora (%u mSeg) \n"
-              "Hall Effect Sensor (%i)", 
+              /* "Hall Effect Sensor (%i)" */, 
               taskName, stack_HWM, portGCID, dispGIT, temperature, Ahora);
   Serial.println("\n================================================================================");
 }
@@ -105,14 +105,14 @@ void ICACHE_FLASH_ATTR io_service::memoria_ESP(void)
 {
   Serial.println("\n\n\n");
   Serial.println("\n================================================================================");
-  log_d("Total heap: %d", ESP.getHeapSize());
-  log_d("Free heap: %d", ESP.getFreeHeap());
-  log_d("Min Free heap: %d", ESP.getMinFreeHeap());
-  log_d("Total PSRAM: %d", ESP.getPsramSize());
-  log_d("Free PSRAM: %d", ESP.getFreePsram());
-  log_d("Min Free PSRAM: %d", ESP.getMinFreePsram());
-  log_d("Total Flash: %d", ESP.getFlashChipSize());
-  log_d("Free Flash: %d", ESP.getFreeSketchSpace());
+  // log_d("Total heap: %d", ESP.getHeapSize());
+  // log_d("Free heap: %d", ESP.getFreeHeap());
+  // log_d("Min Free heap: %d", ESP.getMinFreeHeap());
+  // log_d("Total PSRAM: %d", ESP.getPsramSize());
+  // log_d("Free PSRAM: %d", ESP.getFreePsram());
+  // log_d("Min Free PSRAM: %d", ESP.getMinFreePsram());
+  // log_d("Total Flash: %d", ESP.getFlashChipSize());
+  // log_d("Free Flash: %d", ESP.getFreeSketchSpace());
   Serial.println("\n================================================================================");
   Serial.println("\n\n\n");
 }

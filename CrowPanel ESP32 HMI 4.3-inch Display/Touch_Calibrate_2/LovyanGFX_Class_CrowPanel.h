@@ -63,14 +63,14 @@ public:
             cfg.pin_d2 = GPIO_NUM_46;       // B2
             cfg.pin_d3 = GPIO_NUM_9;        // B3
             cfg.pin_d4 = GPIO_NUM_1;        // B4
-            
+
             cfg.pin_d5 = GPIO_NUM_5;        // G0
             cfg.pin_d6 = GPIO_NUM_6;        // G1
             cfg.pin_d7 = GPIO_NUM_7;        // G2
             cfg.pin_d8 = GPIO_NUM_15;       // G3
             cfg.pin_d9 = GPIO_NUM_16;       // G4
             cfg.pin_d10 = GPIO_NUM_4;       // G5
-            
+
             cfg.pin_d11 = GPIO_NUM_45;      // R0
             cfg.pin_d12 = GPIO_NUM_48;      // R1
             cfg.pin_d13 = GPIO_NUM_47;      // R2
@@ -87,7 +87,7 @@ public:
             cfg.hsync_front_porch = 8;
             cfg.hsync_pulse_width = 4;
             cfg.hsync_back_porch  = 43;
-
+            
             cfg.vsync_polarity    = 0;
             cfg.vsync_front_porch = 8;
             cfg.vsync_pulse_width = 4;
@@ -133,6 +133,6 @@ public:
     }
 };
 
-LGFX tft;               //  load tft service
+LGFX tft;            // load tft service
 
 #endif // __CLASSCROWPANEL_H__

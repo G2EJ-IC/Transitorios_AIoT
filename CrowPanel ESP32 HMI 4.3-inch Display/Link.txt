@@ -1,0 +1,14 @@
+
+CrowPanel 4.3"-HMI ESP32 Display 480x272 RGB TFT LCD Touch Screen Compatible with Arduino/LVGL/ PlatformIO/Micropython.
+https://www.elecrow.com/esp32-display-4-3-inch-hmi-display-rgb-tft-lcd-touch-screen.html
+
+
+ESP32 HMI 4.3-inch Arduino Tutorial
+https://www.elecrow.com/wiki/ESP32_Display_4.3-inch_HMI_Arduino_Tutorial.html
+
+
+CrowPanel ESP32 HMI 4.3-inch Display
+https://www.elecrow.com/wiki/esp32-display-432727-intelligent-touch-screen-wi-fi26ble-480272-hmi-display.html
+
+https://github.com/MikeWarriner/CrowPanel7inch
+https://github.com/MikeWarriner/CrowPanel7inch.git

@@ -41,7 +41,7 @@ int delayLength0 = 3000;
 
 void ICACHE_FLASH_ATTR setup()
 {
-  io.memoria_ESP();
+  // io.memoria_ESP();
   // pinMode(PinLED, OUTPUT);
   // pinMode(PIN_BL, OUTPUT);
   // Segundo Siclo en el Núcleo Secundario.
@@ -99,7 +99,7 @@ void ICACHE_FLASH_ATTR setup()
   taskCreationResult = xTaskCreatePinnedToCore(
       loop4,
       "Task_4",
-      1600, //25600
+      3200, //25600
       NULL,
       1,
       &Task4,
@@ -176,7 +176,7 @@ void ICACHE_FLASH_ATTR loop1(void *parameter)
     if (millis() > asyncDelay1)
     {
       asyncDelay1 += delayLength1;
-      io.ParpadeoLED();
+      // io.ParpadeoLED();
       io.TestHWM("loop1", asyncDelay1);          
     }
   }

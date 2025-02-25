@@ -23,14 +23,15 @@
 #include "config.h"
 #include <LovyanGFX.hpp>
 
-static const uint32_t TFT_WIDTH = 320;
-static const uint32_t TFT_HEIGHT = 480;
+#include <lgfx/v1/panel/Panel_ILI948x.hpp>
+#include <lgfx/v1/platforms/esp32/Bus_SPI.hpp>
+#include <driver/i2c.h>
 
 class LGFX : public lgfx::LGFX_Device
 {
-	lgfx::Panel_ILI9488     _panel_instance;
-	lgfx::Bus_SPI        _bus_instance; // instancia de bus SPI
-	lgfx::Light_PWM     _light_instance;
+	lgfx::Panel_ILI9488 	_panel_instance;
+	lgfx::Bus_SPI       	_bus_instance; // instancia de bus SPI
+	lgfx::Light_PWM     	_light_instance;
 	
 	// Prepara una instancia que coincida con el tipo de pantalla táctil. (Eliminar si no es necesario)
 	lgfx::Touch_XPT2046          _touch_instance;
