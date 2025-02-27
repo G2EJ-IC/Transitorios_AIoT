@@ -7,7 +7,7 @@
 #include <Arduino.h>
 #include <Wire.h>
 #include <SPI.h>
-#include "LovyanGFX_Class_CrowPanel.h"
+#include "GFX_Class_Conf.h"
 
 // static LGFX tft;            // load tft service
 

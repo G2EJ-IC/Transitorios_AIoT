@@ -12,7 +12,7 @@
 	Modificado: Ernesto José Guerrero González, Civil Engineering ud FJdC.
 */
 //////////////////////////////////////////////////////////////////////////
-#define HMI_TFT_NV3047_480x272
+#define HMI_TFT_CrowPanel_43_480x272
 
 #define VERSION "0.0.0.4" 	//version number
 #define _DEBUG_           	//debug switch
@@ -23,7 +23,7 @@
 // #define _TP_DEBUG_ //TP debug
 
 //----------------------------tp configaction
-#if defined(HMI_TFT_ILI9488_480x320)
+#if defined(HMI_TFT_ILI9488_39_480x320)
 // Pines TFT ILI9488 480x320.
 static const uint16_t TFT_WIDTH = 480;
 static const uint16_t TFT_HEIGHT = 320;
@@ -45,7 +45,7 @@ static const uint16_t TFT_HEIGHT = 320;
 #define TOUCH_CS 	GPIO_NUM_21 	// Pin CS del panel táctil
 #define PinLED 		GPIO_NUM_2		// LED_BUILTIN
 
-#elif defined(HMI_TFT_NV3047_480x272)
+#elif defined(HMI_TFT_CrowPanel_43_480x272)
 // Pines TFT HMI ESP32 4827S043 - ESP32-S3 480x320
 static const uint16_t TFT_WIDTH = 480;
 static const uint16_t TFT_HEIGHT = 272;

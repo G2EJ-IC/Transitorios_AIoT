@@ -1,29 +1,25 @@
-//////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
 /*
-	ESP32 | LVGL8 | Ep 0. GFX Setup (ft. LovyanGFX)
-	Developing Embedded GUI with SquareLine Studio [2/2]
-	Configuración de lv_conf.h
-	Video Tutorial: https://youtu.be/b_4m1A3A2yw
-	Created by That Project
+	ESP32 | LVGL9 | GFX_Class_Conf
+    LovyanGFX
+    https://github.com/lovyan03/LovyanGFX
+    
+    Modificado: Ernesto José Guerrero González, Civil Engineering ud FJdC.
 */
-//////////////////////////////////////////////////////////////////////////
-/*
-	Modificado: Ernesto José Guerrero González, Civil Engineering ud FJdC.
-*/
-//////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
 
 #ifndef __CLASSCROWPANEL_H__
 #define __CLASSCROWPANEL_H__
 
-//#include <Arduino.h>
-
-// LovyanGFX
-// https://github.com/lovyan03/LovyanGFX
-#define LGFX_USE_V1
 #include <Arduino.h>
 #include "config.h"
-#include <Wire.h>
 #include <LovyanGFX.hpp>
+
+#if defined (HMI_TFT_ILI9488_39_480x320)
+
+
+
+#elif defined (HMI_TFT_CrowPanel_43_480x272)
 
 #include <lgfx/v1/platforms/esp32s3/Panel_RGB.hpp>
 #include <lgfx/v1/platforms/esp32s3/Bus_RGB.hpp>
@@ -32,8 +28,6 @@
 #include <lgfx/v1/touch/Touch_XPT2046.hpp>
 
 #include <driver/i2c.h>
-#include <driver/gpio.h>
-
 class LGFX : public lgfx::LGFX_Device
 {
 public:
@@ -66,14 +60,14 @@ public:
             cfg.pin_d2 = GPIO_NUM_46;       // B2
             cfg.pin_d3 = GPIO_NUM_9;        // B3
             cfg.pin_d4 = GPIO_NUM_1;        // B4
-
+            
             cfg.pin_d5 = GPIO_NUM_5;        // G0
             cfg.pin_d6 = GPIO_NUM_6;        // G1
             cfg.pin_d7 = GPIO_NUM_7;        // G2
             cfg.pin_d8 = GPIO_NUM_15;       // G3
             cfg.pin_d9 = GPIO_NUM_16;       // G4
             cfg.pin_d10 = GPIO_NUM_4;       // G5
-
+            
             cfg.pin_d11 = GPIO_NUM_45;      // R0
             cfg.pin_d12 = GPIO_NUM_48;      // R1
             cfg.pin_d13 = GPIO_NUM_47;      // R2
@@ -84,18 +78,21 @@ public:
             cfg.pin_vsync = GPIO_NUM_41;
             cfg.pin_hsync = GPIO_NUM_39;
             cfg.pin_pclk = GPIO_NUM_42;
-            cfg.freq_write = 8000000;       //  8000000
+            cfg.freq_write = 8000000;  // 8000000;
 
+            // hsync
             cfg.hsync_polarity    = 0;
             cfg.hsync_front_porch = 8;
             cfg.hsync_pulse_width = 4;
-            cfg.hsync_back_porch  = 43;
-            
-            cfg.vsync_polarity    = 0;
-            cfg.vsync_front_porch = 8;
-            cfg.vsync_pulse_width = 4;
-            cfg.vsync_back_porch  = 12;
+            cfg.hsync_back_porch  = 16;  // 43;
 
+            // vsync
+            cfg.vsync_polarity    = 0;
+            cfg.vsync_front_porch = 4;  // 8;
+            cfg.vsync_pulse_width = 4;  // 4;
+            cfg.vsync_back_porch  = 4;  // 12;
+
+            // polaridad del reloj PCLK
             cfg.pclk_active_neg = 1;
             cfg.de_idle_high = 0;
             cfg.pclk_idle_high = 0;
@@ -136,6 +133,8 @@ public:
     }
 };
 
-LGFX tft;            // load tft service
+#endif // defined (HMI_TFT_ ....)
+
+LGFX tft; //  load tft service
 
 #endif // __CLASSCROWPANEL_H__

@@ -24,7 +24,7 @@ display_service::~display_service() {}
 
 /*Change to your screen resolution*/
 
-static const uint16_t N = 10u; // N = {10, 12, 15, 16, 20, 24, 25, 32}
+static const uint16_t N = 8u; // N = {8, 10, 12, 15, 16, 20, 24, 25, 32}
 
 enum { SCREENBUFFER_SIZE_PIXELS = (TFT_WIDTH * TFT_HEIGHT / N) * (LV_COLOR_DEPTH / 8) };
 static lv_color_t buf [SCREENBUFFER_SIZE_PIXELS];
@@ -35,7 +35,7 @@ unsigned long lastTickMillis = 0;
 
 static lv_display_t *disp;
 
-#define DRAW_BUF_SIZE (TFT_HOR_RES * TFT_VER_RES / 10 * (LV_COLOR_DEPTH / 8))
+#define DRAW_BUF_SIZE (TFT_WIDTH * TFT_HEIGHT / N * (LV_COLOR_DEPTH / 8))
 
 /*Set tick routine needed for LVGL internal timings*/
 inline static uint32_t my_tick_get_cb (void){ return millis(); }
