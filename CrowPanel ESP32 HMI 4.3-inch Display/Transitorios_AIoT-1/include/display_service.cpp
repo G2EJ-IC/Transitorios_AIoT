@@ -2,7 +2,7 @@
 #include <lvgl.h>
 #include "config.h"
 #include <SPI.h>
-#include "LovyanGFX_Class_CrowPanel.h"
+#include "GFX_Class_Conf.h"
 
 #include "display_service.h"
 #include "io_service.h"
@@ -24,7 +24,7 @@ display_service::~display_service() {}
 
 /*Change to your screen resolution*/
 
-static const uint16_t N = 15u; // N = {10, 12, 15, 16, 20, 24, 25, 32}
+static const uint16_t N = 10u; // N = {10, 12, 15, 16, 20, 24, 25, 32}
 
 enum { SCREENBUFFER_SIZE_PIXELS = (TFT_WIDTH * TFT_HEIGHT / N) * (LV_COLOR_DEPTH / 8) };
 static lv_color_t buf [SCREENBUFFER_SIZE_PIXELS];

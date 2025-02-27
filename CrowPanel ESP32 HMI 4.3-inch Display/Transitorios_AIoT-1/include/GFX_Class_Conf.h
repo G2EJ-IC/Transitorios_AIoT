@@ -1,27 +1,25 @@
-//////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
 /*
-	ESP32 | LVGL8 | Ep 0. GFX Setup (ft. LovyanGFX)
-	Developing Embedded GUI with SquareLine Studio [2/2]
-	Configuración de lv_conf.h
-	Video Tutorial: https://youtu.be/b_4m1A3A2yw
-	Created by That Project
+	ESP32 | LVGL9 | GFX_Class_Conf
+    LovyanGFX
+    https://github.com/lovyan03/LovyanGFX
+    
+    Modificado: Ernesto José Guerrero González, Civil Engineering ud FJdC.
 */
-//////////////////////////////////////////////////////////////////////////
-/*
-	Modificado: Ernesto José Guerrero González, Civil Engineering ud FJdC.
-*/
-//////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
 
 #ifndef __CLASSCROWPANEL_H__
 #define __CLASSCROWPANEL_H__
 
-//#include <Arduino.h>
-
-// LovyanGFX
-// https://github.com/lovyan03/LovyanGFX
-#define LGFX_USE_V1
+#include <Arduino.h>
 #include "config.h"
 #include <LovyanGFX.hpp>
+
+#if defined (HMI_TFT_ILI9488_39_480x320)
+
+
+
+#elif defined (HMI_TFT_CrowPanel_43_480x272)
 
 #include <lgfx/v1/platforms/esp32s3/Panel_RGB.hpp>
 #include <lgfx/v1/platforms/esp32s3/Bus_RGB.hpp>
@@ -30,7 +28,6 @@
 #include <lgfx/v1/touch/Touch_XPT2046.hpp>
 
 #include <driver/i2c.h>
-
 class LGFX : public lgfx::LGFX_Device
 {
 public:
@@ -83,16 +80,19 @@ public:
             cfg.pin_pclk = GPIO_NUM_42;
             cfg.freq_write = 8000000;
 
+            // hsync
             cfg.hsync_polarity    = 0;
             cfg.hsync_front_porch = 8;
             cfg.hsync_pulse_width = 4;
             cfg.hsync_back_porch  = 43;
 
+            // vsync
             cfg.vsync_polarity    = 0;
             cfg.vsync_front_porch = 8;
             cfg.vsync_pulse_width = 4;
             cfg.vsync_back_porch  = 12;
 
+            // polaridad del reloj PCLK
             cfg.pclk_active_neg = 1;
             cfg.de_idle_high = 0;
             cfg.pclk_idle_high = 0;
@@ -133,6 +133,8 @@ public:
     }
 };
 
-LGFX tft;               //  load tft service
+#endif // defined (HMI_TFT_ ....)
+
+LGFX tft; //  load tft service
 
 #endif // __CLASSCROWPANEL_H__

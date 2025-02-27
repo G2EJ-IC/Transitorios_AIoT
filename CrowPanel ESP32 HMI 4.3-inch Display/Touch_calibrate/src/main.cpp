@@ -26,9 +26,6 @@ void setup() {
   // (the touch coordinates returned then correspond to that rotation only)
   tft.setRotation(ROTATION);
 
-  tft.setTextSize(2);
-  tft.println("¡Monocuco Guayabero!"); // Prueba
-
   // Calibrate the touch screen and retrieve the scaling factors
   touch_calibrate();
 

@@ -12,3 +12,11 @@ https://www.elecrow.com/wiki/esp32-display-432727-intelligent-touch-screen-wi-fi
 
 https://github.com/MikeWarriner/CrowPanel7inch
 https://github.com/MikeWarriner/CrowPanel7inch.git
+
+
+
+C:\xEEZStudio\Transitorios_AIoT\CrowPanel ESP32 HMI 4.3-inch Display\Touch_calibrate
+C:\xEEZStudio\Transitorios_AIoT\CrowPanel ESP32 HMI 4.3-inch Display\Touch_Calibrate_2
+C:\xEEZStudio\Transitorios_AIoT\CrowPanel_ESP32_Tutorial\Code\V2.X\Lesson 2 Draw GUI with LovyanGFX\4.3inch_5inch_7inch\Draw
+C:\Users\IC.EJGuerreroG\OneDrive\OneDrive\Downloads\CrowPanel7inch-main\Starter_SquareLineUX
+
