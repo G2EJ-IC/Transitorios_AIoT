@@ -16,12 +16,6 @@
 #include "config.h"
 #include <LovyanGFX.hpp>
 
-#if defined (HMI_TFT_ILI9488_39_480x320)
-
-
-
-#elif defined (HMI_TFT_CrowPanel_43_480x272)
-
 #include <lgfx/v1/platforms/esp32s3/Panel_RGB.hpp>
 #include <lgfx/v1/platforms/esp32s3/Bus_RGB.hpp>
 #include <lgfx/v1/platforms/esp32/Light_PWM.hpp>
@@ -132,8 +126,6 @@ public:
         setPanel(&_panel_instance);
     }
 };
-
-#endif // defined (HMI_TFT_ ....)
 
 LGFX tft; //  load tft service
 
