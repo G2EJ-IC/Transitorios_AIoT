@@ -82,7 +82,7 @@ void ICACHE_FLASH_ATTR io_service::TestHWM(const char *taskName, uint32_t Ahora)
               "Timer(%u) \n"
               "Temperatura (%.2f°C) \n"
               "Ahora (%u mSeg) \n"
-              /* "Hall Effect Sensor (%i)" */, 
+              /* "Hall Effect Sensor (%i)" */,
               taskName, stack_HWM, portGCID, dispGIT, temperature, Ahora);
   Serial.println("\n================================================================================");
 }

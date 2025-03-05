@@ -74,12 +74,12 @@ void ICACHE_FLASH_ATTR setup()
       3,
       &Task2,
       1);
-  if (taskCreationResult != pdPASS)
-  {
-    Serial.println("Error al crear Task2");
-    while (true)
-      ;
-  }
+if (taskCreationResult != pdPASS)
+{
+  Serial.println("Error al crear Task2");
+  while (true)
+    ;
+}
 
   taskCreationResult = xTaskCreatePinnedToCore(
       loop3,
@@ -99,7 +99,7 @@ void ICACHE_FLASH_ATTR setup()
   taskCreationResult = xTaskCreatePinnedToCore(
       loop4,
       "Task_4",
-      3200, //25600
+      25600, // 3200, //25600
       NULL,
       1,
       &Task4,
@@ -111,13 +111,13 @@ void ICACHE_FLASH_ATTR setup()
       ;
   }
 
-  cuentaMutex = xSemaphoreCreateMutex();
-  if (cuentaMutex == NULL)
-  {
-    Serial.println("Error al crear semáforo");
-    while (true)
-      ;
-  }
+cuentaMutex = xSemaphoreCreateMutex();
+if (cuentaMutex == NULL)
+{
+  Serial.println("Error al crear semáforo");
+  while (true)
+    ;
+}
 
   /******************************************End FreeRTOS***************************************/
   delay(1000);
@@ -165,7 +165,7 @@ inline void loop_Task4(void)
 
 void ICACHE_FLASH_ATTR loop1(void *parameter)
 {
-  int delayLength1 = 5333;
+  int delayLength1 = 1000;
   unsigned long asyncDelay1 = 0;
 
   io.setup();
@@ -177,14 +177,14 @@ void ICACHE_FLASH_ATTR loop1(void *parameter)
     {
       asyncDelay1 += delayLength1;
       // io.ParpadeoLED();
-      io.TestHWM("loop1", asyncDelay1);          
+      io.TestHWM("loop1", asyncDelay1); 
     }
   }
 }
 
 void ICACHE_FLASH_ATTR loop2(void *parameter)
 {
-  int delayLength2 = 5222;
+  int delayLength2 = 900;
   unsigned long asyncDelay2 = 0;
 
   display.setup();
@@ -197,14 +197,14 @@ void ICACHE_FLASH_ATTR loop2(void *parameter)
     {
       io.cronometro(asyncDelay2);
       asyncDelay2 += delayLength2;
-      io.TestHWM("loop2", asyncDelay2);      
+      io.TestHWM("loop2", asyncDelay2);   
     }
   }
 }
 
 void ICACHE_FLASH_ATTR loop3(void *parameter)
 {
-  int delayLength3 = 5111;
+  int delayLength3 = 800;
   unsigned long asyncDelay3 = 0;
 
   tp.setup();
@@ -215,7 +215,7 @@ void ICACHE_FLASH_ATTR loop3(void *parameter)
     if (millis() > asyncDelay3)
     {
       asyncDelay3 += delayLength3;
-      io.TestHWM("loop3", asyncDelay3);      
+      io.TestHWM("loop3", asyncDelay3);
     }
   }
 }

@@ -12,6 +12,7 @@
 #define __CLASSCROWPANEL_H__
 
 #include <Arduino.h>
+#define LGFX_USE_V1
 #include "config.h"
 #include <LovyanGFX.hpp>
 
@@ -24,10 +25,12 @@
 #include <lgfx/v1/platforms/esp32s3/Panel_RGB.hpp>
 #include <lgfx/v1/platforms/esp32s3/Bus_RGB.hpp>
 #include <lgfx/v1/platforms/esp32/Light_PWM.hpp>
-
 #include <lgfx/v1/touch/Touch_XPT2046.hpp>
 
 #include <driver/i2c.h>
+
+enum BoardConstants { TFT_BL=2, SERIAL_BAUD=9600, LVGL_BUFFER_RATIO = 6 };
+
 class LGFX : public lgfx::LGFX_Device
 {
 public:
@@ -77,20 +80,20 @@ public:
             cfg.pin_henable = GPIO_NUM_40;
             cfg.pin_vsync = GPIO_NUM_41;
             cfg.pin_hsync = GPIO_NUM_39;
-            cfg.pin_pclk = GPIO_NUM_42;
+            cfg.pin_pclk =  GPIO_NUM_42; //GPIO_NUM_0; //  GPIO_NUM_42;
             cfg.freq_write = 8000000;  // 8000000;
 
             // hsync
             cfg.hsync_polarity    = 0;
             cfg.hsync_front_porch = 8;
             cfg.hsync_pulse_width = 4;
-            cfg.hsync_back_porch  = 16;  // 43;
+            cfg.hsync_back_porch  = 43;
 
             // vsync
             cfg.vsync_polarity    = 0;
-            cfg.vsync_front_porch = 4;  // 8;
-            cfg.vsync_pulse_width = 4;  // 4;
-            cfg.vsync_back_porch  = 4;  // 12;
+            cfg.vsync_front_porch = 8;
+            cfg.vsync_pulse_width = 4;
+            cfg.vsync_back_porch  = 12;
 
             // polaridad del reloj PCLK
             cfg.pclk_active_neg = 1;
@@ -98,7 +101,7 @@ public:
             cfg.pclk_idle_high = 0;
 
             _bus_instance.config(cfg);
-            _panel_instance.setBus(&_bus_instance);
+            // _panel_instance.setBus(&_bus_instance);
         }
 
         {
@@ -129,6 +132,7 @@ public:
             _touch_instance.config(touch_cfg);
             _panel_instance.setTouch(&_touch_instance);  // Configura la pantalla táctil en el panel.
         }
+        _panel_instance.setBus(&_bus_instance);
         setPanel(&_panel_instance);
     }
 };

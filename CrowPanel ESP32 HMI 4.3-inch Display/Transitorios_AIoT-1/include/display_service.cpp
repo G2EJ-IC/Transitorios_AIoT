@@ -91,7 +91,7 @@ void ICACHE_FLASH_ATTR display_service::touch_setup()
 #endif
 
     tft.begin();          /* TFT init */
-    tft.setRotation( 3 ); /* Landscape orientation, flipped */
+    tft.setRotation( ROTATION ); /* Landscape orientation, flipped */
 
     static lv_disp_t* disp;
     disp = lv_display_create( TFT_WIDTH, TFT_HEIGHT );
@@ -124,16 +124,17 @@ void display_service::my_disp_flush (lv_display_t *disp, const lv_area_t *area, 
     uint32_t w = ( area->x2 - area->x1 + 1 );
     uint32_t h = ( area->y2 - area->y1 + 1 );
 
-    if (LV_COLOR_16_SWAP) {
-        size_t len = lv_area_get_size( area );
-        lv_draw_sw_rgb565_swap( pixelmap, len );
-    }
+    // if (LV_COLOR_16_SWAP) {
+    //     size_t len = lv_area_get_size( area );
+    //     lv_draw_sw_rgb565_swap( pixelmap, len );
+    // }
+    // 
+    // tft.startWrite();
+    // tft.setAddrWindow( area->x1, area->y1, w, h);
+    // tft.pushColors( (uint16_t*) pixelmap, w * h, true );
+    // tft.endWrite();
 
-    tft.startWrite();
-    tft.setAddrWindow( area->x1, area->y1, w, h);
-    tft.pushColors( (uint16_t*) pixelmap, w * h, true );
-    tft.endWrite();
-
+    tft.pushImageDMA( area->x1, area->y1, w, h, (lgfx::rgb565_t*) pixelmap );
     lv_disp_flush_ready( disp );
 }
 
