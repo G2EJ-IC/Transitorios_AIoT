@@ -175,6 +175,7 @@ void loop1(void *parameter)
     //   io.TestHWM("loop1", asyncDelay1); 
     // }
     vTaskDelay(pdMS_TO_TICKS(1)); // delay( 1 );
+    // taskYIELD();
   }
 }
 
@@ -195,6 +196,7 @@ void loop2(void *parameter)
       // io.TestHWM("loop2", asyncDelay2);   
     }
     vTaskDelay(pdMS_TO_TICKS(1)); // delay( 1 );
+    // taskYIELD();
   }
 }
 
@@ -213,6 +215,7 @@ void loop3(void *parameter)
     //   io.TestHWM("loop3", asyncDelay3);
     // }
     vTaskDelay(pdMS_TO_TICKS(1)); // delay( 1 );
+    // taskYIELD();
   }
 }
 
@@ -224,5 +227,6 @@ void loop4(void *parameter)
   {
     loop_Task4();
     vTaskDelay(pdMS_TO_TICKS(1)); // delay( 1 );
+    // taskYIELD();
   }
 }
