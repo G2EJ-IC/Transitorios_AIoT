@@ -11,7 +11,6 @@
 #include "esp_freertos_hooks.h"
 #include "ui.h"
 
-//  static LGFX tft;            // load tft service
 extern tp_service tp;       // load tp service
 extern io_service io_tp;    // load IO control service
 
@@ -73,7 +72,7 @@ void ICACHE_FLASH_ATTR display_service::touch_setup()
     //************************************************************************************************
     // tft.setBrightness(255);
     // uint16_t calData[] = { 196, 256, 178, 3792, 3909, 300, 3912, 3791};
-    uint16_t calData[] = {204, 303, 181, 3820, 3913, 303, 3905, 3799};
+    uint16_t calData[] = {187, 241, 186, 3798, 3916, 279, 3898, 3769};
     tft.setTouchCalibrate(calData);
     lv_init();
     //************************************************************************************************
@@ -118,21 +117,10 @@ void IRAM_ATTR display_service::lv_main()
 }
 
 /* Display flushing */
-// void my_disp_flush( lv_display_t *disp, const lv_area_t *area, uint8_t * px_map)
 void display_service::my_disp_flush (lv_display_t *disp, const lv_area_t *area, uint8_t *pixelmap)
 {
     uint32_t w = ( area->x2 - area->x1 + 1 );
     uint32_t h = ( area->y2 - area->y1 + 1 );
-
-    // if (LV_COLOR_16_SWAP) {
-    //     size_t len = lv_area_get_size( area );
-    //     lv_draw_sw_rgb565_swap( pixelmap, len );
-    // }
-    // 
-    // tft.startWrite();
-    // tft.setAddrWindow( area->x1, area->y1, w, h);
-    // tft.pushColors( (uint16_t*) pixelmap, w * h, true );
-    // tft.endWrite();
 
     tft.pushImageDMA( area->x1, area->y1, w, h, (lgfx::rgb565_t*) pixelmap );
     lv_disp_flush_ready( disp );

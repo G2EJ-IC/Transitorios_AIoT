@@ -28,9 +28,6 @@
 #include <lgfx/v1/touch/Touch_XPT2046.hpp>
 
 #include <driver/i2c.h>
-
-enum BoardConstants { TFT_BL=2, SERIAL_BAUD=9600, LVGL_BUFFER_RATIO = 6 };
-
 class LGFX : public lgfx::LGFX_Device
 {
 public:
@@ -80,8 +77,8 @@ public:
             cfg.pin_henable = GPIO_NUM_40;
             cfg.pin_vsync = GPIO_NUM_41;
             cfg.pin_hsync = GPIO_NUM_39;
-            cfg.pin_pclk =  GPIO_NUM_42; //GPIO_NUM_0; //  GPIO_NUM_42;
-            cfg.freq_write = 8000000;  // 8000000;
+            cfg.pin_pclk =  GPIO_NUM_42;
+            cfg.freq_write = 8000000;
 
             // hsync
             cfg.hsync_polarity    = 0;
@@ -101,7 +98,7 @@ public:
             cfg.pclk_idle_high = 0;
 
             _bus_instance.config(cfg);
-            // _panel_instance.setBus(&_bus_instance);
+            _panel_instance.setBus(&_bus_instance);
         }
 
         {
@@ -132,7 +129,6 @@ public:
             _touch_instance.config(touch_cfg);
             _panel_instance.setTouch(&_touch_instance);  // Configura la pantalla táctil en el panel.
         }
-        _panel_instance.setBus(&_bus_instance);
         setPanel(&_panel_instance);
     }
 };

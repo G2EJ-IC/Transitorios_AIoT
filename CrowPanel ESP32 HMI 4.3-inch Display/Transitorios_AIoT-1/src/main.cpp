@@ -41,8 +41,6 @@ int delayLength0 = 3000;
 
 void ICACHE_FLASH_ATTR setup()
 {
-  // io.memoria_ESP();
-  // pinMode(PinLED, OUTPUT);
   // pinMode(PIN_BL, OUTPUT);
   // Segundo Siclo en el Núcleo Secundario.
   // Núcleo Principal  -> 1. APP
@@ -126,7 +124,6 @@ if (cuentaMutex == NULL)
 
 void ICACHE_FLASH_ATTR loop()
 {
-  // io.feedTheDog();
   // analogWrite(PIN_BL, 1);
   // tp.lv_no_sleep(60);
   if (millis() > asyncDelay0)
@@ -169,14 +166,12 @@ void ICACHE_FLASH_ATTR loop1(void *parameter)
   unsigned long asyncDelay1 = 0;
 
   io.setup();
-  for (;;) //while(1);
+  for (;;)
   {
-    // io.feedTheDog();
     loop_Task1();
     if (millis() > asyncDelay1)
     {
       asyncDelay1 += delayLength1;
-      // io.ParpadeoLED();
       io.TestHWM("loop1", asyncDelay1); 
     }
   }
@@ -190,7 +185,6 @@ void ICACHE_FLASH_ATTR loop2(void *parameter)
   display.setup();
   for (;;)
   {
-    // io.feedTheDog();
     loop_Task2();
     tp.lv_no_sleep(lv_N_sleep);
     if (millis() >= asyncDelay2)
@@ -210,7 +204,6 @@ void ICACHE_FLASH_ATTR loop3(void *parameter)
   tp.setup();
   for (;;)
   {
-    // io.feedTheDog();
     loop_Task3();
     if (millis() > asyncDelay3)
     {
@@ -226,13 +219,11 @@ void ICACHE_FLASH_ATTR loop4(void *parameter)
   tp.setup();
   for (;;)
   {
-    // io.feedTheDog();
     loop_Task4();
     asyncDelay4 = millis();
     io.cronometro(asyncDelay4);
     vTaskDelay(pdMS_TO_TICKS(5)); // delay( 5 );
     // get_var_slider_porcentaje();
     // set_var_slider_porcentaje(15);
-
   }
 }
