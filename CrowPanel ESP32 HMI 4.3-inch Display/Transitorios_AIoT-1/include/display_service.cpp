@@ -49,7 +49,7 @@ inline static uint32_t my_tick_get_cb (void){ return millis(); }
 #endif 
 
 /* =============================icache functions========================= */
-void ICACHE_FLASH_ATTR display_service::lv_setup()
+void display_service::lv_setup()
 {
     lv_init();
     tft.begin();                /* TFT init */
@@ -64,7 +64,7 @@ void ICACHE_FLASH_ATTR display_service::lv_setup()
 #endif
 }
 
-void ICACHE_FLASH_ATTR display_service::touch_setup()
+void display_service::touch_setup()
 {
     tp.setup();         /* TFT setup*/
     Serial.begin(115200); /* prepare for possible serial debug */
@@ -146,16 +146,16 @@ void display_service::my_touchpad_read (lv_indev_t * indev_driver, lv_indev_data
         data->point.x = touchX;
         data->point.y = touchY;
 
-        Serial.print( "Data x " );
-        Serial.println( touchX );
+        // Serial.print( "Data x " );
+        // Serial.println( touchX );
 
-        Serial.print( "Data y " );
-        Serial.println( touchY );
+        // Serial.print( "Data y " );
+        // Serial.println( touchY );
     }
 }
 
 /* =============================iram functions=============================== */
-void ICACHE_FLASH_ATTR display_service::setup()
+void display_service::setup()
 {
     lv_setup();
     // esp_register_freertos_tick_hook(lv_tick_task);

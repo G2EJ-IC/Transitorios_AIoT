@@ -18,19 +18,19 @@ tp_service::tp_service() {}
 tp_service::~tp_service() {}
 
 /* =============================icache functions========================= */
-void ICACHE_FLASH_ATTR tp_service::setup()
+void tp_service::setup()
 {
     pinMode(PIN_BL, OUTPUT);
 } // end tp setup
 
-void ICACHE_FLASH_ATTR tp_service::loop()
+void tp_service::loop()
 {
     // lv_no_sleep();
 } // end tp loop
 
 
 
-void ICACHE_FLASH_ATTR tp_service::lv_no_sleep(uint32_t lv_sleep){
+void tp_service::lv_no_sleep(uint32_t lv_sleep){
     if (lv_display_get_inactive_time(NULL) < (1000 * lv_sleep)){
         io_tp.setPinBL(HIGH);
         io_tp.setOpacity((int32_t)(255 * lv_slider_get_value(objects.slider_porcentaje) / 100));
@@ -40,9 +40,9 @@ void ICACHE_FLASH_ATTR tp_service::lv_no_sleep(uint32_t lv_sleep){
         Serial.println();
         uint32_t Ahora = lv_display_get_inactive_time(NULL);
         String DHMS = DateTimeAhora.DHMS_AIoT_get((uint64_t)(Ahora));
-        Serial.printf("%u mSeg - %s",Ahora, DHMS);
+        // Serial.printf("%u mSeg - %s",Ahora, DHMS);
         io_tp.setPinBL(LOW);
-        Serial.println();
+        // Serial.println();
     }
 }
 

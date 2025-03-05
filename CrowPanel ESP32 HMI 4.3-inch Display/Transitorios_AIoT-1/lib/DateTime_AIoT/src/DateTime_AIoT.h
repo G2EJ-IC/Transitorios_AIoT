@@ -12,7 +12,7 @@ private:
 public:
     dhms_AIoT();
     ~dhms_AIoT();
-    String ICACHE_FLASH_ATTR DHMS_AIoT_get(unsigned long long);     
+    String DHMS_AIoT_get(unsigned long long);     
 };
 
 #ifdef __cplusplus

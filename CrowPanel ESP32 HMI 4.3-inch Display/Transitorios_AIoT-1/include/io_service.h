@@ -1,8 +1,6 @@
 #ifndef __IO_SERVICE_H__
 #define __IO_SERVICE_H__
 
-#define ICACHE_FLASH_ATTR
-
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -19,13 +17,13 @@ public:
     io_service();
     ~io_service();
 
-    void ICACHE_FLASH_ATTR setPinBL(bool);
-    void ICACHE_FLASH_ATTR setOpacity(uint32_t);
-    void ICACHE_FLASH_ATTR TestHWM(const char *, uint32_t);
-    void ICACHE_FLASH_ATTR setup();
-    void ICACHE_FLASH_ATTR loop();
-    void ICACHE_FLASH_ATTR cronometro(uint32_t);
-    uint32_t ICACHE_FLASH_ATTR suspender(void);    
+    void setPinBL(bool);
+    void setOpacity(uint32_t);
+    void TestHWM(const char *, uint32_t);
+    void setup();
+    void loop();
+    void cronometro(uint32_t);
+    uint32_t suspender(void);    
 };
 
 #ifdef __cplusplus

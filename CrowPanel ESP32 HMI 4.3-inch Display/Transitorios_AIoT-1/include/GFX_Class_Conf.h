@@ -1,3 +1,6 @@
+#ifndef __GFX_CLASS_CONF_H__
+#define __GFX_CLASS_CONF_H__
+
 //////////////////////////////////////////////////////////////////////////////
 /*
 	ESP32 | LVGL9 | GFX_Class_Conf
@@ -7,9 +10,6 @@
     Modificado: Ernesto José Guerrero González, Civil Engineering ud FJdC.
 */
 //////////////////////////////////////////////////////////////////////////////
-
-#ifndef __CLASSCROWPANEL_H__
-#define __CLASSCROWPANEL_H__
 
 #include <Arduino.h>
 #define LGFX_USE_V1
@@ -129,4 +129,4 @@ public:
 
 LGFX tft; //  load tft service
 
-#endif // __CLASSCROWPANEL_H__
+#endif // __GFX_CLASS_CONF_H__

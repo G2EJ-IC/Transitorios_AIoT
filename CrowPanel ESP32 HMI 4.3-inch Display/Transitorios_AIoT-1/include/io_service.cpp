@@ -16,13 +16,13 @@ io_service::io_service() {}
 io_service::~io_service() {}
 
 /* =============================icache functions========================= */
-void ICACHE_FLASH_ATTR io_service::setup()
+void io_service::setup()
 {
   Serial.begin(115200);
   // ParpadeoLED();
 } // end io setup
 
-void ICACHE_FLASH_ATTR io_service::loop()
+void io_service::loop()
 {
 
 } // end io loop
@@ -61,12 +61,12 @@ void io_service::setOpacity(uint32_t opaContainer) {
  * @param Parámetros.
  * @return Salida. 
  */
-void ICACHE_FLASH_ATTR io_service::TestHWM(const char *taskName, uint32_t Ahora)
+void io_service::TestHWM(const char *taskName, uint32_t Ahora)
 {
   UBaseType_t stack_HWM = uxTaskGetStackHighWaterMark(nullptr);
   BaseType_t portGCID = xPortGetCoreID();
   uint32_t dispGIT = lv_disp_get_inactive_time(NULL);
-  float temperature = temperatureRead();
+  // float temperature = temperatureRead();
   // int HallEffectSensor = hallRead();
   // String DHMS = DateTime.DHMS_AIoT((uint64_t)Ahora);
 
@@ -75,14 +75,15 @@ void ICACHE_FLASH_ATTR io_service::TestHWM(const char *taskName, uint32_t Ahora)
               "Tiene un máximo en la Pila (High Water Mark) de.: %u \n"
               "En el núcleo (%u) \n"
               "Timer(%u) \n"
-              "Temperatura (%.2f°C) \n"
+              // "Temperatura (%.2f°C) \n"
               "Ahora (%u mSeg) \n"
               /* "Hall Effect Sensor (%i)" */,
-              taskName, stack_HWM, portGCID, dispGIT, temperature, Ahora);
+              taskName, stack_HWM, portGCID, dispGIT, Ahora);
+              // taskName, stack_HWM, portGCID, dispGIT, temperature, Ahora);
   Serial.println("\n================================================================================");
 }
 
-void ICACHE_FLASH_ATTR io_service::cronometro(uint32_t Ahora)
+void io_service::cronometro(uint32_t Ahora)
 {
   String DHMS = DateTime.DHMS_AIoT_get((uint64_t)(Ahora));
   // lv_label_set_text(objects.label_dhms_1, "xx.xx.xx.xx");
@@ -92,7 +93,7 @@ void ICACHE_FLASH_ATTR io_service::cronometro(uint32_t Ahora)
   // lv_label_set_text(objects.label_dhms_3, String(DHMS).c_str());
 }
 
-uint32_t ICACHE_FLASH_ATTR io_service::suspender(void)
+uint32_t io_service::suspender(void)
 {
   int N = 0;
   uint32_t N_sleep;

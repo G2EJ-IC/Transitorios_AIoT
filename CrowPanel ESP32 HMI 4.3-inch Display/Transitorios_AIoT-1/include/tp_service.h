@@ -1,8 +1,6 @@
 #ifndef __TP_SERVICE_H__
 #define __TP_SERVICE_H__
 
-#define ICACHE_FLASH_ATTR
-
 #include "lvgl.h"
 
 #ifdef __cplusplus
@@ -20,11 +18,11 @@ public:
     tp_service();
     ~tp_service();
 
-    void ICACHE_FLASH_ATTR setup();
-    void ICACHE_FLASH_ATTR loop();
+    void setup();
+    void loop();
     
-    // void ICACHE_FLASH_ATTR lv_no_sleep(uint32_t);
-    void ICACHE_FLASH_ATTR lv_no_sleep(uint32_t);
+    // void lv_no_sleep(uint32_t);
+    void lv_no_sleep(uint32_t);
 };
 
 #ifdef __cplusplus

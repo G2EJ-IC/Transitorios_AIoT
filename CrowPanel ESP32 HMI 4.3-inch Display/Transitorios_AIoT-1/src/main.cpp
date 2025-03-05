@@ -32,14 +32,13 @@ void loop2(void *);
 void loop3(void *);
 void loop4(void *);
 //************************************************************************************************setPin32;
-#define ICACHE_FLASH_ATTR
 
-unsigned long asyncDelay0 = 0;
-int delayLength0 = 3000;
+// unsigned long asyncDelay0 = 0;
+// int delayLength0 = 3000;
 
 // static uint32_t lvgl_refresh_timestamp = 5u;
 
-void ICACHE_FLASH_ATTR setup()
+void setup()
 {
   // pinMode(PIN_BL, OUTPUT);
   // Segundo Siclo en el Núcleo Secundario.
@@ -122,15 +121,16 @@ if (cuentaMutex == NULL)
   // lv_task_handler();
 }
 
-void ICACHE_FLASH_ATTR loop()
+void loop()
 {
   // analogWrite(PIN_BL, 1);
   // tp.lv_no_sleep(60);
-  if (millis() > asyncDelay0)
-  {
-    asyncDelay0 += delayLength0;
-    io.TestHWM("loop", asyncDelay0); 
-  }
+  // if (millis() > asyncDelay0)
+  // {
+  //   asyncDelay0 += delayLength0;
+  //   io.TestHWM("loop", asyncDelay0); 
+  // }
+  vTaskDelay(pdMS_TO_TICKS(1)); // delay( 1 );
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -160,26 +160,27 @@ inline void loop_Task4(void)
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //************************************************************************************************
 
-void ICACHE_FLASH_ATTR loop1(void *parameter)
+void loop1(void *parameter)
 {
-  int delayLength1 = 1000;
-  unsigned long asyncDelay1 = 0;
+  // int delayLength1 = 1000;
+  // unsigned long asyncDelay1 = 0;
 
   io.setup();
   for (;;)
   {
     loop_Task1();
-    if (millis() > asyncDelay1)
-    {
-      asyncDelay1 += delayLength1;
-      io.TestHWM("loop1", asyncDelay1); 
-    }
+    // if (millis() > asyncDelay1)
+    // {
+    //   asyncDelay1 += delayLength1;
+    //   io.TestHWM("loop1", asyncDelay1); 
+    // }
+    vTaskDelay(pdMS_TO_TICKS(1)); // delay( 1 );
   }
 }
 
-void ICACHE_FLASH_ATTR loop2(void *parameter)
+void loop2(void *parameter)
 {
-  int delayLength2 = 900;
+  int delayLength2 = 250;
   unsigned long asyncDelay2 = 0;
 
   display.setup();
@@ -191,39 +192,37 @@ void ICACHE_FLASH_ATTR loop2(void *parameter)
     {
       io.cronometro(asyncDelay2);
       asyncDelay2 += delayLength2;
-      io.TestHWM("loop2", asyncDelay2);   
+      // io.TestHWM("loop2", asyncDelay2);   
     }
+    vTaskDelay(pdMS_TO_TICKS(1)); // delay( 1 );
   }
 }
 
-void ICACHE_FLASH_ATTR loop3(void *parameter)
+void loop3(void *parameter)
 {
-  int delayLength3 = 800;
-  unsigned long asyncDelay3 = 0;
+  // int delayLength3 = 800;
+  // unsigned long asyncDelay3 = 0;
 
   tp.setup();
   for (;;)
   {
     loop_Task3();
-    if (millis() > asyncDelay3)
-    {
-      asyncDelay3 += delayLength3;
-      io.TestHWM("loop3", asyncDelay3);
-    }
+    // if (millis() > asyncDelay3)
+    // {
+    //   asyncDelay3 += delayLength3;
+    //   io.TestHWM("loop3", asyncDelay3);
+    // }
+    vTaskDelay(pdMS_TO_TICKS(1)); // delay( 1 );
   }
 }
 
-void ICACHE_FLASH_ATTR loop4(void *parameter)
+void loop4(void *parameter)
 {
   unsigned long asyncDelay4 = 0;
   tp.setup();
   for (;;)
   {
     loop_Task4();
-    asyncDelay4 = millis();
-    io.cronometro(asyncDelay4);
-    vTaskDelay(pdMS_TO_TICKS(5)); // delay( 5 );
-    // get_var_slider_porcentaje();
-    // set_var_slider_porcentaje(15);
+    vTaskDelay(pdMS_TO_TICKS(1)); // delay( 1 );
   }
 }
