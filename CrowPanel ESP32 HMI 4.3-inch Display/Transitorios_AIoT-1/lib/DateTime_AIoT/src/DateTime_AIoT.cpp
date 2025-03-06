@@ -24,24 +24,16 @@ String dhms_AIoT::DHMS_AIoT_get(unsigned long long mSegT) {
   int SEG = SegT;
 
   if (DIA == 0 && HORA == 0 && MINUTO == 0) {
-    /*sprintf(DHMS,"%.2d.%.3ds", 
-      SEG, SubSEG);*/
     snprintf(DHMS, sizeof(DHMS), "%02d.%03ds", 
       SEG, SubSEG);
   } else if (DIA == 0 && HORA == 0) {
-    /*sprintf(DHMS,"%.2dm %.2d.%.3ds", 
-      MINUTO, SEG, SubSEG);*/
     snprintf(DHMS, sizeof(DHMS), "%02dm %02d.%03ds", 
       MINUTO, SEG, SubSEG);
   } else if (DIA == 0) {
-    /*sprintf(DHMS,"%.2dh %.2dm %.2d.%.3ds",
-      HORA, MINUTO, SEG, SubSEG);*/
     snprintf(DHMS, sizeof(DHMS), "%02dh %02dm %02d.%03ds", 
       HORA, MINUTO, SEG, SubSEG);
   } else {
-    /*sprintf(DHMS,"%dd %.2dh %.2dm %.2d.%.3ds",
-      DIA, HORA, MINUTO, SEG, SubSEG);*/
-    snprintf(DHMS, sizeof(DHMS), "%dd %02dh %02dm %02d.%03ds", 
+    snprintf(DHMS, sizeof(DHMS), "%02dd %02dh %02dm %02d.%03ds", 
       DIA, HORA, MINUTO, SEG, SubSEG);
   }
   return String(DHMS);
