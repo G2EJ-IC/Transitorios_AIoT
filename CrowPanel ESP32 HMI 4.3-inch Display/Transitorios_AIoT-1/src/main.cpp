@@ -31,10 +31,7 @@ void loop1(void *);
 void loop2(void *);
 void loop3(void *);
 void loop4(void *);
-//************************************************************************************************setPin32;
-
-// unsigned long asyncDelay0 = 0;
-// int delayLength0 = 3000;
+//************************************************************************************************
 
 // static uint32_t lvgl_refresh_timestamp = 5u;
 
@@ -71,12 +68,12 @@ void setup()
       3,
       &Task2,
       1);
-if (taskCreationResult != pdPASS)
-{
-  Serial.println("Error al crear Task2");
-  while (true)
-    ;
-}
+  if (taskCreationResult != pdPASS)
+  {
+    Serial.println("Error al crear Task2");
+    while (true)
+      ;
+  }
 
   taskCreationResult = xTaskCreatePinnedToCore(
       loop3,
@@ -103,33 +100,26 @@ if (taskCreationResult != pdPASS)
       0);
   if (taskCreationResult != pdPASS)
   {
-    Serial.println("Error al crear Task3");
+    Serial.println("Error al crear Task4");
     while (true)
       ;
   }
 
-cuentaMutex = xSemaphoreCreateMutex();
-if (cuentaMutex == NULL)
-{
-  Serial.println("Error al crear semáforo");
-  while (true)
-    ;
-}
+  cuentaMutex = xSemaphoreCreateMutex();
+  if (cuentaMutex == NULL)
+  {
+    Serial.println("Error al crear semáforo");
+    while (true)
+      ;
+  }
 
   /******************************************End FreeRTOS***************************************/
-  delay(1000);
+  vTaskDelay(pdMS_TO_TICKS(1000)); // delay( 1000 );
   // lv_task_handler();
 }
 
 void loop()
 {
-  // analogWrite(PIN_BL, 1);
-  // tp.lv_no_sleep(60);
-  // if (millis() > asyncDelay0)
-  // {
-  //   asyncDelay0 += delayLength0;
-  //   io.TestHWM("loop", asyncDelay0); 
-  // }
   vTaskDelay(pdMS_TO_TICKS(1)); // delay( 1 );
 }
 
@@ -162,18 +152,10 @@ inline void loop_Task4(void)
 
 void loop1(void *parameter)
 {
-  // int delayLength1 = 1000;
-  // unsigned long asyncDelay1 = 0;
-
   io.setup();
   for (;;)
   {
     loop_Task1();
-    // if (millis() > asyncDelay1)
-    // {
-    //   asyncDelay1 += delayLength1;
-    //   io.TestHWM("loop1", asyncDelay1); 
-    // }
     vTaskDelay(pdMS_TO_TICKS(1)); // delay( 1 );
     // taskYIELD();
   }
@@ -193,7 +175,6 @@ void loop2(void *parameter)
     {
       io.cronometro(asyncDelay2);
       asyncDelay2 += delayLength2;
-      // io.TestHWM("loop2", asyncDelay2);   
     }
     vTaskDelay(pdMS_TO_TICKS(1)); // delay( 1 );
     // taskYIELD();
@@ -202,18 +183,10 @@ void loop2(void *parameter)
 
 void loop3(void *parameter)
 {
-  // int delayLength3 = 800;
-  // unsigned long asyncDelay3 = 0;
-
   tp.setup();
   for (;;)
   {
     loop_Task3();
-    // if (millis() > asyncDelay3)
-    // {
-    //   asyncDelay3 += delayLength3;
-    //   io.TestHWM("loop3", asyncDelay3);
-    // }
     vTaskDelay(pdMS_TO_TICKS(1)); // delay( 1 );
     // taskYIELD();
   }

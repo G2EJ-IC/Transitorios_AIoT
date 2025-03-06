@@ -43,16 +43,10 @@ void io_service::setPinBL(bool estado) {
  * @return Salida. 
  */
 void io_service::setOpacity(uint32_t opaContainer) {
-  // int32_t opaContainer = (int32_t)(255 * lv_slider_get_value(objects.slider_porcentaje) / 100);
-  // Serial.println(opaContainer);
-  const int pwmChannel  = 0; // 0-15
-  const int frecuencia = 10000; // en Hz
-  const int resolucion = 8; // 8-16 bits de resolución.
-
   pinMode(PIN_BL, OUTPUT);
-  ledcSetup(pwmChannel , frecuencia, resolucion);
-  ledcAttachPin(PIN_BL, pwmChannel);
-  ledcWrite(pwmChannel , opaContainer);
+  ledcSetup(_pwmChannel , _frecuencia, _resolucion);
+  ledcAttachPin(PIN_BL, _pwmChannel);
+  ledcWrite(_pwmChannel , opaContainer);
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////
