@@ -13,9 +13,9 @@ private:
     friend class tp_service;
     // friend class dhms_AIoT;
     
-    const int _pwmChannel  = 0; // 0-15
-    const int _frecuencia = 10000; // en Hz
-    const int _resolucion = 8; // 8-16 bits de resolución.
+    const int _pwmChannel  = 0;     // 0-15
+    const int _frecuencia = 10000;  // en Hz
+    const int _resolucion = 8;      // 8-16 bits de resolución.
 
 public:
     io_service();

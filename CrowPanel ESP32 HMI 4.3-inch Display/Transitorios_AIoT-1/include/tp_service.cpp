@@ -33,7 +33,11 @@ void tp_service::loop()
 void tp_service::lv_no_sleep(uint32_t lv_sleep){
     if (lv_display_get_inactive_time(NULL) < (1000 * lv_sleep)){
         io_tp.setPinBL(HIGH);
-        io_tp.setOpacity((int32_t)(255 * lv_slider_get_value(objects.slider_porcentaje) / 100));
+        io_tp.setOpacity((int32_t)(255 * lv_slider_get_value(objects.slider_porcentaje) / 100));    // 8 bits
+        // io_tp.setOpacity((int32_t)(4095 * lv_slider_get_value(objects.slider_porcentaje) / 100));   // 12 bits
+        // io_tp.setOpacity((int32_t)(65535 * lv_slider_get_value(objects.slider_porcentaje) / 100));  // 16 bits
+
+
     }
     /*Sleep after 1 sec inactivity*/
     else {
