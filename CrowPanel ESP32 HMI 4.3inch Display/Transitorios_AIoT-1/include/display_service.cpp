@@ -169,5 +169,5 @@ void IRAM_ATTR display_service::loop()
 {
     lv_timer_handler(); /* let the GUI do its work */
     ui_tick();
-    vTaskDelay(pdMS_TO_TICKS(5)); // delay( 5 );
+    vTaskDelay(pdMS_TO_TICKS(3)); // delay( 3 );
 } // end loop */

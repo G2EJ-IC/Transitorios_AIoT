@@ -120,7 +120,7 @@ void setup()
 
 void loop()
 {
-  vTaskDelay(pdMS_TO_TICKS(5)); // delay( 5 );
+  vTaskDelay(pdMS_TO_TICKS(2)); // delay( 2 );
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -176,7 +176,7 @@ void loop2(void *parameter)
       io.cronometro(asyncDelay2);
       asyncDelay2 += delayLength2;
     }
-    vTaskDelay(pdMS_TO_TICKS(5)); // delay( 5 );
+    vTaskDelay(pdMS_TO_TICKS(2)); // delay( 2 );
     // taskYIELD();
   }
 }
