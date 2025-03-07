@@ -120,7 +120,7 @@ void setup()
 
 void loop()
 {
-  vTaskDelay(pdMS_TO_TICKS(1)); // delay( 1 );
+  vTaskDelay(pdMS_TO_TICKS(5)); // delay( 5 );
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -156,14 +156,14 @@ void loop1(void *parameter)
   for (;;)
   {
     loop_Task1();
-    vTaskDelay(pdMS_TO_TICKS(1)); // delay( 1 );
+    vTaskDelay(pdMS_TO_TICKS(5)); // delay( 5 );
     // taskYIELD();
   }
 }
 
 void loop2(void *parameter)
 {
-  int delayLength2 = 250;
+  int delayLength2 = 200;
   unsigned long asyncDelay2 = 0;
 
   display.setup();
@@ -176,7 +176,7 @@ void loop2(void *parameter)
       io.cronometro(asyncDelay2);
       asyncDelay2 += delayLength2;
     }
-    vTaskDelay(pdMS_TO_TICKS(1)); // delay( 1 );
+    vTaskDelay(pdMS_TO_TICKS(5)); // delay( 5 );
     // taskYIELD();
   }
 }
@@ -187,7 +187,7 @@ void loop3(void *parameter)
   for (;;)
   {
     loop_Task3();
-    vTaskDelay(pdMS_TO_TICKS(1)); // delay( 1 );
+    vTaskDelay(pdMS_TO_TICKS(5)); // delay( 5 );
     // taskYIELD();
   }
 }
@@ -199,7 +199,7 @@ void loop4(void *parameter)
   for (;;)
   {
     loop_Task4();
-    vTaskDelay(pdMS_TO_TICKS(1)); // delay( 1 );
+    vTaskDelay(pdMS_TO_TICKS(5)); // delay( 5 );
     // taskYIELD();
   }
 }
