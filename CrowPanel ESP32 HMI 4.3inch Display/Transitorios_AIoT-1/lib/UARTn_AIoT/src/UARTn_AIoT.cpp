@@ -1,3 +1,4 @@
+#include <Arduino.h>
 #include "UARTn_AIoT.h"
 
 // Constructor: recibe los pines de RX, TX y la velocidad en baudios.

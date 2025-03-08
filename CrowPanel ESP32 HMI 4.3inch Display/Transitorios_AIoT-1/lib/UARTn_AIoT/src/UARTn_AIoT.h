@@ -1,8 +1,9 @@
 #ifndef __UART1_AIOT_H__
 #define __UART1_AIOT_H__
 
-#include <Arduino.h>
-
+#ifdef __cplusplus
+extern "C" {
+#endif
 class UARTn_AIoT {
     private:
     uint8_t _rxPin;
@@ -20,5 +21,9 @@ public:
 };
 
 // UARTn_AIoT myUART(&Serial1, 16, 17, 115200);  // Usa Serial1, pines 16 (RX) y 17 (TX)
+
+#ifdef __cplusplus
+} /*extern "C"*/
+#endif
 
 #endif // __UART1_AIOT_H__

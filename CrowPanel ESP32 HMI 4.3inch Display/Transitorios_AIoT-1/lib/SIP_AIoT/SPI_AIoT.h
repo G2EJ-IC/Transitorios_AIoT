@@ -1,7 +1,7 @@
-#ifndef __UARTN_AIOT_H__
-#define __UARTN_AIOT_H__
+#ifndef __SPI_AIOT_H__
+#define __SPI_AIOT_H__
 /**
- * @file UARTn_AIoT.h
+ * @file SPI_AIoT.h
  *
  */
 
@@ -12,7 +12,7 @@ extern "C" {
 /*********************
  *      INCLUDES
  *********************/
-#include "src/UARTn_AIoT.h"
+#include "src/SPI_AIoT.h"
 
 /*********************
  *      DEFINES
@@ -34,4 +34,4 @@ extern "C" {
 } /*extern "C"*/
 #endif
 
-#endif // __UARTN_AIOT_H__
+#endif // __SPI_AIOT_H__
