@@ -1,0 +1,21 @@
+// Ejemplo de Uso en main.cpp
+
+/*
+#include "UARTn_AIoT.h"
+
+UARTn_AIoT myUART(&Serial1, 16, 17, 115200);  // Usa Serial1, pines 16 (RX) y 17 (TX)
+
+void setup() {
+  Serial.begin(115200);  // Para depuración
+  myUART.begin();
+  Serial.println("Inicializando comunicación UART...");
+}
+
+void loop() {
+  if (myUART.available()) {
+    String data = myUART.readStringUntil('\n');
+    Serial.print("Datos recibidos: ");
+    Serial.println(data);
+  }
+}
+*/

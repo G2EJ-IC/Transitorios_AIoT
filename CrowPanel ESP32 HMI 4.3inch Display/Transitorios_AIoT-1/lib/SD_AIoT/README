@@ -1,0 +1,55 @@
+// Ejemplo de Uso en main.cpp
+
+/*
+#include <Arduino.h>
+#include "SD_AIoT.h"
+
+// Configuración de pines según la CrowPanel 4.3 inch.
+SD_AIoT sdCard(10, 12, 13, 11);
+
+void setup() {
+  Serial.begin(115200);
+  while (!Serial) { }
+  Serial.println("Iniciando manejo de SD con SD_AIoT...");
+
+  if (!sdCard.begin()) {
+    Serial.println("Error al iniciar la SD.");
+    while (1) {
+      delay(1000);
+    }
+  }
+
+  // Listar el directorio raíz.
+  sdCard.listDir("/", 1);
+
+  // Escribir un archivo.
+  if (sdCard.writeFile("/test.txt", "Hola, CrowPanel SD con SD_AIoT!")) {
+    Serial.println("Archivo escrito exitosamente.");
+  }
+
+  // Leer el archivo y mostrar su contenido.
+  String data = sdCard.readFile("/test.txt");
+  Serial.print("Contenido de test.txt: ");
+  Serial.println(data);
+
+  // Añadir datos al archivo.
+  if (sdCard.appendFile("/test.txt", "\nAñadiendo una nueva línea.")) {
+    Serial.println("Datos añadidos al archivo.");
+  }
+
+  // Volvemos a leer el archivo para ver la actualización.
+  data = sdCard.readFile("/test.txt");
+  Serial.print("Contenido actualizado de test.txt: ");
+  Serial.println(data);
+
+  // Para borrar el archivo, descomenta la siguiente línea:
+  // if (sdCard.removeFile("/test.txt")) {
+  //   Serial.println("Archivo eliminado.");
+  // }
+}
+
+void loop() {
+  // Aquí podrías colocar otras operaciones o mantener el loop vacío.
+  delay(5000);
+}
+*/

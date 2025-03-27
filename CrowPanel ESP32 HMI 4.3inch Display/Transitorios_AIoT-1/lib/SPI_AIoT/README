@@ -1,0 +1,32 @@
+// Ejemplo de Uso en main.cpp
+
+/*
+#include <Arduino.h>
+#include <SPI.h>
+#include "SPI_AIoT.h"
+
+// Instancia la clase usando la instancia SPI por defecto (generalmente "SPI")
+// Configuramos el pin CS en el pin 10 y la velocidad de 1 MHz.
+SPI_AIoT mySPI(&SPI, 10, 1000000);
+
+void setup() {
+  Serial.begin(115200);
+  while (!Serial) { } // Espera a que se abra el monitor serial
+  Serial.println("Iniciando comunicación SPI con SPI_AIoT...");
+
+  mySPI.begin();
+}
+
+void loop() {
+  // Ejemplo: enviar un byte y recibir la respuesta
+  uint8_t dataToSend = 0x55;
+  uint8_t dataReceived = mySPI.transfer(dataToSend);
+  
+  Serial.print("Dato enviado: 0x");
+  Serial.print(dataToSend, HEX);
+  Serial.print(" - Dato recibido: 0x");
+  Serial.println(dataReceived, HEX);
+  
+  delay(1000);
+}
+*/
